@@ -1,15 +1,4 @@
 # Ignore paths that contain user-generated content
-web/sites/default/files/*
-node_modules/
-web/sites/default/settings.php
-web/sites/default/services.yml
-web/sites/default/files/php
-web/sites/default/files/css
-web/sites/default/files/js
-web/sites/default/files/php
-web/sites/default/files/config*
-web/sites/default/files/twig
-web/sites/default/files/styles
 web/exchanges_hs/
 
 # Ignore .DS_Store files
