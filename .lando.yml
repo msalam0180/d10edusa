@@ -1,0 +1,34 @@
+name: educationusa
+recipe: drupal10
+config:
+  webroot: web
+services:
+  nodeserver:
+    type: 'node:14'
+    run:
+      - cd /app/web/themes/custom/educationusa && yarn install
+      - cd /app/web/themes/custom/educationusa && yarn gulp sass
+    globals:
+      yarn: latest
+
+  # Setting up Databases.
+  database: # Setting up Database Creds
+    type: mysql:5.7
+    creds:
+      user: drupal10
+      password: drupal10
+      database: drupal10
+    config:
+      database: .lando-config/my-custom.cnf
+    # Set phpmyadmin database hosts.
+  pma:
+    type: phpmyadmin
+    hosts:
+      - database
+tooling:
+  node:
+    service: nodeserver
+  npm:
+    service: nodeserver
+  yarn:
+    service: nodeserver
