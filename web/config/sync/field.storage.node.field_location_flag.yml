@@ -1,0 +1,27 @@
+uuid: 5e2a2318-8a0e-49b1-b45d-6dce53f4ea7d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_location_flag
+field_name: field_location_flag
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: US
+      label: US
+    -
+      value: non_us
+      label: Non-US
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

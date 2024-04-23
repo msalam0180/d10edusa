@@ -1,0 +1,42 @@
+uuid: 0960938d-0176-45ab-8a01-ed010551e26f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.foreign_institutions.body
+    - field.field.node.foreign_institutions.field_hero
+    - field.field.node.foreign_institutions.field_main_intro
+    - field.field.node.foreign_institutions.field_sub_intro
+    - field.field.node.foreign_institutions.field_sub_nav
+    - field.field.node.foreign_institutions.field_text_cards
+    - field.field.node.foreign_institutions.field_top_nav
+    - node.type.foreign_institutions
+  module:
+    - text
+    - user
+id: node.foreign_institutions.teaser
+targetEntityType: node
+bundle: foreign_institutions
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_hero: true
+  field_main_intro: true
+  field_sub_intro: true
+  field_sub_nav: true
+  field_text_cards: true
+  field_top_nav: true

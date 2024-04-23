@@ -1,0 +1,29 @@
+uuid: f27749d6-511d-4c70-a628-8221bf84b4ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topics
+    - node.type.edusa_videos
+    - taxonomy.vocabulary.tags
+id: node.edusa_videos.field_topics
+field_name: field_topics
+entity_type: node
+bundle: edusa_videos
+label: Topics
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

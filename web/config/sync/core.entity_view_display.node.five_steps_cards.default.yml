@@ -1,0 +1,59 @@
+uuid: 96c6d861-03d1-4254-b18f-1413b5de8fde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.five_steps_cards.body
+    - field.field.node.five_steps_cards.field_color_selection
+    - field.field.node.five_steps_cards.field_five_steps
+    - field.field.node.five_steps_cards.field_step_link
+    - node.type.five_steps_cards
+  module:
+    - link
+    - options
+    - text
+    - user
+id: node.five_steps_cards.default
+targetEntityType: node
+bundle: five_steps_cards
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_color_selection:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_five_steps:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_step_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: 838362b3-f41a-410e-ba62-378fba00203c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: fzJ_kU3wKSQOA7gdcWs4erHYixRul2pFzixpKaUIEcs
+id: block_content.field_ebt_counter_number
+field_name: field_ebt_counter_number
+entity_type: block_content
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,90 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_slideshow
+    - field.field.block_content.ebt_slideshow.field_ebt_settings
+    - field.field.block_content.ebt_slideshow.field_ebt_slideshow
+  module:
+    - ebt_slideshow
+    - field_group
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_settings
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      region: content
+      format_settings:
+        direction: horizontal
+        width_breakpoint: 120
+        id: ''
+        classes: ''
+        show_empty_fields: false
+      label: Tabs
+    group_content:
+      children:
+        - field_ebt_slideshow
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Content
+    group_settings:
+      children:
+        - field_ebt_settings
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Settings
+id: block_content.ebt_slideshow.default
+targetEntityType: block_content
+bundle: ebt_slideshow
+mode: default
+content:
+  field_ebt_settings:
+    weight: 22
+    settings: {  }
+    third_party_settings: {  }
+    type: ebt_settings_slideshow
+    region: content
+  field_ebt_slideshow:
+    type: entity_reference_paragraphs
+    weight: 21
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

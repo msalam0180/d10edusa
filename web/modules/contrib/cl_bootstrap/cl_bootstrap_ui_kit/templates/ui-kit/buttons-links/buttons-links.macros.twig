@@ -1,0 +1,119 @@
+{# Macros #}
+{% macro button_set(style, outlined) %}
+  <div class="{{ style is same as('Light') ? 'bg-dark p-5 text-light mt-lg-0 rounded-3' }}">
+    <div class="row row-cols-1 gy-5">
+      <strong>{{ style ~ ' Buttons'|t }}<small>{{ outlined ? ' (Outlined)'|t }}</small></strong>
+      <div>
+        <small class="d-block mb-2">{{ 'Small'|t }}</small>
+        {% include 'button' with {
+          text: 'Button text'|t,
+          size: 'sm',
+          style: style|lower,
+        } %}
+      </div>
+      <div>
+        <small class="d-block mb-2">{{ 'Normal'|t }}</small>
+        {% include 'button' with {
+          text: 'Button text'|t,
+          style: style|lower,
+        } %}
+      </div>
+      <div>
+        <small class="d-block mb-2">{{ 'Large'|t }}</small>
+        {% include 'button' with {
+          text: 'Button text'|t,
+          size: 'lg',
+          style: style|lower,
+        } %}
+      </div>
+      <div>
+        <small class="d-block mb-2">{{ 'With Icon'|t }}</small>
+        {% include 'button' with {
+          text: 'Button text'|t,
+          style: style|lower,
+          iconName: 'arrow-right',
+        } %}
+      </div>
+      <div>
+        <small class="d-block mb-2">{{ 'With Icon (Large, Above)'|t }}</small>
+        {% include 'button' with {
+          text: 'Button text'|t,
+          size: 'lg',
+          style: style|lower,
+          iconName: 'address-book',
+          iconClasses: 'icon-lg pt-2',
+          iconPlacement: 'above',
+        } %}
+      </div>
+      <strong class="mt-5 pt-5">{{ 'Button States'|t }}</strong>
+      <div>
+        <small class="d-block mb-2">{{ 'Normal'|t }}</small>
+        {% include 'button' with {
+          text: 'Button text'|t,
+          style: style|lower,
+        } %}
+      </div>
+      <div>
+        <small class="d-block mb-2">{{ 'Hover / Active'|t }}</small>
+        {% include 'button' with {
+          text: 'Button text'|t,
+          style: style|lower,
+          dataBsToggle: 'button',
+          classes: 'active'
+        } %}
+      </div>
+      <div>
+        <small class="d-block mb-2">{{ 'Disabled'|t }}</small>
+        {% include 'button' with {
+          text: 'Button text'|t,
+          style: style|lower,
+          disabled: 1,
+        } %}
+      </div>
+      <div>
+        <small class="d-block mb-2">{{ 'With Icon'|t }}</small>
+        {% include 'button' with {
+          text: 'Button text'|t,
+          style: style|lower,
+          iconName: 'arrow-right',
+        } %}
+      </div>
+      <div>
+        <small class="d-block mb-2">{{ 'Disabled With Icon (Large, Above)'|t }}</small>
+        {% include 'button' with {
+          text: 'Button text'|t,
+          style: style|lower,
+          disabled: 1,
+          iconName: 'address-book',
+          iconClasses: 'icon-lg pt-2',
+          iconPlacement: 'above',
+        } %}
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro link_set(style) %}
+  <div class="{{ style is same as('Light') ? 'bg-dark p-5 text-light mt-lg-0 rounded-3' }}">
+    <div class="row row-cols-1 gy-5">
+      <strong>{{ style ~ ' Links'|t }}</strong>
+      <div>
+        <small class="d-block mb-2">{{ 'Normal'|t }}</small>
+        <div class="mb-5">
+          {% include 'link' with {
+            text: 'Link text'|t,
+            style: style|lower,
+          } %}
+        </div>
+        <small class="d-block mb-2">{{ 'Icon Links'|t }}</small>
+        <div>
+          {% include 'link' with {
+            text: 'Link text'|t,
+            style: style|lower,
+            iconName: 'arrow-up-right-from-square-solid',
+          } %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

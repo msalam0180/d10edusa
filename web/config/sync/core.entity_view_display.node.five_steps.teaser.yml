@@ -1,0 +1,36 @@
+uuid: eba0a016-33c0-456f-8484-a4366875e6a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.five_steps.body
+    - field.field.node.five_steps.field_hero
+    - field.field.node.five_steps.field_hero_overlay_text
+    - field.field.node.five_steps.field_text_cards
+    - node.type.five_steps
+  module:
+    - text
+    - user
+id: node.five_steps.teaser
+targetEntityType: node
+bundle: five_steps
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_hero: true
+  field_hero_overlay_text: true
+  field_text_cards: true

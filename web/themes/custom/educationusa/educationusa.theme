@@ -1,0 +1,151 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ *
+ * Example on how to alter theme settings form
+ */
+function educationusa_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = [
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  ];
+}
+function educationusa_preprocess(&$variables) {
+
+  $variables['base_path'] = base_path();
+
+  $current_path = \Drupal::service('path.current')->getPath();
+  $result = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
+
+  // Check if on page twig code
+  $variables['current_page'] =   $result;
+
+  // Rendering HTML code on page
+  $variables['double_image'] = [
+    '#markup' => '<div class="double-image">
+    <div class="double-image-1"></div>
+    <div class="double-image-2"></div>
+  </div>',
+  ];
+
+  if ($_SERVER['HTTP_HOST'] == 'educationusa.lndo.site') {
+    // Theme Image Path
+    $variables['images'] = [
+      '#markup' => '/themes/custom/educationusa/images/',
+    ];
+    // $variables['relative_path'] = "";
+
+  }
+  else {
+        // Theme Image Path
+        $variables['images'] = [
+          '#markup' => '/alumni/web/themes/custom/educationusa/images/',
+        ];
+        // $variables['relative_path'] = "/alumni/web";
+  }
+}
+
+function educationusa_preprocess_node(&$variables) {
+  $menu_names = ['five-steps','for-inst','higher-ed','int-stu','study'];
+
+  foreach ($menu_names as $menu_name) {
+      $menu_tree = \Drupal::menuTree();
+      $parameters = new \Drupal\Core\Menu\MenuTreeParameters();
+      $parameters->onlyEnabledLinks();
+
+      $parameters->setMaxDepth(3);
+
+      $tree = $menu_tree->load($menu_name, $parameters);
+      $manipulators = [
+          ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+          ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+      ];
+      $tree = $menu_tree->transform($tree, $manipulators);
+      $menu = $menu_tree->build($tree);
+
+      $menu_items = [];
+      foreach ($tree as $element) {
+          $menu_items[] = [
+              'title' => $element->link->getTitle(),
+              'url' => $element->link->getUrlObject()->toString(),
+              'below' => educationusa_get_menu_tree($element->subtree),
+          ];
+      }
+
+      $variables['menus'][$menu_name] = $menu_items;
+  }
+}
+
+function educationusa_get_menu_tree($tree) {
+  $menu_items = [];
+  foreach ($tree as $item) {
+      if ($item->link) {
+          $menu_item = [
+              'title' => $item->link->getTitle(),
+              'url' => $item->link->getUrlObject()->toString(),
+          ];
+          if ($item->hasChildren) {
+              $menu_item['below'] = educationusa_get_menu_tree($item->subtree);
+          }
+          $menu_items[] = $menu_item;
+      }
+  }
+  return $menu_items;
+}
+
+function educationusa_preprocess_page(&$variables) {
+  /*
+    sets Homepage Site as home for different environments.
+    **WILL NEED TO SET FOR PRODUCTION PRIOR TO PRODUCTION PUSH**
+   */
+  
+    if ($_SERVER['HTTP_HOST'] == 'eca-dev-dmz-elb1-699046269.us-east-1.elb.amazonaws.com') {
+      $base_url = 'http://eca-dev-dmz-elb1-699046269.us-east-1.elb.amazonaws.com';
+    } elseif ($_SERVER['HTTP_HOST'] == 'eca-stage-dmz-elb1-1528946800.us-east-1.elb.amazonaws.com') {
+      $base_url = 'http://eca-stage-dmz-elb1-1528946800.us-east-1.elb.amazonaws.com';
+    } else {
+      $current_request = \Drupal::request();
+      $base_url = rtrim($current_request->getSchemeAndHttpHost(), '/') . '/';
+    }
+  
+    $variables['base_url'] = $base_url;
+  }
+
+// function educationusa_preprocess_node(&$variables) {
+//   $navChips = \Drupal\block\Entity\Block::load('educationusa_fivestepsnavigationpages');
+//   $variables['chips'] = \Drupal::entityTypeManager()
+//       ->getViewBuilder('block')
+//       ->view($navChips);
+  
+//   $subChips = \Drupal\block\Entity\Block::load('educationusa_fivestepsnavigationpagessubchips');
+//   $variables['subChips'] = \Drupal::entityTypeManager()
+//       ->getViewBuilder('block')
+//       ->view($subChips);
+
+//   $bottomChips = \Drupal\block\Entity\Block::load('educationusa_fivestepsnavigationpagesbottomchips');
+//   $variables['bottomChips'] = \Drupal::entityTypeManager()
+//       ->getViewBuilder('block')
+//       ->view($bottomChips);
+// }

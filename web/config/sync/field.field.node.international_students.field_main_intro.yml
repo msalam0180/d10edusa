@@ -1,0 +1,76 @@
+uuid: 480be24f-0632-4217-936d-9bf3c6ffed81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_intro
+    - node.type.international_students
+  module:
+    - block_field
+id: node.international_students.field_main_intro
+field_name: field_main_intro
+entity_type: node
+bundle: international_students
+label: 'Main Intro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: categories
+  selection_settings:
+    categories:
+      Block: Block
+      'Content block': 'Content block'
+      'Inline blocks': 'Inline blocks'
+      'Chaos Tools': '0'
+      'Cheeseburger Menu': '0'
+      Comment: '0'
+      'Comment fields': '0'
+      'Contact message': '0'
+      'Contact message fields': '0'
+      Content: '0'
+      'Content block fields': '0'
+      'Content fields': '0'
+      'Content moderation state': '0'
+      'Content moderation state fields': '0'
+      core: '0'
+      'Custom menu link': '0'
+      'Custom menu link fields': '0'
+      Devel: '0'
+      Feed: '0'
+      'Feed fields': '0'
+      'Feeds Import Log': '0'
+      'Feeds Import Log fields': '0'
+      File: '0'
+      'File fields': '0'
+      Forms: '0'
+      'Google Translator': '0'
+      Help: '0'
+      'Lists (Views)': '0'
+      Media: '0'
+      'Media fields': '0'
+      Menus: '0'
+      Paragraph: '0'
+      'Paragraph fields': '0'
+      'Section library template': '0'
+      'Section library template fields': '0'
+      'Shortcut link': '0'
+      'Shortcut link fields': '0'
+      'Social Feed': '0'
+      Subscription: '0'
+      'Subscription fields': '0'
+      Superfish: '0'
+      System: '0'
+      'Taxonomy term': '0'
+      'Taxonomy term fields': '0'
+      'URL alias': '0'
+      'URL alias fields': '0'
+      User: '0'
+      'User fields': '0'
+      Webform: '0'
+      'Webform access': '0'
+      'Webform submission': '0'
+      'Webform submission fields': '0'
+field_type: block_field

@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/cl_components/-/raw/1.x/src/metadata.schema.json
+machineName: accordion
+name: Accordion
+status: READY
+componentType: molecule
+description: The accordion component.
+schemas:
+  props:
+    type: object
+    required:
+      - title
+    properties:
+      title:
+        type: string
+        title: Title
+        description: The title of the icon.
+        examples:
+          - Press
+          - Submit now

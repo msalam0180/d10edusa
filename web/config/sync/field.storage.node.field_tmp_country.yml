@@ -1,0 +1,20 @@
+uuid: 231071ef-8c3f-4229-99a6-5231b62f97b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_tmp_country
+field_name: field_tmp_country
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

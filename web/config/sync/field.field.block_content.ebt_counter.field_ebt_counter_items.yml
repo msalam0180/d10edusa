@@ -1,0 +1,57 @@
+uuid: 3513c973-b1bd-4be9-ad15-d30c5830e712
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_counter
+    - field.storage.block_content.field_ebt_counter_items
+    - paragraphs.paragraphs_type.ebt_counter_item
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: THMDnvRSK2T-HDm43RpPPAcvphnT9498jj_FFYD1XwE
+id: block_content.ebt_counter.field_ebt_counter_items
+field_name: field_ebt_counter_items
+entity_type: block_content
+bundle: ebt_counter
+label: 'EBT Counter Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ebt_counter_item: ebt_counter_item
+    negate: 0
+    target_bundles_drag_drop:
+      ebt_accordion:
+        weight: 10
+        enabled: false
+      ebt_carousel:
+        weight: 11
+        enabled: false
+      ebt_counter_item:
+        weight: 12
+        enabled: true
+      ebt_slick_slider:
+        weight: 13
+        enabled: false
+      ebt_slideshow:
+        weight: 14
+        enabled: false
+      ebt_stats_item:
+        weight: 15
+        enabled: false
+      ebt_tab:
+        weight: 16
+        enabled: false
+      ebt_timeline:
+        weight: 17
+        enabled: false
+      ebt_video_and_image_gallery_item:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

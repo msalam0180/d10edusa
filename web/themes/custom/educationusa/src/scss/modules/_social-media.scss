@@ -1,0 +1,195 @@
+.social-media-bureau-of-educationa {
+    letter-spacing: 0;
+    line-height: 18px;
+    min-height: 21px;
+    margin-top: -16px;
+    font-size: var(--font-size-s);
+    width: 13%;
+    color: #e7e7e7;
+   
+    @include bp(xs) {   //450px
+      letter-spacing: 0;
+      line-height: 18px;
+      min-height: 21px;
+      margin-top: -16px;
+      font-size: var(--font-size-m);
+      width: 62%;
+      color: #e7e7e7;
+    }
+    @include bp(md) { 
+      letter-spacing: 0;
+      line-height: 18px;
+      min-height: 21px;
+      margin-top: -16px;
+      font-size: var(--font-size-s);
+      width: 62%;
+      color: #e7e7e7;
+    }
+    @include bp(lg) {
+      width: auto;
+      white-space: nowrap;
+      color: #e7e7e7;
+      font-size: var(--font-size-s);
+    }
+  }
+  
+.social-media-exchange-programs-roboto-bold-white-34px {
+  letter-spacing: 0;
+  line-height: 11px;
+  min-height: 47px;
+  white-space: nowrap;
+  margin-top: -5px;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700; 
+    @include bp(xs) {   
+        
+    }
+    @include bp(md) { //450px
+      
+    }
+    @include bp(lg) {
+      letter-spacing: 0;
+      line-height: 11px;
+      min-height: 47px;
+      white-space: nowrap;
+      margin-top: -15px;
+      color: var(--white);
+      font-family: var(--font-family-roboto);
+      font-size: var(--font-size-xxl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    
+  }
+
+.social-media .grid-one{
+    align-items: flex-start;
+    display: flex;
+    height: 64px;
+    float: left;
+    min-width: 493px;
+    position: relative;
+    top: 0px;
+  }
+
+
+  .social-media .grid-two{
+    align-items: flex-start;
+    display: flex;
+    height: 64px;
+    float: left;
+    min-width: 493px;
+    position: relative;
+    top: 0px;
+  }
+
+.social-media-x7 {
+    align-self: end;
+    background-image: url(../images/rectangle-3-1@1x.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 36px;
+    margin-bottom: 24.59px;
+    width: 60px;
+    margin-left: 0px;
+}
+  
+.social-media-x1-1 {
+    height: 40px;
+    margin-left: 28px;
+    margin-right: 22px;
+    margin-top: 0px;
+    object-fit: cover;
+    width: 40px;
+}
+
+.social-media-x9 {
+  height: 31px;
+  margin-bottom: 1.0px;
+  object-fit: cover;
+  width: 32px;
+  margin-top: -50px;
+}
+
+.social-media-x10 {
+  height: 31px;
+  margin-bottom: 1.0px;
+  margin-left: 4px;
+  object-fit: cover;
+  width: 31px;
+  margin-top: -50px;
+}
+
+.social-media-x11 {
+  height: 32px;
+  margin-bottom: 1.0px;
+  margin-left: 4px;
+  object-fit: cover;
+  width: 32px;
+  margin-top: -50px;
+}
+
+.social-media-x12 {
+  height: 33px;
+  margin-left: 5px;
+  object-fit: cover;
+  width: 35px;
+  margin-top: -51px;
+}
+
+.social-media-x13 {
+  height: 32px;
+  margin-left: 4px;
+  object-fit: cover;
+  width: 30px;
+  margin-top: -51px;
+}
+
+.social-media-icons {
+   margin-top: 78px;
+   height:0px;
+   margin-right: 90px !important;
+   float: right;
+
+  @include bp(xs) {   //450px
+    margin-top: 26px;
+   height:0px;
+   margin-right: 88px !important;
+   float: right;
+      
+  }
+  @include bp(md) { 
+    margin-top: 78px;
+    height:0px;
+    margin-right: 244px !important;
+    float: right;
+    
+  }
+  @include bp(lg) {
+    margin-top: -46px;
+    margin-right: 11% !important;
+    margin-left: 9px !important;
+    float:right; 
+  }
+
+
+}
+
+.grid-one {
+  //flex-direction: row-reverse;
+  margin-top: -22%;
+  @include bp(xs) {   //450px
+    margin-top: -10%; 
+  }
+  @include bp(md) { 
+    margin-top: -9%;
+  }
+  @include bp(lg) {
+    margin-top: 0px;
+  }
+}
+

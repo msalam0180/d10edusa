@@ -1,0 +1,36 @@
+uuid: 26a1dc13-7bc2-4a4f-964e-7593340beaba
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_five_steps
+field_name: field_five_steps
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: '1 Research Your Options'
+    -
+      value: 2
+      label: '2 Finance Your Studies'
+    -
+      value: 3
+      label: '3 Complete Your Application'
+    -
+      value: 4
+      label: '4 Apply for Your Student Visa'
+    -
+      value: 5
+      label: '5 Prepare For Your Departure'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

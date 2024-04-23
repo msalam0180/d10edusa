@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+	<h3>{{ title }}</h3>
+{% endif %}
+{# <section class=" ">
+	<div class="pb-5">
+		<div class="row">
+			{% for row in rows %}
+				<div class="col-sm-12 col-12 col-md-6 col-lg-3 mt-3" id="Alumni_Home-1">
+					<img
+					src="{{ file_url(row['content']['#row']._entity.field_news_image.entity.uri.value) }}" class="card-img-top img-fluid" alt="{{row.content['#row']._entity.field_news_image[0].alt }}">
+					<div class="">
+						<p class="small mt-2">{{ row.content['#row']._entity.field_news_date[0].value|date("l, M d, Y") }}</p>
+						<h5 class="card-title fw-bold">{{row.content['#row']._entity.title[0].value|raw}}</h4>
+						<a class="fw-bold card-link" href="{{ row.content['#row']._entity.field_news_link[0].url }}">
+							{{ row.content['#row']._entity.field_news_link[0].title}}</a>
+						<i class="fa fa-angle-right link-primary"></i>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section> #}
+
+<section class="bg-light pt-5 pb-5 shadow-sm">
+	<div class="container">
+		<div class="row">
+			{% for row in rows %}
+				<div class="col-sm-12 col-12 col-md-6 col-lg-3 mt-3 d-flex align-items-stretch">
+					<div class="card">
+						<img src="{{ file_url(row['content']['#row']._entity.field_news_image.entity.uri.value) }}" class="card-img-top img-fluid" alt="{{row.content['#row']._entity.field_news_image[0].alt }}">
+						<div class="card-body d-flex flex-column line-clamp">
+							<p class="small">{{ row.content['#row']._entity.field_news_date[0].value|date("l, M d, Y") }}</p>
+							<a href="/node/{{row.content['#row']._entity.nid[0].value}}" hreflang="en">
+								<h5 class="card-title fw-bold">{{row.content['#row']._entity.title[0].value}}</h5>
+							</a>
+							<p class="small mb-4 line-clamp">{{row.content['#row']._entity.body[0].value|raw}}</p>
+							{% if row['content']['#row']._entity.field_news_link[0].url is not empty %}
+								<a href="{{ row.content['#row']._entity.field_news_link[0].url }}" class="btn btn-primary mt-auto align-self-start">{{ row.content['#row']._entity.field_news_link[0].title}}</a>
+							{% else %}
+								<a href="/node/{{row.content['#row']._entity.nid[0].value}}" class="btn btn-primary mt-auto align-self-start">Learn More</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

@@ -1,0 +1,24 @@
+uuid: f63f0401-880f-4d3a-b548-13d4d7849004
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_share_description_short
+    - filter.format.plain_text
+    - node.type.financial_aid_country_based_
+  module:
+    - text
+id: node.financial_aid_country_based_.field_share_description_short
+field_name: field_share_description_short
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Tweet Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

@@ -1,0 +1,21 @@
+uuid: e6b44ca5-24d1-418d-8ae2-a26b3ead747c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_five_steps
+    - node.type.five_steps_cards
+  module:
+    - options
+id: node.five_steps_cards.field_five_steps
+field_name: field_five_steps
+entity_type: node
+bundle: five_steps_cards
+label: 'Five Steps'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,72 @@
+uuid: 11180b5c-75c8-40cf-b6ab-123c3e44521e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.events.body
+    - field.field.node.events.feeds_item
+    - field.field.node.events.field_advising_center
+    - field.field.node.events.field_audience
+    - field.field.node.events.field_date
+    - field.field.node.events.field_event_city
+    - field.field.node.events.field_event_country
+    - field.field.node.events.field_event_time
+    - field.field.node.events.field_event_type
+    - field.field.node.events.field_event_year
+    - field.field.node.events.field_featured_image
+    - field.field.node.events.field_in_person_location
+    - field.field.node.events.field_location_type
+    - field.field.node.events.field_more_information
+    - field.field.node.events.field_online_location
+    - field.field.node.events.field_registration_email
+    - field.field.node.events.field_summary
+    - field.field.node.events.field_timezone
+    - field.field.node.events.field_tmp_address_line_one
+    - field.field.node.events.field_tmp_address_line_two
+    - field.field.node.events.field_tmp_authored_by
+    - field.field.node.events.field_tmp_date
+    - node.type.events
+  module:
+    - text
+    - user
+id: node.events.teaser
+targetEntityType: node
+bundle: events
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true
+  field_advising_center: true
+  field_audience: true
+  field_date: true
+  field_event_city: true
+  field_event_country: true
+  field_event_time: true
+  field_event_type: true
+  field_event_year: true
+  field_featured_image: true
+  field_in_person_location: true
+  field_location_type: true
+  field_more_information: true
+  field_online_location: true
+  field_registration_email: true
+  field_summary: true
+  field_timezone: true
+  field_tmp_address_line_one: true
+  field_tmp_address_line_two: true
+  field_tmp_authored_by: true
+  field_tmp_date: true

@@ -1,0 +1,19 @@
+uuid: d5327f92-ac7b-4928-98bc-3e7f4671b0bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_institution_name
+    - node.type.financial_aid_us
+id: node.financial_aid_us.field_institution_name
+field_name: field_institution_name
+entity_type: node
+bundle: financial_aid_us
+label: 'Institution Name'
+description: 'College, university or institution offering the scholarship. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

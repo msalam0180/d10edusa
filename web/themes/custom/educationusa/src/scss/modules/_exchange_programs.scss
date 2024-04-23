@@ -1,0 +1,217 @@
+.eca-exp {
+    border-bottom: 1px solid #ccc;
+    // margin-bottom: 10px;
+    padding-top: 30px !important;
+    background-color: #e9f1f7;
+    position: relative;
+    margin-top: -20px;
+
+    &-page {
+      margin-top: 0 !important;
+
+      .latest-news-blk {
+        padding-top: 0px !important;
+        background-color: #fff !important;
+        }
+
+        .w-container,
+        .inner-container {
+            max-width: inherit !important;
+            margin: 0 0 !important;
+            @include padding-lr();
+        }
+
+        .eca_ex-ln-2 {
+            .title-text {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                @include bp(sm) {
+                    align-items: baseline;
+                }
+            }
+        }
+
+        .featuredpost.wf-section {
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            .inner-container.w-container {
+                padding: 0;
+            }
+        }
+
+        .w-col-3 {
+
+            @include bp(md){
+                width: 30%;
+            }
+        }
+    }
+
+    h2 {
+        display: flex;
+        flex-direction: column;
+        color: #000;
+        font-family: var(--font-family-roboto);
+        font-size: 28px;
+        font-weight: 400;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 0px;
+        text-transform:inherit;
+
+        @include bp(md){
+            text-align: left;
+            flex-direction: row;
+        }
+
+        &:before {
+            content: '';
+            height: 40px;
+            width: 40px;
+            position: relative;
+            display: block;
+            overflow: hidden;
+            background: url($images + 'world-icon.png');
+            margin-right: 10px;
+            background-size: cover;
+            margin: 20px auto;
+
+            @include bp(md){
+                margin: -2px 10px 20px 0;
+            }
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 0px;
+            font-size: 1.5rem;
+            @include bp(md){
+                text-align: left;
+            }
+        }
+    }
+    &-hero {
+        position: relative;
+        border-top: 1px solid #ccc;
+        overflow: hidden;
+         margin-top: -8%;
+
+         img {
+            position: relative;
+            top: 10px;
+         }
+
+        &.banners {
+            position: relative;
+            margin-top: -20%;
+        }
+
+        &.videos {
+            position: relative;
+            margin-top: -20%;
+        }
+
+        &-desktop,
+        &-mobile {
+            position: relative;
+        }
+
+        &-desktop {
+            display: none;
+            @include bp(md){
+                display: block;
+            }
+        }
+        &-mobile {
+            display: block;
+            @include bp(md){
+                display: none;
+            }
+        }
+
+        h1 {
+            font-family: var(--font-family-roboto);
+            line-height: 28px !important;
+            font-size: 28px !important;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-left: 10px;
+            @include bp(sm){
+                line-height: 48px !important;
+                font-size: 48px !important;
+                padding-left: 0px;
+                align-items: baseline;
+            }
+        }
+    }
+    @include spacer_limit();
+
+}
+
+.title-of-page {
+    background: linear-gradient(90deg, rgba(76, 58, 180, 0.244135) 6%, #071b3b 100%, #fcb045 100%);
+    position: absolute;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    bottom: 20px;
+
+   &.non-bottom {
+    bottom: 20px;
+
+
+    @include bp(sm) {
+        bottom: 0px;
+    }
+   }
+
+   @include bp(sm) {
+    height: 150px;
+   }
+
+    .title {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    @include spacer_limit();
+}
+
+
+.node--type-homepage {
+    .eca-exp-page {
+        margin-top: 5px !important;
+
+        .flex-row-3 {
+            padding-left: 0px !important;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            align-items: center;
+            width: 300px;
+            justify-content: center;
+
+            @include bp(sm) {
+                flex-direction: row;
+                align-items: end;
+                text-align: left;
+                width: 100%;
+            }
+
+            .flex-col {
+                width: 100%;
+            }
+        }
+    }
+}

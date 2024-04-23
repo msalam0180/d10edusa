@@ -1,0 +1,19 @@
+uuid: b7d95a51-02c0-4cde-bbb9-2857c11909d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_time
+    - node.type.events
+id: node.events.field_event_time
+field_name: field_event_time
+entity_type: node
+bundle: events
+label: 'Event Time'
+description: 'i.e. 9:00am - 5:00pm or Tuesday 9:00am to Thursday 5:00pm'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

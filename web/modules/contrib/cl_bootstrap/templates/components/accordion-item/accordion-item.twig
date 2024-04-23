@@ -1,0 +1,70 @@
+{#
+/**
+ * @file
+ * Template for rendering an accordion item component.
+ *
+ * Available variables:
+ * - classes: (optional) Additional CSS classes to apply to the component wrapper.
+ * - id: (optional) ID for the component wrapper. If not provided, a random ID will be generated.
+ * - header_tag: (optional) HTML tag to use for the accordion header. Default is 'h2'.
+ * - icon: (optional) Icon to display in the accordion header.
+ * - title: Title to display in the accordion header.
+ * - description: (optional) Description to display in the accordion header.
+ * - collapsed: (optional) Whether the accordion is collapsed by default. Default is true.
+ * - alwaysOpen: (optional) Whether to keep the accordion always open (i.e., allow multiple items to be expanded simultaneously).
+ * - accordion_id: ID of the parent accordion component.
+ * - body: Content to display in the accordion body.
+ *
+ */
+#}
+{% set component_classes = [
+  'accordion-item',
+  classes,
+] %}
+{% set id = id|default(random(0, 1000000)) %}
+{% set header_tag = header_tag|default('h2') %}
+
+<div {{ clAttributes.addClass(component_classes) }}>
+  <div class="accordion-header" id="#{{ 'collapse__heading-' ~ id }}">
+    <button class="accordion-button {{ collapsed is not same as(true) and loop.index == 1 ? '' : 'collapsed'}} d-flex align-items-center gap-3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#{{ 'collapse-' ~ id }}"
+            aria-expanded="{{ collapsed is not same as(true) and loop.index == 1 ? 'true' : 'false'}}"
+            aria-controls="{{ 'collapse-' ~ id }}">
+      <div class="row">
+
+        {% if icon %}
+        <div class="col-auto">
+          {% include 'icon' with { name: icon } %}
+        </div>
+        {% endif %}
+
+        <div class="col">
+          {% if description %}
+          <div class="row">
+            <div class="col">
+              {{ title|t }}
+            </div>
+            <div class="col-12 mt-3">
+              {{ description|t }}
+            </div>
+          </div>
+          {% else %}
+            {{ title|t }}
+          {% endif %}
+        </div>
+
+      </div>
+    </button>
+  </div>
+
+  <div id="{{ 'collapse-' ~ id }}"
+       class="accordion-collapse collapse {{ collapsed is not same as(true) and loop.index == 1 ? 'show' : ''}}"
+       aria-labelledby="#{{ 'collapse__heading-' ~ id }}"
+       {% if alwaysOpen %} data-bs-parent="#{{ accordion_id }}" {% endif %}>
+    <div class="accordion-body">
+      {{ body }}
+    </div>
+  </div>
+</div>

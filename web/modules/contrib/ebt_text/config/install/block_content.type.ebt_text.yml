@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_text
+label: 'EBT Text'
+revision: 1
+description: 'Adds Text block type with WYSIWYG editor'

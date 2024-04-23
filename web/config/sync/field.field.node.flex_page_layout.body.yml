@@ -1,0 +1,24 @@
+uuid: bace34e2-4441-4b8b-becb-2448f1c0def8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.flex_page_layout
+  module:
+    - text
+id: node.flex_page_layout.body
+field_name: body
+entity_type: node
+bundle: flex_page_layout
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -1,0 +1,22 @@
+uuid: 4eebedb7-bfee-46f1-86c8-3d443fc683d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: five_steps
+label: 'Five Steps'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  7043e2cf-9efd-49f4-b330-03d4667a717f:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 7043e2cf-9efd-49f4-b330-03d4667a717f
+    context_mapping:
+      node: node
+    bundles:
+      five_steps: five_steps
+selection_logic: and
+weight: -5
+relationships: {  }

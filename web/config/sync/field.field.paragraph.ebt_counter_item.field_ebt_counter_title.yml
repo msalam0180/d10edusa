@@ -1,0 +1,24 @@
+uuid: b1775ace-b5a0-408d-8151-52bd43bef52b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ebt_counter_title
+    - paragraphs.paragraphs_type.ebt_counter_item
+  module:
+    - text
+_core:
+  default_config_hash: CvlljFbOKRTlxFz1hVYtYJkEdk3S-0I9UmjjS41E7_U
+id: paragraph.ebt_counter_item.field_ebt_counter_title
+field_name: field_ebt_counter_title
+entity_type: paragraph
+bundle: ebt_counter_item
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

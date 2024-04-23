@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall logic for EBT Bootstrap Button.
+ */
+
+use Drupal\field\Entity\FieldConfig;
+
+/**
+ * Set the field "field_ebt_bootstrap_button_link" as required.
+ */
+function ebt_bootstrap_button_update_9101() {
+
+  // Set the machine names.
+  $block_type_id = 'ebt_bootstrap_button';
+  $field_name = 'field_ebt_bootstrap_button_link';
+
+  // Load the field configuration object.
+  $field_config = FieldConfig::loadByName('block_content', $block_type_id, $field_name);
+
+  // If the field doesn't exists, skip.
+  if (empty($field_config)) {
+    return;
+  }
+
+  // Set the field as required.
+  $field_config->setRequired(TRUE)->save();
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function ebt_bootstrap_button_uninstall() {
+
+  // Get the object of block type "ebt_bootstrap_button".
+  $block_type = \Drupal::entityTypeManager()->getStorage('block_content_type')->load('ebt_bootstrap_button');
+
+  // If there is no the block type "ebt_bootstrap_button", skip.
+  if (empty($block_type)) {
+    return;
+  }
+
+  // Get all possible blocks with block type = "ebt_bootstrap_button".
+  $blocks_bootstrap_button = \Drupal::entityTypeManager()->getStorage('block_content')->loadByProperties(['type' => 'ebt_bootstrap_button']);
+
+  // If there are custom blocks with block type "ebt_bootstrap_button", skip.
+  if (!empty($blocks_bootstrap_button)) {
+    \Drupal::logger('ebt_bootstrap_button')->notice(t('You uninstalled "ebt_bootstrap_button" but there are custom blocks with type "ebt_bootstrap_button", for this reason the block type was not deleted'));
+    return;
+  }
+
+  // Delete the block type.
+  $block_type->delete();
+
+}

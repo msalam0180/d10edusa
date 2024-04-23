@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ebt_slideshow.field_ebt_slideshow_link
+    - field.field.paragraph.ebt_slideshow.field_ebt_slideshow_slide
+    - field.field.paragraph.ebt_slideshow.field_ebt_slideshow_text
+    - field.field.paragraph.ebt_slideshow.field_ebt_slideshow_title
+    - paragraphs.paragraphs_type.ebt_slideshow
+  module:
+    - link
+    - media
+    - text
+id: paragraph.ebt_slideshow.default
+targetEntityType: paragraph
+bundle: ebt_slideshow
+mode: default
+content:
+  field_ebt_slideshow_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 1023
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ebt_slideshow_slide:
+    type: media_thumbnail
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ebt_slideshow_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ebt_slideshow_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

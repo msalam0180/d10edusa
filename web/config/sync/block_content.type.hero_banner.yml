@@ -1,0 +1,8 @@
+uuid: 09b1652d-6c75-4454-9f8c-c312ed458245
+langcode: en
+status: true
+dependencies: {  }
+id: hero_banner
+label: 'Hero Banner'
+revision: 0
+description: 'Global hero banner block'

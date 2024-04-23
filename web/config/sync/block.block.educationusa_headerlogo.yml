@@ -1,0 +1,25 @@
+uuid: 268380a1-8ac0-4d15-a605-d6fe19602c5b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:ebt_text:68d882b3-d99f-42f8-8f0f-7019ba1fdb0f'
+  module:
+    - block_content
+  theme:
+    - educationusa
+id: educationusa_headerlogo
+theme: educationusa
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:68d882b3-d99f-42f8-8f0f-7019ba1fdb0f'
+settings:
+  id: 'block_content:68d882b3-d99f-42f8-8f0f-7019ba1fdb0f'
+  label: 'Header Logo'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

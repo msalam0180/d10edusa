@@ -1,0 +1,88 @@
+.recently {
+    &-view {
+        position: relative;
+        // width: 100%;
+        // background-color: #e4e2e2;
+        // border-top: #a1a0a0 1px solid;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+
+        .views-element-container {
+            position: relative;
+
+            .view-recently-read-content {
+                position: relative;
+                // display: flex;
+                // flex-direction: column;
+                // align-items: center;
+
+                // .flex-row-3 {
+                //     width: 100%;
+                //     max-width: 400px;
+                    
+
+                //     @include bp(sm) {
+                //         max-width: 1015px;
+                //     }
+                // }
+
+                .view-content.row {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include bp(sm) {
+                        flex-direction: row;
+                        // width: 1250px;
+                    }
+
+                    .views-row {
+                        position: relative;
+                        // width: 400px;
+                        margin: 20px;
+
+                        .eca_ex-ln-block {
+                            // width: 400px;
+                            margin: 10px auto;
+
+                            .eca_ex-ln-image {
+                                // width: 400px;
+                                // height: 212px;
+                                position: relative;
+                                display: block;
+                            }
+
+                            .eca_ex-ln-title {
+                                color: #000;
+                                margin-top: 10px;
+                                font-size: 20px;
+                            }
+
+                            .eca_ex-ln-cta {
+                                font-size: 14px !important;
+                                margin-top: 20px;
+
+                                &:after {
+                                    content: '';
+                                    background: url(../images/linkicon-10@1x.png);
+                                    background-repeat: no-repeat;
+                                    width: 12px;
+                                    height: 12px;
+                                    background-size: contain;
+                                    position: absolute;
+                                    bottom: 6px;
+                                    margin-left: 5px;
+                                    left: inherit;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

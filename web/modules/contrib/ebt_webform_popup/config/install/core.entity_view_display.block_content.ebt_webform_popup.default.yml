@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_webform_popup
+    - field.field.block_content.ebt_webform_popup.field_ebt_settings
+    - field.field.block_content.ebt_webform_popup.field_ebt_webform_popup_form
+  module:
+    - ebt_core
+    - webform
+id: block_content.ebt_webform_popup.default
+targetEntityType: block_content
+bundle: ebt_webform_popup
+mode: default
+content:
+  field_ebt_settings:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: ebt_settings_default
+    region: content
+  field_ebt_webform_popup_form:
+    weight: 1
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+hidden: {  }

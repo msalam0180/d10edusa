@@ -1,0 +1,12 @@
+uuid: 3b85a46b-c13a-4998-86e9-c10919fa4f48
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ycgzZPt9EhNziX0konZumLTJ6y69olJaVnLJ2dtyKnI
+id: ebt_counter_item
+label: 'EBT Counter Item'
+icon_uuid: null
+icon_default: null
+description: 'Counter Items to be used inside of Block Type: "EBT Counter"'
+behavior_plugins: {  }

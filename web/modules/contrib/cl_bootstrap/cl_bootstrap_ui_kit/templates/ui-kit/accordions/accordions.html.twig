@@ -1,0 +1,104 @@
+{#
+/**
+ * @file
+ * Implements the Accordions tab content for the UI Kit.
+ *
+ * Displays usage of accordions within the theme.
+ */
+#}
+{% extends '@bootstrap_ui_kit/ui-kit/accordions/accordions.html.twig' %}
+
+{% block section_intro %}
+  {% trans %}
+  <p>An accordion menu is a vertically stacked list of headers that can be clicked to reveal or hide content associated
+    with them. It is one of many ways you can expose content to users in a progressive manner.</p>
+  {% endtrans %}
+{% endblock %}
+
+{% block section_content %}
+
+  {# Normal (collapsed) #}
+  <p><strong>{{ 'Collpased'|t }}</strong></p>
+  <div class="mb-5">
+  {% embed 'accordion' with { alwaysOpen: true } only %}
+    {% block content %}
+      {% for i in 1..1 %}
+        {% include 'accordion-item' with {
+          icon: 'calendar-days',
+          title: 'This is my title',
+          description: '',
+          body: 'This is the first item\'s accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It\'s also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.',
+          collapsed: true
+        } %}
+      {% endfor %}
+    {% endblock %}
+  {% endembed %}
+  </div>
+
+  {# Always Open #}
+  <div class="mb-5">
+  <p><strong>{{ 'Expanded'|t }}</strong></p>
+  {% embed 'accordion' with { alwaysOpen: true } only %}
+    {% block content %}
+      {% for i in 1..1 %}
+        {% include 'accordion-item' with {
+          icon: 'calendar-days',
+          title: 'Accordion Item #' ~ loop.index,
+          body: 'This is the first item\'s accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It\'s also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.',
+        } %}
+      {% endfor %}
+    {% endblock %}
+  {% endembed %}
+  </div>
+
+  {# Always Open #}
+  <div class="mb-5">
+    <p><strong>{{ 'Grouped'|t }}</strong> <em>{{ '(single expand)'|t }}</em></p>
+    {% embed 'accordion' with { alwaysOpen: true } only %}
+      {% block content %}
+        {% for i in 1..3 %}
+          {% include 'accordion-item' with {
+            icon: 'calendar-days',
+            title: 'Accordion Item #' ~ loop.index,
+            body: 'This is the first item\'s accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It\'s also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.',
+          } %}
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+  </div>
+
+  {# Always Open #}
+  <div class="mb-5">
+    <p><strong>{{ 'Grouped'|t }}</strong> <em>{{ '(mutiple expand)'|t }}</em></p>
+    {% embed 'accordion' %}
+      {% block content %}
+        {% for i in 1..3 %}
+          {% include 'accordion-item' with {
+            icon: 'calendar-days',
+            title: 'This is my title',
+            body: 'the body...',
+          } %}
+        {% endfor %}
+      {% endblock %}
+    {% endembed %}
+  </div>
+
+{% endblock %}
+
+{% block section_modal %}
+  {%
+    set tabs = {
+    'twig': {},
+    'php': {},
+    'storybook': {
+      'title': 'Stories',
+      'hilightLang': 'php',
+      'files': {
+        'Accordion': components_path ~ '/accordion/accordion.stories.yml',
+        'Accordion Item': components_path ~ '/accordion-item/accordion-item.stories.yml',
+      },
+    },
+  }
+  %}
+  {{ parent() }}
+{% endblock %}

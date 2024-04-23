@@ -1,0 +1,159 @@
+.featp-view {
+    h2,
+    h3 {
+        margin: 0;
+        font-family: var(--font-family-roboto);
+    }
+
+    h2 {
+       /* text-transform: uppercase; */
+        font-size: 20px;
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 14px;
+    }
+
+    .flex-row-3 {
+        padding-left: 0px;
+    }
+    
+    .image-holder {
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+
+    .eca_ex-ln-date {
+      font-size: 14px;  
+    }
+
+}
+
+
+.featured-story-image {
+    margin-top: 4%;
+    width: 90%;
+    height: auto;
+    position: relative;
+    display: block;
+    border-radius: 15px;
+    margin-left: 2px;
+    margin-bottom: 2%;
+    
+    @include bp(lg) {
+     width: 92%;
+     height: auto;
+     position: relative;
+     display: block;
+     border-radius: 15px;
+     margin-right: 25px;
+    }
+}
+
+.feat-inner-container{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    @include bp(lg) {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+      }
+}
+
+.feat-w-row {
+    margin-left: 7%;
+    margin-right: -10px;
+    margin-top: -5%;
+    @include bp(lg) {
+     margin-left: -10px;
+     margin-right: -10px;
+     margin-top: -6%;
+    }
+}
+
+.more-prg-h .feat-more-prg-h{
+    font-weight: bold;
+}
+
+.feat-moreprg-p{
+    color: #000;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    margin-right: 10px;
+}
+
+.feat-moreprg-link-text {
+    color: #0367cc;
+    margin-right: 4px;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 25px;
+}
+
+
+.feat-title-h {
+    color: #040000;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Merriweather, serif;
+    font-size: 40px !important;
+    line-height: 45px;
+    text-transform: capitalize;
+    margin: 0;
+    font-family: var(--font-family-roboto);
+}
+
+
+.feat-link-icon {
+    width: 14px;
+    padding-left: 2px;
+    margin-left: 103px;
+    margin-top: -20px;
+}
+
+.feat-title-text{
+    margin-left: 11%;
+    margin-bottom: -15%;
+    @include bp(sm) {
+        margin-left: 2%;  
+    }
+    @include bp(lg) {
+        margin-left: 2%;  
+    }
+}
+
+.feat-title-img{
+    margin-left: 0%;  
+    margin-bottom: 0%;
+    @include bp(sm) {
+        margin-left: 9%;  
+        margin-bottom: -5%;
+    }
+    @include bp(lg) {
+        margin-left: 0%;
+        margin-bottom: -4%;  
+    }
+}
+
+/* Aligning List of Programs */
+
+.view-list-of-programs {
+    .w-container .w-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+.view-list-of-programs {
+    margin-left: -66px;
+}

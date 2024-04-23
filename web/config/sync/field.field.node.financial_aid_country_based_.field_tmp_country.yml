@@ -1,0 +1,22 @@
+uuid: 7c38161d-1236-403d-9a54-bbd4b0520237
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmp_country
+    - node.type.financial_aid_country_based_
+  module:
+    - text
+id: node.financial_aid_country_based_.field_tmp_country
+field_name: field_tmp_country
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Tmp country'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+	<h3>{{ title }}</h3>
+{% endif %}
+<section class=" ">
+    <div class="pb-3 pt-4 nav-panel-color">
+        <div class="row three-col-expander">
+            {% for row in rows %}
+                <div class="col-sm-3 col-6 col-md-6 col-lg-3 mt-2 nav-items">
+                    <a href="{{ row.content['#row']._entity.field_nav_link[0].url }}" style="text-decoration: none; color: inherit;">
+                        <div class="card mb-3 border-0" id="CardOne-Navigation" style="margin: 10px;"> 
+                            <div class="row g-0">
+                                <div class="col-md-4"><img class="img-fluid rounded-3" src="{{ file_url(row['content']['#row']._entity.field_nav_image.entity.uri.value) }}" alt="{{row.content['#row']._entity.field_nav_image[0].alt }}"></div>
+                                <div class="col-md-8">
+                                    <div class="ms-3">
+                                        <h5 class="card-title">{{row.content['#row']._entity.title[0].value|raw}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

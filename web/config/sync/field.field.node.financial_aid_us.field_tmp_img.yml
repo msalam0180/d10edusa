@@ -1,0 +1,24 @@
+uuid: 522a0fc4-da0b-4d54-baaf-7b763749a2d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmp_img
+    - filter.format.plain_text
+    - node.type.financial_aid_us
+  module:
+    - text
+id: node.financial_aid_us.field_tmp_img
+field_name: field_tmp_img
+entity_type: node
+bundle: financial_aid_us
+label: 'Tmp img'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

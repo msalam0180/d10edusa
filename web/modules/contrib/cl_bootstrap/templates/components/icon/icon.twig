@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Renders an icon or a series of icons based on the provided name(s).
+ *
+ * Available variables:
+ * - name: The name of the icon(s) to render. If multiple names are provided, they will be
+ *   rendered as a series of icons separated by a small gap.
+ * - classes: (optional) Additional classes to apply to the icon(s).
+ */
+#}
+
+{% import _self as macros %}
+
+{% set name = name|split(' ') %}
+
+{% if name|length == 1 %}
+  {{ macros.icon(name|join(), classes) }}
+{% else %}
+  <span class="d-flex align-items-center gap-3 flex-wrap">
+    {% for key in name %}
+      {{ macros.icon(key, classes) }}
+    {% endfor %}
+  </span>
+{% endif %}
+
+{% macro icon(name, classes) %}
+  {%
+    set attributes = create_attribute({
+    'class': [
+      'icon',
+      'icon-' ~ name|replace({'.': '-'})|clean_class,
+    ]
+  })
+  %}
+  <i{{ attributes.addClass(classes) }} role="presentation">
+    <svg xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" viewBox="0 0 20 20">
+      <use xlink:href="#{{ name }}"></use>
+    </svg>
+  </i>
+{% endmacro %}
+

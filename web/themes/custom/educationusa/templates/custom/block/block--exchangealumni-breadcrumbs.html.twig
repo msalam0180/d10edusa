@@ -1,0 +1,52 @@
+{% extends "@bootstrap_barrio/block/block--system-menu-block.html.twig" %}
+{#
+/**
+ * @file
+ * Barrio's theme implementation for a menu block.
+ *
+ * @ingroup themeable
+ */
+#}
+{% set show_anchor = "show-" ~ attributes.id|clean_id %}
+{% set hide_anchor = "hide-" ~ attributes.id|clean_id %}
+{% block content %}
+  {# <div{{ content_attributes.addClass('content') }}> #}
+    {# When rendering a menu without label, render a menu toggle. #}
+    {# <div class="menu-toggle-target menu-toggle-target-show" id="{{ show_anchor }}"></div>
+    <div class="menu-toggle-target" id="{{ hide_anchor }}"></div> #}
+    {# <a class="menu-toggle" href="#{{ show_anchor }}">{{ 'Menu'|t }}</a>
+    <a class="menu-toggle menu-toggle--hide" href="#{{ hide_anchor }}">{{ 'Menu'|t }}</a> #}
+    {# {{ content }}
+  </div> #}
+  <div class="container text-style nav bd-highlight bg-white text-left w-100 p-3">
+    {# <ul class="breadcrumb container pb-0 ">
+      <li class="breadcrumb-item active ml-4"><a href="ExchangeProgramsHome.html" class="back small">Exchange Programs</a></li>
+      <li class="breadcrumb-item active  "><a href="ExchangeAlumni_Home.html" class="back small">Non U.S. Citizens</a></li>
+      <li class="breadcrumb-item active  "><a href="#" class="back small">Find Programs</a></li>
+      <li class="breadcrumb-item active fw-bold text-black "><a href="#" class="back small">Center Stage</a></li>
+    </ul> #}
+    {{ content }}
+
+{# {% if breadcrumb %}
+  <nav role="navigation" aria-label="breadcrumb" style="{{breadcrumb_divider}}">
+    <ol class="breadcrumb">
+    {% for item in breadcrumb %}
+      {% if item.url %}
+        <li class="breadcrumb-item">
+          <a href="{{ item.url }}">{{ item.text }}</a>
+        </li>
+      {% else %}
+        <li class="breadcrumb-item active">
+          {{ item.text }}
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ol>
+  </nav>
+{% endif %} #}
+
+  {# </div> #}
+  </div>
+{% endblock %}
+
+

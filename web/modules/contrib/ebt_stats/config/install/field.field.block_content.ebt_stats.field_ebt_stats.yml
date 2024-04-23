@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_stats
+    - field.storage.block_content.field_ebt_stats
+    - paragraphs.paragraphs_type.ebt_stats_item
+  module:
+    - entity_reference_revisions
+id: block_content.ebt_stats.field_ebt_stats
+field_name: field_ebt_stats
+entity_type: block_content
+bundle: ebt_stats
+label: 'EBT Stats'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ebt_stats_item: ebt_stats_item
+    negate: 0
+    target_bundles_drag_drop:
+      ebt_accordion:
+        weight: 8
+        enabled: false
+      ebt_carousel:
+        weight: 9
+        enabled: false
+      ebt_slick_slider:
+        weight: 10
+        enabled: false
+      ebt_slideshow:
+        weight: 11
+        enabled: false
+      ebt_stats_item:
+        weight: 12
+        enabled: true
+      ebt_tab:
+        weight: 13
+        enabled: false
+      ebt_timeline:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

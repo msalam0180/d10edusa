@@ -1,0 +1,29 @@
+uuid: 651856e9-e7c4-4059-99b6-a09c9b6c582d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_us_states
+    - node.type.financial_aid_us
+    - taxonomy.vocabulary.us_states
+id: node.financial_aid_us.field_us_states
+field_name: field_us_states
+entity_type: node
+bundle: financial_aid_us
+label: 'U.S. States & Territory'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      us_states: us_states
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

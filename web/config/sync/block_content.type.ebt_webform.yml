@@ -1,0 +1,10 @@
+uuid: b60be891-9b65-4e55-aec4-f5fbe7a5e08e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: k3H_UHOSAmFpJw6LHD2vdsX3dZLNA5kNrXGpam98bHg
+id: ebt_webform
+label: 'EBT Webform'
+revision: 0
+description: 'Extra Block Type (EBT): Webform'

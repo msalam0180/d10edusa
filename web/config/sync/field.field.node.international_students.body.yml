@@ -1,0 +1,24 @@
+uuid: 06bd9f0b-f89a-4008-8c69-51d4acb2f06a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.international_students
+  module:
+    - text
+id: node.international_students.body
+field_name: body
+entity_type: node
+bundle: international_students
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

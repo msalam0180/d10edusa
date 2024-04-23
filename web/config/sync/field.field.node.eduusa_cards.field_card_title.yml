@@ -1,0 +1,26 @@
+uuid: 09fa345f-89a5-42c2-8013-74326012bd31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_title
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.eduusa_cards
+  module:
+    - text
+id: node.eduusa_cards.field_card_title
+field_name: field_card_title
+entity_type: node
+bundle: eduusa_cards
+label: 'Card Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text

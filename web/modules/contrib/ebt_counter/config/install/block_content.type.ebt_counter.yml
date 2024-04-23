@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_counter
+label: 'EBT Counter'
+revision: 0
+description: 'Extra Block Type (EBT): Counter - Adds Counter with coffee cups, projects, case studies number, etc.'

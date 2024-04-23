@@ -1,0 +1,19 @@
+uuid: f8529f58-7b22-440e-9c68-f55c7c6f4f1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_center_website
+field_name: field_center_website
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

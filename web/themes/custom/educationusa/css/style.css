@@ -1,0 +1,23 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ */
+ .views-view-responsive-grid__item{
+	background-color: #efefef;
+	border:0.5px solid #63666A;
+	border-radius: 3px;
+	padding:20px;
+}
+
+.views-field-field-card-title{
+	font-weight: bold;
+	padding-bottom:10px;
+}
+
+.view-eduusa-card-grid .views-field-body{
+	font-size: 15px;
+}
+
+.views-view-responsive-grid__item.views-field-field-card-background-image{
+	background-color: transparent;
+}

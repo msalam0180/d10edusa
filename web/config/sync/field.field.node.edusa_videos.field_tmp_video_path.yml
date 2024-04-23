@@ -1,0 +1,19 @@
+uuid: fab49e17-e4de-44e9-bf42-1f62e3cd8aea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmp_video_path
+    - node.type.edusa_videos
+id: node.edusa_videos.field_tmp_video_path
+field_name: field_tmp_video_path
+entity_type: node
+bundle: edusa_videos
+label: 'Tmp video path'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

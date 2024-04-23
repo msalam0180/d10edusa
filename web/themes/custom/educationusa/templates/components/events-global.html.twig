@@ -1,0 +1,124 @@
+<article{{attributes.addClass(classes)}}>
+    <header>
+    </header>
+    <div{{content_attributes.addClass('node__content','clearfix')}}>
+        <div class="container events">
+            <div class="row">
+                <div class="col-md-8">
+
+                    <div class="row justify-content-left">  
+                        
+                         {% if node.field_featured_image.entity.field_media_image.entity.fileuri is not empty  %} 
+                              <div class="col-md-7">
+                                  {{ title_prefix }}
+                                  {% if label %}
+                                    <h2{{title_attributes.addClass('node__title')}}>
+                                    {{ label }}
+                                    <h4 class="fw-bold margin-top-adj">{{ node.field_advising_center.value }}</h4>
+                                    </h2>
+                                  {% endif %}
+                              </div>
+                              <div class="col-md-4">
+                                  <img class="img-thumbnail" src="{{ file_url(node.field_featured_image.entity.field_media_image.entity.fileuri) }}" alt="{{ node.field_featured_image.field_media_image.entity.alt }}">
+                              </div>
+                         {% else %}
+                              <div class="col-md-7" style="width:100%;">
+                                  {{ title_prefix }}
+                                  {% if label %}
+                                    <h2{{title_attributes.addClass('node__title')}}>
+                                    {{ label }}
+                                    <h4 class="fw-bold margin-top-adj">{{ node.field_advising_center.value }}</h4>
+                                    </h2>
+                                  {% endif %}
+                              </div>
+                         {% endif %}
+                    </div>
+                    <br>
+                    <!-- Event Details -->
+                    {% if content.body is not empty %}
+                        <div>
+                            {{ content.body }}
+                        </div>
+                    {% endif %}
+
+                        {% if node.field_more_information.uri is not empty %}
+                            <button class="btn btn-primary mt-2 mb-3">
+                            <a href="{{ node.field_more_information.uri }}">{{ node.field_more_information.title|default('More Information') }}</a>
+                            </button>
+                        {% else %}
+                        {% endif %}
+
+
+                </div>
+                <div class="col-md-4">
+                    <div class="row mb-2">
+                        <div>
+                            {% if node.field_audience.value is not empty %}
+                                <h6 class="mb-2"><b>FOR</b></h6>
+                                {{ content.field_audience.0|render|striptags }}
+                                <hr>
+                            {% endif %}
+                            {% if node.field_date.value is not empty %}
+                                <h6 class="mb-2"><b>DATE & TIME</b></h6>
+                                {{ node.field_date.value| date('l, F d, Y')  }}
+                                {% if node.field_date.end_value %}
+                                    &nbsp;to<br>{{ node.field_date.end_value| date('l, F d, Y')  }}
+                                {% endif %}
+                                {% if node.field_event_time is not empty %}
+                                         <br>{{ node.field_event_time.value }}
+                                {% endif %}
+                                {% if node.field_timezone is not empty %}
+                                         ({{ node.field_timezone.value }})
+                                {% endif %}
+                            {% else %}    
+                                <h6 class="mb-2"><b>DATE & TIME</b></h6>
+                                {{ node.field_tmp_date.value }} ({{ node.field_timezone.value }})  
+                            {% endif %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-2">
+                        <div>
+                        {% if content.field_location_type.0|render|striptags  == 'In-Person Event' %}
+                            <div>
+                                     <h6 class="mb-2"><b>LOCATION (IN-PERSON)</b></h6>
+                                    <address>
+                                        {% if node.field_tmp_address_line_one is not empty %}
+                                            {{ content.field_tmp_address_line_one.0|render|striptags }}<br>
+                                        {% endif %}
+                                        {% if node.field_tmp_address_line_two is not empty %}
+                                            {{ content.field_tmp_address_line_two.0|render|striptags }}<br>
+                                        {% endif %}
+                                        {% if node.field_event_city is not empty %}
+                                            {{ content.field_event_city.0 }},
+                                        {% endif %}
+                                        {% if node.field_event_country is not empty %}
+                                            {{ content.field_event_country.0|render|striptags }}
+                                        {% endif %}
+                                    </address>
+                            </div>
+                        {% elseif content.field_location_type.0|render|striptags  == 'Online Event' %}
+                            <div>
+                                {% if node.field_online_location %}
+                                    <h6 class="mb-2"><b>LOCATION (ONLINE)</b></h6>
+                                    <a href="{{ node.field_online_location.uri }}">Online Registration</a>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-2">
+                        <div>
+                           {% if node.field_registration_email is not empty	%}
+                                        <h6 class="mb-2"><b>CONTACT FOR MORE INFORMATION</b></h6>
+                                        <p><a href="mailto:{{ content.field_registration_email.0|render|striptags }}">Contact by e-mail</a></p>
+                                        <hr>
+                                {% endif %} 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

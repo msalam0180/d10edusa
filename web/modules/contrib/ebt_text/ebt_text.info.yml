@@ -1,0 +1,13 @@
+type: module
+name: 'Extra Block Types (EBT): Text'
+description: 'Adds Text block type with WYSIWYG editor.'
+core_version_requirement: ^9.3 || ^10
+package: 'Extra Block Types'
+
+dependencies:
+  - ebt_core:ebt_core
+
+# Information added by Drupal.org packaging script on 2023-10-19
+version: '1.4.2'
+project: 'ebt_text'
+datestamp: 1697706393

@@ -1,0 +1,8 @@
+uuid: fd575482-f00b-416b-951f-581296fe7fe7
+langcode: en
+status: true
+dependencies: {  }
+id: card_block
+label: 'Card Block'
+revision: 0
+description: 'This is to used for Cards with 2/3 Image with 1/3 text'

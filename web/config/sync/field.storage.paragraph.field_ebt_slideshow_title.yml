@@ -1,0 +1,21 @@
+uuid: 4b10e57f-f022-4573-8a6f-faf9a56d49f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: 56OfbIVnrkDV6Ei_ldSAYihwJbVyAJds03m4lf7fsqc
+id: paragraph.field_ebt_slideshow_title
+field_name: field_ebt_slideshow_title
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,12 @@
+title: Bootstrap/UI Kit/Accordions
+argTypes:
+  flush:
+    control: boolean
+  alwaysOpen:
+    control: boolean
+stories:
+  - name: Accordion
+    args:
+      classes: ''
+      alwaysOpen: ''
+      flush: ''

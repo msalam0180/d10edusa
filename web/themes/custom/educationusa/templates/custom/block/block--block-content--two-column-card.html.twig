@@ -1,0 +1,81 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main content
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{attributes.addClass(classes)}}>
+	{{ title_prefix }}
+	{% if label %}
+		<h2{{title_attributes}}>{{ label }}</h2>
+	{% endif %}
+	{{ title_suffix }}
+	{% block content %}
+		<section
+			class="py-5 pt-5 pb-5 pb-5">
+			{# <div class="container "> #}
+			<div class="text-center">
+				<small class="text-uppercase pb-0">
+					{{ content.field_card_main_title.0 }}
+				</small>
+				<p class="section-title " style="">{{ content.field_card_sub_title.0 }}
+				</p>
+			</div>
+			<div class="row pb-5" style="">
+				<div class="col-sm-12 col-12 col-md-12 col-xl-6 col-lg-6 ">
+					<img class="img-fluid  mt-4 card-height" src="{{file_url(content.field_card_image|field_target_entity.uri.value)}}" alt="{{content.field_card_image|field_raw('alt')}}">
+				</div>
+				<div class="col-sm-12 col-12 col-md-12 col-xl-6  col-lg-6  ">
+					<div class="shadow-sm mt-4 rounded-3 bg-white border p-4 card-height" id="Voices">
+						<small class="text-uppercase pb-0 mt-4">
+							{{ content.field_card_body_top_title.0 }}</small>
+						<h3 class="fw-bolder ">{{ content.field_card_body_title.0 }}
+						</h3>
+						<div>
+							<p >{{ content.field_card_body.0 }}
+							</p>
+							{% if content.field_card_link[0]['#url'] is not empty %}
+								<a href="{{ content.field_card_link[0]['#url'] }}" class="fw-bold ">{{ content.field_card_link[0]['#title'] }}</a>
+								<i class="fa fa-angle-right link-primary  "></i>
+							{% endif %}
+						</div>
+						{# <a href="{{ content.field_getting_there_link[0]['#url'] }}" class="fw-bold pt-2" style="cursor: pointer;">{{ content.field_getting_there_link[0]['#title'] }} <i class="fa fa-angle-right link-primary ml-3"></i></a> #}
+						{# <i class="fa fa-angle-right link-primary"></i> #}
+					</div>
+				</div>
+			</div>
+		</section>
+	{% endblock %}
+</div>

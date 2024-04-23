@@ -1,0 +1,15 @@
+type: module
+name: 'Extra Block Types (EBT): Webform Popup'
+description: 'Shows Webform Popup by click on button.'
+core_version_requirement: ^9.3 || ^10
+package: 'Extra Block Types'
+
+dependencies:
+  - ebt_basic_button:ebt_basic_button
+  - paragraphs:paragraphs
+  - webform:webform
+
+# Information added by Drupal.org packaging script on 2023-10-19
+version: '1.4.3'
+project: 'ebt_webform_popup'
+datestamp: 1697706452

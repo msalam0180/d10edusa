@@ -1,0 +1,30 @@
+uuid: 8b5b6dac-97cc-422f-b6b4-de4c884a08b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: foreign_institutions
+label: 'One Level'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  987b8ebe-9273-4ad7-9cf3-b6e1d72cef59:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 987b8ebe-9273-4ad7-9cf3-b6e1d72cef59
+    context_mapping:
+      node: node
+    bundles:
+      advising_center: advising_center
+      financial_aid_country_based_: financial_aid_country_based_
+      financial_aid_us: financial_aid_us
+      five_steps: five_steps
+      flex_page_layout: flex_page_layout
+      foreign_institutions: foreign_institutions
+      higher_education: higher_education
+      international_students: international_students
+      study: study
+selection_logic: and
+weight: -5
+relationships: {  }

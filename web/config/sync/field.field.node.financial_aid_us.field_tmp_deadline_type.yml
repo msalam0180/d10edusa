@@ -1,0 +1,24 @@
+uuid: ac0d62fd-2721-4d33-b7f3-8332300fede7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmp_deadline_type
+    - filter.format.plain_text
+    - node.type.financial_aid_us
+  module:
+    - text
+id: node.financial_aid_us.field_tmp_deadline_type
+field_name: field_tmp_deadline_type
+entity_type: node
+bundle: financial_aid_us
+label: 'Tmp deadline type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

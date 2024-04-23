@@ -1,0 +1,22 @@
+{# Hero Banner Media Section #}
+{% if content.field_hero_banner.0 is not empty %}
+    {% set media_item = content.field_hero_banner.0['#media'] %}
+    {% if media_item.field_media_image is not empty %}
+        {% set image_file = media_item.field_media_image.entity %}
+        {% set image_uri = image_file.fileuri %}
+        {% set image_source = file_url(image_uri) %}
+        {% set hero_image_alt = image_file.alt %}
+        <div{{ attributes.addClass(classes) }}>
+            <div class="position-relative">
+                <img class="img-fluid" src="{{ image_source }}" alt="{{ hero_image_alt }}">
+                {% if hero_overlay_text %}
+                    <div class="position-absolute py-3 w-100 text-left">
+                        <div class="container">
+                            <h1 class="h1-responsive"><strong>{{ hero_overlay_text }}</strong></h1>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+{% endif %}

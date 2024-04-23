@@ -1,0 +1,20 @@
+uuid: 54f296c6-ca10-4bc6-a8a1-439147c89c06
+langcode: en
+status: true
+dependencies:
+  theme:
+    - educationusa
+_core:
+  default_config_hash: Gsgdkrk-xQuRW003GS_IURQU5yjAEMrxU6qwcZxURD4
+id: educationusa_page_title
+theme: educationusa
+region: content
+weight: -15
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

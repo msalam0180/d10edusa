@@ -1,0 +1,16 @@
+<div class="mt-5">
+  {% if content.field_title %}
+    <div class="text-center">
+      {{ content.field_title }}
+    </div>
+  {% endif %}
+  <div class="navigation-chips mb-5 mt-4">
+    {% for item in content.field_button %}
+      {% if item['#url'] and item['#title'] %}
+        <a href="{{ item['#url'] }}" class="chip-link">
+          <div class="chip">{{ item['#title'] }}</div>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

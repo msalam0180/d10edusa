@@ -1,0 +1,25 @@
+uuid: c4c7a227-1a60-4891-8a2a-07ee44fe6c98
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-fourth-menu
+  module:
+    - system
+  theme:
+    - educationusa
+id: educationusa_footerfourthmenu
+theme: educationusa
+region: footer_fourth
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-fourth-menu'
+settings:
+  id: 'system_menu_block:footer-fourth-menu'
+  label: 'Footer fourth menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

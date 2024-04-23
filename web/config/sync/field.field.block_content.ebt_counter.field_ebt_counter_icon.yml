@@ -1,0 +1,31 @@
+uuid: 72a73b01-b4ab-4c36-b033-f32538a9dbe9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_counter
+    - field.storage.block_content.field_ebt_counter_icon
+    - media.type.image
+_core:
+  default_config_hash: AqwI810Vi6u8gzBeecbZAAUxasqqVBWGSG3usxdzT8Y
+id: block_content.ebt_counter.field_ebt_counter_icon
+field_name: field_ebt_counter_icon
+entity_type: block_content
+bundle: ebt_counter
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

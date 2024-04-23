@@ -1,0 +1,35 @@
+uuid: c65d5dba-f0ff-4b65-bfdc-58fdff00785d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ebt_carousel.field_ebt_carousel_caption
+    - field.field.paragraph.ebt_carousel.field_ebt_carousel_image
+    - paragraphs.paragraphs_type.ebt_carousel
+  module:
+    - media
+    - text
+_core:
+  default_config_hash: o21VkkuJdszAqDOznTVc61VIxPQJc6ocyXSW3qSQFHc
+id: paragraph.ebt_carousel.default
+targetEntityType: paragraph
+bundle: ebt_carousel
+mode: default
+content:
+  field_ebt_carousel_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ebt_carousel_image:
+    type: media_thumbnail
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

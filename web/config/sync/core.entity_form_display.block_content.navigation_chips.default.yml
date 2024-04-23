@@ -1,0 +1,47 @@
+uuid: 94238a5e-ea99-4909-806b-6e9632009081
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.navigation_chips
+    - field.field.block_content.navigation_chips.field_button
+    - field.field.block_content.navigation_chips.field_title
+  module:
+    - field_layout
+    - layout_discovery
+    - link
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: block_content.navigation_chips.default
+targetEntityType: block_content
+bundle: navigation_chips
+mode: default
+content:
+  field_button:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

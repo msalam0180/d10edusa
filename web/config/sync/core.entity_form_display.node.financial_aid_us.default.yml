@@ -1,0 +1,209 @@
+uuid: 73f0c3f1-ff61-4214-8006-5b2aa8eac61b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.financial_aid_us.body
+    - field.field.node.financial_aid_us.feeds_item
+    - field.field.node.financial_aid_us.field_deadline_type
+    - field.field.node.financial_aid_us.field_fb_share_description_short
+    - field.field.node.financial_aid_us.field_in_person_location
+    - field.field.node.financial_aid_us.field_institution_logo
+    - field.field.node.financial_aid_us.field_institution_name
+    - field.field.node.financial_aid_us.field_location_flag
+    - field.field.node.financial_aid_us.field_more_information
+    - field.field.node.financial_aid_us.field_scholarship_degree_levels
+    - field.field.node.financial_aid_us.field_scholarship_majors
+    - field.field.node.financial_aid_us.field_scholarship_url
+    - field.field.node.financial_aid_us.field_share_description_short
+    - field.field.node.financial_aid_us.field_tmp_authored_by
+    - field.field.node.financial_aid_us.field_tmp_deadline_type
+    - field.field.node.financial_aid_us.field_tmp_degree_level
+    - field.field.node.financial_aid_us.field_tmp_img
+    - field.field.node.financial_aid_us.field_tmp_location_flag
+    - field.field.node.financial_aid_us.field_tmp_us_states
+    - field.field.node.financial_aid_us.field_us_states
+    - node.type.financial_aid_us
+  module:
+    - field_layout
+    - layout_discovery
+    - link
+    - media_library
+    - path
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.financial_aid_us.default
+targetEntityType: node
+bundle: financial_aid_us
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 15
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_deadline_type:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_fb_share_description_short:
+    type: text_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_institution_logo:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_institution_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 100
+      placeholder: ''
+    third_party_settings: {  }
+  field_location_flag:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+  field_scholarship_degree_levels:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_scholarship_majors:
+    type: text_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_scholarship_url:
+    type: link_default
+    weight: 16
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_share_description_short:
+    type: text_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tmp_authored_by:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tmp_location_flag:
+    type: string_textfield
+    weight: 20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_us_states:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  feeds_item: true
+  field_in_person_location: true
+  field_more_information: true
+  field_tmp_deadline_type: true
+  field_tmp_degree_level: true
+  field_tmp_img: true
+  field_tmp_us_states: true
+  publish_on: true
+  publish_state: true
+  unpublish_on: true
+  unpublish_state: true

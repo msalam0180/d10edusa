@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/cl_components/-/raw/1.x/src/metadata.schema.json
+machineName: icon
+name: Icon
+status: READY
+componentType: atom
+description: Generic icon component.
+schemas:
+  props:
+    type: object
+    required:
+      - name
+    properties:
+      name:
+        type: string
+        title: Name
+        description: The name of the icon.
+        examples:
+          - Press
+          - Submit now

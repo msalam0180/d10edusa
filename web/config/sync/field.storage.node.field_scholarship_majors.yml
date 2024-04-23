@@ -1,0 +1,20 @@
+uuid: fadd8fb4-c05f-4319-ab3e-c4670e70f3a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_scholarship_majors
+field_name: field_scholarship_majors
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

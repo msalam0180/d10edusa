@@ -1,0 +1,25 @@
+uuid: d4dd13f8-59b8-4bcc-8a16-16f68e3f5f03
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - educationusa
+_core:
+  default_config_hash: 6mM7WI0fI8MVF2E5aQr0vL9_sDgPv6Cg5v-xLDoEhDk
+id: educationusa_site_branding
+theme: educationusa
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

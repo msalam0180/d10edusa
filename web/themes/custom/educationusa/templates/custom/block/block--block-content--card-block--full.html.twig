@@ -1,0 +1,30 @@
+<div class="container-fluid bg-white py-3">
+    <div class="container w-100">
+        <div class="row g-0">
+            <div class="col-md-8">
+                {% if content.field_card_image %}
+                    {% set image = content.field_card_image.0['#media'] %}
+                    {% if image %}
+                        <div class="image-container">
+                            <img src="{{ file_url(image.field_media_image.entity.fileuri) }}" alt="{{ image.field_media_image.alt }}" class="img-fluid w-100 rounded-start" />
+                        </div>
+                    {% endif %}
+                {% endif %}
+            </div>
+            <div class="col-md-4 d-flex">
+                {% set background_class = content.field_background_color[0]['#markup'] == 'Yes' ? 'bg-card-color text-white link-card-color' %}
+                <div class="{{ background_class }} text-container rounded-end d-flex align-items-center justify-content-center p-4">
+                <div class="text-container rounded-end d-flex align-items-center justify-content-center p-4">
+                    <div>
+                        {{ content.body }}
+                        {% if content.field_card_link %}
+                            {% set link_url = content.field_card_link.0['#url'] %}
+                            {% set link_title = content.field_card_link.0['#title'] %}
+                            <a href="{{ link_url }}">{{ link_title }}</a>
+                        {% endif %}                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

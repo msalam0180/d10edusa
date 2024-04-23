@@ -1,0 +1,68 @@
+uuid: 110aa706-92b7-4521-9dde-ae80f88d60b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.financial_aid_us.body
+    - field.field.node.financial_aid_us.feeds_item
+    - field.field.node.financial_aid_us.field_deadline_type
+    - field.field.node.financial_aid_us.field_fb_share_description_short
+    - field.field.node.financial_aid_us.field_in_person_location
+    - field.field.node.financial_aid_us.field_institution_logo
+    - field.field.node.financial_aid_us.field_institution_name
+    - field.field.node.financial_aid_us.field_location_flag
+    - field.field.node.financial_aid_us.field_more_information
+    - field.field.node.financial_aid_us.field_scholarship_degree_levels
+    - field.field.node.financial_aid_us.field_scholarship_majors
+    - field.field.node.financial_aid_us.field_scholarship_url
+    - field.field.node.financial_aid_us.field_share_description_short
+    - field.field.node.financial_aid_us.field_tmp_authored_by
+    - field.field.node.financial_aid_us.field_tmp_deadline_type
+    - field.field.node.financial_aid_us.field_tmp_degree_level
+    - field.field.node.financial_aid_us.field_tmp_img
+    - field.field.node.financial_aid_us.field_tmp_location_flag
+    - field.field.node.financial_aid_us.field_tmp_us_states
+    - field.field.node.financial_aid_us.field_us_states
+    - node.type.financial_aid_us
+  module:
+    - text
+    - user
+id: node.financial_aid_us.teaser
+targetEntityType: node
+bundle: financial_aid_us
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true
+  field_deadline_type: true
+  field_fb_share_description_short: true
+  field_in_person_location: true
+  field_institution_logo: true
+  field_institution_name: true
+  field_location_flag: true
+  field_more_information: true
+  field_scholarship_degree_levels: true
+  field_scholarship_majors: true
+  field_scholarship_url: true
+  field_share_description_short: true
+  field_tmp_authored_by: true
+  field_tmp_deadline_type: true
+  field_tmp_degree_level: true
+  field_tmp_img: true
+  field_tmp_location_flag: true
+  field_tmp_us_states: true
+  field_us_states: true

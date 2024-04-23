@@ -1,0 +1,31 @@
+{#
+/**
+* Options:
+*
+* Accordion:
+* - alwaysOpen: Makes accordion items stay open when another item is opened. (single expand)
+* - flush: Removes the default background-color, some borders, and some rounded corners to render accordions edge-to-edge with their parent container.
+* - classes: Additional utility classes added to the main accordion component.
+*
+* Accordion Item:
+* - icon: The name of the icon. [optional]
+* - title: Main title, triggers the expanding/collapsing functionality. Accepts HTML. [required]
+* - description: Appears below the title. Accepts HTML. [optional]
+* - body:  Accepts HTML. [optional]
+* - collapsed: Force collapse state. Default: false.
+*/
+#}
+
+{% embed 'accordion' with { alwaysOpen: true, flush: true, classes: 'my-extra-class' } %}
+  {% block content %}
+    {% for i in 1..3 %}
+      {% include 'accordion-item' with {
+        icon: 'calendar-days',
+        title: 'This is my title',
+        description: 'This is my description',
+        body: 'the body...',
+        collapsed: true
+      } %}
+    {% endfor %}
+  {% endblock %}
+{% endembed %}

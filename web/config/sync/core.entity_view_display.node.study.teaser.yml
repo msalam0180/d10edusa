@@ -1,0 +1,40 @@
+uuid: bb1d2b17-4b10-4b6d-ac10-4a783d461569
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.study.body
+    - field.field.node.study.field_bottom_nav
+    - field.field.node.study.field_hero
+    - field.field.node.study.field_step_type
+    - field.field.node.study.field_sub_nav
+    - field.field.node.study.field_top_nav
+    - node.type.study
+  module:
+    - text
+    - user
+id: node.study.teaser
+targetEntityType: node
+bundle: study
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_bottom_nav: true
+  field_hero: true
+  field_step_type: true
+  field_sub_nav: true
+  field_top_nav: true

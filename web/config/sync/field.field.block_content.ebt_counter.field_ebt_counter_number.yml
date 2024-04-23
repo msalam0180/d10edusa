@@ -1,0 +1,25 @@
+uuid: 06aab9fa-a01e-4a86-85c5-960d219f44b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_counter
+    - field.storage.block_content.field_ebt_counter_number
+_core:
+  default_config_hash: xYrvXZvhuSrLAZDblfVrQO8BT0HeZGJKPail-de9LYQ
+id: block_content.ebt_counter.field_ebt_counter_number
+field_name: field_ebt_counter_number
+entity_type: block_content
+bundle: ebt_counter
+label: Number
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

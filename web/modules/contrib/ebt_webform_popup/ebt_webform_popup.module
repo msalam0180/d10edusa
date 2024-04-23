@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * @file
+ * EBT Tabs module file.
+ */
+
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ebt_webform_popup_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ebt_webform_popup module.
+    case 'help.page.ebt_webform_popup':
+
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Webform Popup module provides ability to add Webform in popup. The button and popup are customizable with Settings form.') . '</p>';
+      $output .= '<p>' . t('This module will be helpful for creating Forms in popup, for example; Contact Us form.') . '</p>';
+      $output .= '<h3>' . t('Creating the new custom block') . '</h3>';
+      $output .= '<ul>';
+      $output .= '<li>' . t('After installing and configuring the default settings you can go ahead and create the custom block at') . '</li>';
+      $output .= '<li>' . t('Administration » Structure » Block layout » Add custom block') . '</li>';
+      $output .= '<li>' . t('You can fill in the fields, select the webform that you need to use, choose the design options and save') . '</li>';
+      $output .= '<li>' . t('Now you can place the new custom block using the default block regions or using Layout Builder in a few clicks.') . '</li>';
+      $output .= '</ul>';
+      $output .= '<h3>' . t('EBT Core') . '</h3>';
+      $output .= '<p>' . t('EBT modules provide the ability to add blocks in the layout builder in a few clicks. You can install separate block types from this bunch of EBT modules:') . '</p>';
+      $output .= '<li>' . t('<a href="@ebt_accordion@">EBT Accordion / FAQ</a>', ['@ebt_accordion@' => 'https://www.drupal.org/project/ebt_accordion']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_basic_button@">EBT Bootstrap Button</a>', ['@ebt_basic_button@' => 'https://www.drupal.org/project/ebt_basic_button']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_bootstrap_button@">EBT Bootstrap Button</a>', ['@ebt_bootstrap_button@' => 'https://www.drupal.org/project/ebt_bootstrap_button']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_cta@">EBT Call to Action</a>', ['@ebt_cta@' => 'https://www.drupal.org/project/ebt_cta']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_carousel@">EBT Carousel</a>', ['@ebt_carousel@' => 'https://www.drupal.org/project/ebt_carousel']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_counter@">EBT Counter</a>', ['@ebt_counter@' => 'https://www.drupal.org/project/ebt_counter']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_image_gallery@">EBT Image Gallery</a>', ['@ebt_image_gallery@' => 'https://www.drupal.org/project/ebt_image_gallery']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_micromodal@">EBT Micromodal</a>', ['@ebt_micromodal@' => 'https://www.drupal.org/project/ebt_micromodal']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_quote@">EBT Quote</a>', ['@ebt_quote@' => 'https://www.drupal.org/project/ebt_quote']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_slick_slider@">EBT Slick Slider</a>', ['@ebt_slick_slider@' => 'https://www.drupal.org/project/ebt_slick_slider']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_slideshow@">EBT Slideshow</a>', ['@ebt_slideshow@' => 'https://www.drupal.org/project/ebt_slideshow']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_stats@">EBT Stats</a>', ['@ebt_stats@' => 'https://www.drupal.org/project/ebt_stats']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_tabs@">EBT Tabs</a>', ['@ebt_tabs@' => 'https://www.drupal.org/project/ebt_tabs']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_text@">EBT Text</a>', ['@ebt_text@' => 'https://www.drupal.org/project/ebt_text']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_timeline@">EBT Timeline</a>', ['@ebt_timeline@' => 'https://www.drupal.org/project/ebt_timeline']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_webform@">EBT Webform<</a>', ['@ebt_webform@' => 'https://www.drupal.org/project/ebt_webform']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_webform_popup@">EBT Webform Popup</a>', ['@ebt_webform_popup@' => 'https://www.drupal.org/project/ebt_webform_popup']) . '</li>';
+      $output .= '</ul>';
+      $output .= '<h3>' . t('External Documentation') . '</h3>';
+      $output .= '<p>' . t('You can also view the EBT documentation at Drupal Book: <a href="@drupalbook_external_documentation@">@drupalbook_external_documentation@</a>', [
+        '@drupalbook_external_documentation@' => 'https://drupalbook.org/ebt',
+      ]) . '</p>';
+
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function ebt_webform_popup_preprocess_block(&$variables) {
+  if (empty($variables['elements']['content']['#block_content']) ||
+    $variables['elements']['content']['#block_content']->bundle() !== 'ebt_webform_popup') {
+    return;
+  }
+
+  if (!empty($variables['content']['field_ebt_webform_popup_form'][0]['#webform'])) {
+    $variables['form_url'] = $variables['content']['field_ebt_webform_popup_form'][0]['#webform']->toUrl();
+  }
+
+  $service = \Drupal::service('ebt_basic_button.generate_custom_css');
+  $ebt_settings = $variables['content']['#block_content']->field_ebt_settings->getValue();
+
+  if (!empty($variables['base_plugin_id']) && $variables['base_plugin_id'] == 'inline_block') {
+    $block_class = 'block-revision-id-' . $variables['configuration']['block_revision_id'];
+  }
+  else {
+    $block_class = str_replace(':', '', $variables['plugin_id']);
+    $block_class = str_replace('_', '-', $block_class);
+    $block_class = 'ebt-block-' . $block_class;
+  }
+  $variables['button_styles'] = $service->generateFromSettings($ebt_settings[0]['ebt_settings'], $block_class);
+
+  $data_dialog_options = [
+    'width' => str_replace('px', '', $ebt_settings[0]['ebt_settings']['popup_settings']['popup_width']),
+    'height' => 'auto',
+  ];
+
+  if (!empty($ebt_settings[0]['ebt_settings']['popup_settings']['popup_height'])) {
+    $data_dialog_options['height'] = str_replace('px', '', $ebt_settings[0]['ebt_settings']['popup_settings']['popup_height']);
+  }
+
+  if (!empty($ebt_settings[0]['ebt_settings']['popup_settings']['popup_title'])) {
+    $data_dialog_options['title'] = $ebt_settings[0]['ebt_settings']['popup_settings']['popup_title'];
+  }
+  $variables['data_dialog_options'] = Json::encode($data_dialog_options);
+
+  if (!empty($ebt_settings[0]['ebt_settings']['popup_settings']['popup_type'])) {
+    $variables['data_dialog_type'] = $ebt_settings[0]['ebt_settings']['popup_settings']['popup_type'];
+  }
+  else {
+    $variables['data_dialog_type'] = 'modal';
+  }
+
+  if (!empty($ebt_settings[0]['ebt_settings']['button_text'])) {
+    $variables['button_text'] = $ebt_settings[0]['ebt_settings']['button_text'];
+  }
+  else {
+    $variables['button_text'] = t('Contact Us');
+  }
+}

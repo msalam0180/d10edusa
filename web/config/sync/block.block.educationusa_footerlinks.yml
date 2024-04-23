@@ -1,0 +1,25 @@
+uuid: e470863e-89bc-4a45-bb30-d75b0e5bdcce
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:ebt_text:9c41d8c9-aa70-43d9-b904-448a2c7c63cc'
+  module:
+    - block_content
+  theme:
+    - educationusa
+id: educationusa_footerlinks
+theme: educationusa
+region: footer_fifth
+weight: 0
+provider: null
+plugin: 'block_content:9c41d8c9-aa70-43d9-b904-448a2c7c63cc'
+settings:
+  id: 'block_content:9c41d8c9-aa70-43d9-b904-448a2c7c63cc'
+  label: 'Footer Links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

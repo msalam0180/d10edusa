@@ -1,0 +1,8 @@
+title: Bootstrap/UI Kit/Accordions
+stories:
+  - name: Accordion Item
+    args:
+      icon: calendar-days
+      title: Title
+      description: Description text
+      body: Accordion, long body text.

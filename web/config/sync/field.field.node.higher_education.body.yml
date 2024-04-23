@@ -1,0 +1,24 @@
+uuid: 840aa308-52bc-4225-9fa5-a0830de3425b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.higher_education
+  module:
+    - text
+id: node.higher_education.body
+field_name: body
+entity_type: node
+bundle: higher_education
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

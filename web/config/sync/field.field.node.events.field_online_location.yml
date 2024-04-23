@@ -1,0 +1,23 @@
+uuid: ac33d2ee-5e3b-4f4c-b0ea-5808b30fc455
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_online_location
+    - node.type.events
+  module:
+    - link
+id: node.events.field_online_location
+field_name: field_online_location
+entity_type: node
+bundle: events
+label: 'Online Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

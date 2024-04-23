@@ -1,0 +1,10 @@
+uuid: 518c12d0-b70c-4e4c-a1c4-97b4b27809b7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: k9yRFHPv-0cHC5GXpNilObPbaFf1SBRHn-asOPpDpPA
+id: ebt_cta
+label: 'EBT Call to Action (CTA)'
+revision: 1
+description: 'Extra Block Type (EBT): Call to Action (CTA)'

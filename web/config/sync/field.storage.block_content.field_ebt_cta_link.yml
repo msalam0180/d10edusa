@@ -1,0 +1,21 @@
+uuid: a1747883-2ca7-4984-a76c-04480dad5815
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: rx7cMICk6v3oU3DQBozX_KkK6bXWe9gJNBM2H0aC6n4
+id: block_content.field_ebt_cta_link
+field_name: field_ebt_cta_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

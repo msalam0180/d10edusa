@@ -1,0 +1,17 @@
+{# Hero Image Section #}
+{% if content.field_hero.0 is not empty %}
+    {% set image_uri = content.field_hero.0['#item'].entity.uri.value %}
+    {% set image_source = file_url(image_uri) %}
+    <div{{ attributes.addClass(classes) }}>
+        <div class="position-relative">
+            <img class="img-fluid" src="{{ image_source }}" alt="{{ hero_image_alt }}">
+            {% if hero_overlay_text %}
+                <div class="position-absolute py-3 w-100 text-left">
+                    <div class="container">
+                        <h1 class="h1-responsive"><strong>{{ hero_overlay_text }}</strong></h1>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}

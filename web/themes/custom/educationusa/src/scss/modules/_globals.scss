@@ -1,0 +1,332 @@
+// @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/tooltipster/2.3.0/css/reset.min.css");
+// @import url("/libraries/cdnjs/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Merriweather:700|Roboto:400,300,700,500");
+/* The following line is used to measure usage of this code in production. For more info see our usage billing page */
+// @import url("https://px.animaapp.com/632905d1725dd968949bf2a1.632905d20f9ac6419d7ac6aa.ylSNPUF.hcp.png");
+
+@font-face {
+  font-family: "SegoeUI-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Segoe UI.ttf") format("truetype");
+}
+
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.overlap-group {
+  height: 84px;
+  position: relative;
+  width: 358px;
+}
+
+.main-menu {
+  align-items: flex-start;
+  background-image: url(../img/path-16-1@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  gap: 15px;
+  height: 84px;
+  left: 0;
+  min-width: 358px;
+  padding: 14px 56px;
+  position: absolute;
+  top: 0;
+}
+
+.usa-flag {
+  height: 29px;
+  margin-top: 3px;
+  object-fit: cover;
+  width: 47px;
+}
+
+.dos-icon {
+  border-radius: 20px;
+  height: 36px;
+  object-fit: cover;
+  width: 36px;
+}
+
+.united-states-department-of-state {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: 16px;
+  font-weight: 400;
+  left: 53px;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: absolute;
+  top: 52px;
+  white-space: nowrap;
+}
+
+.flex-col {
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 19.5px;
+  min-height: 44px;
+  width: 1440px;
+}
+
+// .flex-row {
+//   align-self: flex-end;
+//   gap: 39px;
+//   height: 36px;
+//   min-width: 1428px;
+// }
+
+.home-exchang {
+  align-self: flex-end;
+  color: #eeefee;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 18px;
+  min-height: 26px;
+  // min-width: 1357px;
+  white-space: nowrap;
+}
+
+.icon-search {
+  height: 32px;
+  object-fit: cover;
+  width: 32px;
+}
+
+.line-12 {
+  height: 5px;
+  object-fit: cover;
+  width: 90px;
+}
+
+.x7 {
+  align-self: center;
+  background-image: url(../img/rectangle-3-1@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 44px;
+  margin-bottom: 9.59px;
+  width: 67px;
+}
+
+.flex-col-1 {
+  align-self: flex-end;
+  gap: 1px;
+  margin-bottom: -7.5px;
+  margin-left: 20px;
+  min-height: 69px;
+  width: 329px;
+}
+
+.find-programs {
+  letter-spacing: 0;
+  line-height: 18px;
+  min-height: 26px;
+  white-space: nowrap;
+}
+
+.where-does-it-come-f {
+  letter-spacing: 0;
+  line-height: 28px;
+  min-height: 334px;
+  width: 204px;
+}
+
+.exchange-experience {
+  flex: 1;
+  height: 26px;
+  line-height: 18px;
+  margin-right: -2px;
+  margin-top: 3px;
+  max-height: 26px;
+}
+
+.where-does-it-come-f-1 {
+  flex: 1;
+  height: 166px;
+  margin-bottom: 3px;
+  margin-right: 1px;
+  max-height: 166px;
+}
+
+.flex-col-2 {
+  align-self: center;
+  gap: 2px;
+  min-height: 390px;
+  width: 205px;
+}
+
+.exchange-experience-1 {
+  letter-spacing: 0;
+  line-height: 18px;
+  min-height: 26px;
+  white-space: nowrap;
+}
+
+.where-does-it-come-f-2 {
+  min-height: 362px;
+  width: 204px;
+}
+
+.where-does-it-come-f-3 {
+  margin-top: -3px;
+  min-height: 362px;
+  width: 204px;
+}
+
+.x9 {
+  height: 40px;
+  margin-bottom: 1.0px;
+  object-fit: cover;
+  width: 40px;
+}
+
+.x10 {
+  border-radius: 20px;
+  height: 40px;
+  margin-bottom: 1.0px;
+  margin-left: 15px;
+  object-fit: cover;
+  width: 40px;
+}
+
+.x11 {
+  height: 40px;
+  margin-bottom: 1.0px;
+  margin-left: 11px;
+  object-fit: cover;
+  width: 40px;
+}
+
+.x12 {
+  height: 45px;
+  margin-left: 12px;
+  object-fit: cover;
+  width: 45px;
+}
+
+.icon-instagram {
+  border-radius: 16px;
+  height: 40px;
+  margin-left: 15px;
+  margin-top: 1.0px;
+  object-fit: cover;
+  width: 40px;
+}
+
+.exchange {
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.flex {
+  align-items: flex-start;
+  display: flex;
+}
+
+.flex-col-3 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-grid {
+  display: flex;
+  position: absolute;
+}
+
+.where-does-it-come-f-4 {
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.tion-container {
+  background-color: #f7f7f7;
+  // border: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #b1afaf;
+  // height: 884px;
+  // height: 158px;
+  // position: relative;
+  // width: 2580px;
+}
+
+.bureau-of-educationa-1 {
+  letter-spacing: 0;
+  line-height: 14px;
+  min-height: 21px;
+  white-space: nowrap;
+}
+
+.exchange-programs-1 {
+  letter-spacing: 0;
+  line-height: 34px;
+  min-height: 47px;
+  white-space: nowrap;
+}
+
+.image-2 {
+  height: 46px;
+  left: 1921px;
+  object-fit: cover;
+  position: absolute;
+  top: 103px;
+  width: 240px;
+}
+
+.events button.btn.btn-primary {
+  &:hover {
+    background-color: #031a4f;
+  }
+  a {
+  color: white;
+  }
+  background-color: #1b518e;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+  padding: 0.9375rem 1.5625rem;
+  
+}
+
+.image-container img {
+  max-height: 100%;
+  object-fit: contain; 
+  vertical-align: middle !important;
+}
+
+.bg-card-color {
+  background-color: #031a4f;
+}
+
+.bg-card-dColor {
+  color: black !important;
+}

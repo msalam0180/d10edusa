@@ -1,0 +1,13 @@
+name: 'Component Libraries: Bootstrap - UI Kit'
+description: Connector module for displaying components inside the bootstrap UI Kit module.
+type: module
+core_version_requirement: ^9 || ^10
+package: 'User interface'
+dependencies:
+  - bootstrap_ui_kit:bootstrap_ui_kit
+  - cl_bootstrap:cl_bootstrap
+
+# Information added by Drupal.org packaging script on 2023-02-14
+version: '1.0.0-alpha1'
+project: 'cl_bootstrap'
+datestamp: 1676412687

@@ -1,0 +1,19 @@
+uuid: 6ceedb98-bfe9-4260-a46b-2a4921bdf89b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hei_fax_number
+    - node.type.advising_center
+id: node.advising_center.field_hei_fax_number
+field_name: field_hei_fax_number
+entity_type: node
+bundle: advising_center
+label: 'HEI Fax Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

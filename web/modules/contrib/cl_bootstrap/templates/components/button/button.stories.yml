@@ -1,0 +1,37 @@
+title: Bootstrap/UI Kit/Buttons & Links
+argTypes:
+  style:
+    options:
+      Primary: primary
+      Secondary: secondary
+      Light: light
+      Dark: dark
+    control: select
+  size:
+    options:
+      Small: sm
+      Large: lg
+    control: select
+  iconPlacement:
+    options:
+      Before: before
+      After: after
+      Above: above
+      Below: below
+    control: radio
+stories:
+  - name: Buttons
+    args:
+      text: My Button Text
+      style: primary
+      size: lg
+      classes: ''
+      outlined: false
+      disabled: false
+      iconName: address-book
+      iconClasses: icon-lg
+      iconGap: 2
+      iconPlacement: after
+      dataBsToggle: modal
+      dataBsTarget: '#exampleModal'
+      ariaExpanded: false

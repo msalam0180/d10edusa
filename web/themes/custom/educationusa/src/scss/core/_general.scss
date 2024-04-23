@@ -1,0 +1,240 @@
+/*  Start General */
+
+html {
+  height: 100%;
+}
+
+html, body {
+  min-height: 100%;
+  width: 100%;
+  margin: 0; padding: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background: white;
+  overflow-x: hidden !important;
+
+  @include bp(xs) {
+    font-size: 18px;
+  }
+}
+
+iframe, object, embed {
+  max-width: 100%;
+}
+
+// img {
+//   max-width: 100%;
+//   height: auto;
+//   display: block;
+//   margin: 0 auto;
+// }
+
+//Affecting BS Icon and Images
+
+input {
+  border-radius: 0;
+}
+
+button {
+  @include clear-focus();
+}
+
+.caption {
+  font-size: 0.875rem;
+}
+
+
+.browserDetect {
+  &-Container {
+    position: fixed;
+    margin: 0px auto;
+    padding: 25px;
+    background-color: rgba(0,0,0, 0.8);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 999999999;
+    top: 0px;
+    left: 0px;
+  }
+
+    
+    &-Mess{
+      position: relative;
+      margin: 100px auto;
+      background-color: $avalon-white;
+      color: $avalon-blue;
+      max-width: 400px;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 25px;
+      padding: 20px;
+      cursor: pointer;
+
+      &-Name,
+      &-Version,
+      &-Update,
+      &-Click {
+        width: 100%;
+        text-align: center;
+        @include sofie_font_light;
+        font-size:24px;
+      }
+      &-Update {
+        font-size:14px;
+      }
+
+      &-Click{
+        font-size:16px;
+        text-decoration: underline;
+      }
+    }
+}
+
+
+.footer-para-container {
+  position: relative; 
+  margin: 10px auto;
+  position: relative;
+  margin: 0px auto;
+  background: lightblue;
+}
+
+.footer-para-p {
+  font-family: sofia-pro-soft, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  max-width: 750px;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+
+  a {
+    color: white !important;
+    text-decoration: underline !important;
+}
+
+  @include bp(sm) {
+    text-align: center;
+  }
+}
+
+.reduceFooterPM {
+  padding: 25px 0 !important;
+}
+
+
+
+.reducePX{
+  font-size: 30px !important;
+  line-height: 34px !important;
+  // max-width: 700px !important;
+  margin-bottom: 20px !important;
+  
+  @include bp(sm) {
+    font-size: 26px !important;
+    line-height: 30px !important;
+  }
+}
+
+.textAleft,
+.textARight,
+.textACenter {
+  color: $avalon-med-grey !important;
+
+}
+
+.textALeft {
+  text-align: center !important;
+  padding: 10px 0;
+  @include bp(sm) {
+    padding: 0;
+  text-align: left !important;
+  }
+}
+
+.textARight {
+  text-align: center !important;
+  padding: 10px 0;
+  @include bp(sm) {
+    padding: 0;
+  text-align: right !important;
+  }
+}
+
+.textACenter {
+  text-align: center !important;
+  padding: 10px 0;
+  @include bp(sm) {
+    padding: 0;
+  text-align: center !important;
+  }
+}
+
+.container-main {
+  max-width: 100% !important;
+  padding: 0;
+} 
+
+#navbar-main {
+  padding-bottom: 0 !important;
+}
+
+.node--type-non-u-s-citizens,
+.node--type-u-s-citizens,
+.node--type-find-programs {
+  .node__content {
+    margin-top: 14px !important;
+  }
+}
+
+.hb-text-block {
+  .eca_ex-programs-main {
+    padding: 0 5% !important;
+  }
+}
+
+.node--type-programs {
+  .eca_ex-programs-main {
+  padding: 3.5%;
+    @include bp(sm) {
+      padding: 2.5% !important;
+    }
+  }
+}
+
+.node--type-non-u-s-citizens,
+.node--type-u-s-citizens {
+  .eca_ex-programs-main {
+    display: flex !important;
+    flex-direction: row !important;    
+    max-width: 1000px;
+    img {
+      margin: 0;
+    }
+  }
+}
+
+// .views-slideshow-controls-bottom,
+// .views_slideshow_cycle_main,
+.eca_ex-programs-main,
+.eca_ex-ln,
+.eca-exp,
+.title-of-page,
+#block-eca-exchanges-breadcrumbs {
+  // padding: 0 5%; Removed to expand breadcrumb bar fullwidth
+
+  @include bp(md) {
+    // padding: 0 15%; Removed to expand breadcrumb bar fullwidth
+  }
+}
+
+.navbar {
+  padding: 0 !important;
+}
+
+/*  End General */

@@ -1,0 +1,19 @@
+uuid: 02ab6399-5134-4029-bbbc-f7e7b6b61319
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.navigation_chips
+    - field.storage.block_content.field_title
+id: block_content.navigation_chips.field_title
+field_name: field_title
+entity_type: block_content
+bundle: navigation_chips
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

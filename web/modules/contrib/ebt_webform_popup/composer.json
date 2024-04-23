@@ -1,0 +1,18 @@
+{
+    "name": "drupal/ebt_webform_popup",
+    "type": "drupal-module",
+    "description": "Extra Block Types (EBT): Webform Popup",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ebt_webform_popup",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ebt_webform_popup",
+        "source": "https://git.drupalcode.org/project/ebt_webform_popup"
+    },
+    "require": {
+        "drupal/ebt_basic_button": "^1.4",
+        "drupal/paragraphs": "^1.0",
+        "drupal/webform": "^6.0"
+    }
+}

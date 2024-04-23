@@ -1,0 +1,218 @@
+<article{{attributes.addClass(classes)}}>
+    <header>
+    </header>
+    <div{{content_attributes.addClass('node__content','clearfix')}}>
+        <div class="container events">
+            <div class="row">
+                <div class="col-md-8">
+                    
+                      <div class="row justify-content-left">   
+                       
+                         {% if node.field_featured_image.value is not empty %} 
+                              <div class="col-md-7">
+                                  {{ title_prefix }}
+                                  {% if label %}
+                                    <h2{{title_attributes.addClass('node__title')}}>
+                                    {{ label }}
+                                    </h2>
+                                  {% endif %}
+                              </div>
+                              <div class="col-md-4">
+                                  {# Media Widget block in the Advising Center List view is being used below to display a carousel if image and video  #}
+                                  {{ drupal_view('advising_center_list', 'media_widget', node.id) }}
+                              </div>
+                         {% elseif node.field_tmp_img.value is not empty  %}
+                              <div class="col-md-7">
+                                  {{ title_prefix }}
+                                  {% if label %}
+                                    <h2{{title_attributes.addClass('node__title')}}>
+                                    {{ label }}
+                                    </h2>
+                                  {% endif %}
+                              </div>
+                              <div class="col-md-4">
+                                    <img class="img-thumbnail" src="/educationusa/web/sites/default/files/styles/carousel_image_768x434/public/field_carousel_media/{{ node.field_tmp_img.value }}" alt="Advising Center">
+                              </div>
+                         {% else %}
+                              <div class="col-md-7" style="width:100%;">
+                                  {{ title_prefix }}
+                                  {% if label %}
+                                    <h2{{title_attributes.addClass('node__title')}}>
+                                    {{ label }}
+                                    </h2>
+                                  {% endif %}
+                              </div>
+                         {% endif %}
+
+                        
+                      </div>  
+                      {% if content.body %}
+                      <div class="row">
+                         {{ content.body[0] }} 
+                      </div>
+                      {% endif %}
+                      
+                      
+                    <!--Accordions Start-->
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                    {% if node.field_center_services is not empty %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <b>Services</b>
+                        </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{ node.field_center_services.value|t() }}</div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if node.field_center_special_programs is not empty %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <b>Special Programs</b>
+                        </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{ node.field_center_special_programs.value|t() }}</div>
+                        </div>
+                    </div>
+                     {% endif %}
+                     {% if node.field_center_program_highlights is not empty %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <b>Program Highlights</b>
+                        </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{ node.field_center_program_highlights.value|t() }}</div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            <b>Scholarships</b>
+                        </button>
+                        </h2> 
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{ drupal_view('financial_country_and_us', 'advisingcenter_scholarship_accordion', node.field_location.target_id) }}</div>
+                        </div>                      
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            <b>Events</b>
+                        </button>
+                        </h2> 
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{ drupal_view('event_list', 'event_accordion_advising_center', node.field_location.target_id) }}</div>
+                        </div>                      
+                    </div>
+                    <br><br>
+                    </div>
+                    <!--Accordions End-->
+                </div>
+                <div class="col-md-4">
+                    <div class="row mb-2">
+                        <div>
+                            {% if node.field_center_country_flag is not empty %}
+                                        <img class="img-thumbnail" src="/educationusa/web/sites/default/files/styles/thumbnail/public/field_country_flag/{{ content.field_center_country_flag.0 }}" alt="National Flag">
+                                         <hr>
+                            {% endif %}
+                            {% if node.field_walk_up_address is not empty %}
+                                        <h6 class="mb-2"><b>WALK-IN ADDRESS</b></h6>
+                                        {{ content.field_walk_up_address.0 }}
+                                         <hr>
+                            {% endif %}
+                            {% if node.field_public_mailing_address is not empty	%}
+                                        <h6 class="mb-2"><b>MAILING ADDRESS</b></h6>
+                                        {{ content.field_public_mailing_address.0 }}
+                                        <hr>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div>
+                            {% if node.field_center_hours is not empty	%}
+                                        <h6 class="mb-2"><b>CENTER HOURS</b></h6>
+                                        {{ node.field_center_hours.value|t() }}
+                                        <hr>
+                            {% endif %}
+                                 
+                        </div>
+                    </div>
+                   <div class="row mb-2">
+                        <div>
+                                {% if node.field_virtual_hours  is not empty	%}
+                                        <h6 class="mb-2"><b>VIRTUAL HOURS</b></h6>
+                                        {{ node.field_virtual_hours.value|t() }}
+                                        <hr>
+                                {% endif %}
+                                 
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div>
+                                {% if node.field_phone_number is not empty	%}
+                                        <h6 class="mb-2"><b>PHONE</b></h6>
+                                        {{ content.field_phone_number.0 }}
+                                        <hr>
+                                {% endif %}
+                                {% if node.field_fax_number is not empty	%}
+                                        <h6 class="mb-2"><b>FAX NUMBER</b></h6>
+                                        {{ content.field_fax_number.0 }}
+                                        <hr>
+                            {% endif %}
+                                 
+                        </div>
+                    </div>
+                     <div class="row mb-2">
+                        <div>
+                                {% if node.field_center_website is not empty	%}
+                                        <h6 class="mb-2"><b>WEBSITE (URL)</b></h6>
+                                        <a href="{{ content.field_center_website.0|render|striptags }}">{{ content.field_center_website.0|render|striptags }}</a>
+                                        <hr>
+                                {% endif %}
+                                 
+                        </div>
+                    </div>
+                    {# Hiding Contact E-mail until we receive further guidance from Education USA office #}
+                    {#
+                    <div class="row mb-2">
+                         <div>  {% if node.field_center_email is not empty	%}
+                                        <h6 class="mb-2"><b>E-MAIL</b></h6>
+                                        <a href="mailto:{{ content.field_center_email.0|render|striptags }}">Click here to e-mail this Center</a>
+                                        <hr>
+                                {% endif %}
+                        </div>
+                    </div>
+                    #}
+                     <div class="row mb-2">
+                        <div>
+                                {% if node.field_center_facebook_group is not empty	%}
+                                        <h6 class="mb-2"><b>FACEBOOK GROUP (URL)</b></h6>
+                                        <a href="{{ content.field_center_facebook_group.0|render|striptags }}">{{ content.field_center_facebook_group.0|render|striptags }}</a>
+                                        <hr>
+                                {% endif %}
+                        </div>
+                    </div>
+                     <div class="row mb-2">
+                        <div>
+                                        <h6 class="mb-2"><b>FOLLOW THIS CENTER</b></h6>
+                                        <p class="advising-center-social-media-icons">
+                                        {% if node.field_center_facebook_page is not empty %}<a href="{{ content.field_center_facebook_page.0|render|striptags }}"><img alt="Follow us on Facebook" class="social-media-x10" src="/educationusa/web/themes/custom/educationusa/images/10-1@1x.png"></a>{% endif %}
+                                        {% if node.field_center_twitter_account is not empty %}<a href="https://twitter.com/{{ content.field_center_twitter_account.0|render|striptags }}"><img alt="Follow us on Twitter" class="social-media-x11" src="/educationusa/web/themes/custom/educationusa/images/11-2@1x.png"></a>{% endif %}
+                                        {% if node.field_center_blog is not empty %}<a href="{{ content.field_center_blog.0|render|striptags }}"><img alt="Read our Blog" class="social-media-x12" src="/educationusa/web/themes/custom/educationusa/images/12-1@1x.png"></a>{% endif %}
+                                        {% if node.field_center_instagram_page is not empty %}<a href="{{ content.field_center_instagram_page.0|render|striptags }}"><img alt="Follow us on Intagram" class="social-media-x13" src="/educationusa/web/themes/custom/educationusa/images/13-1@1x.png"></a>{% endif %}
+                                        </p>
+                                        <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,22 @@
+uuid: 95429701-09e4-4704-8c5a-d4d093747cac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_program_highlights
+    - node.type.advising_center
+  module:
+    - text
+id: node.advising_center.field_center_program_highlights
+field_name: field_center_program_highlights
+entity_type: node
+bundle: advising_center
+label: 'Program Highlights'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

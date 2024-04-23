@@ -1,0 +1,29 @@
+uuid: 0665b938-ad18-4ee1-8ebb-70f51b78194f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_advising_center
+    - node.type.events
+    - taxonomy.vocabulary.advising_center
+id: node.events.field_advising_center
+field_name: field_advising_center
+entity_type: node
+bundle: events
+label: 'Advising Center'
+description: "If Event Type = Global (select None for Advising Center)<br>\r\nIf Event Type = Advising Center (select an Advising Center)\r\n\r\n\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      advising_center: advising_center
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: f3b03cdb-73ca-477e-8668-150673a7cb98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_website
+    - node.type.advising_center
+  module:
+    - link
+id: node.advising_center.field_center_website
+field_name: field_center_website
+entity_type: node
+bundle: advising_center
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

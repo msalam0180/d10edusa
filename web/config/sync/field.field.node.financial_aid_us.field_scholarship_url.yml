@@ -1,0 +1,23 @@
+uuid: 3c484d31-1f69-43bb-9137-da95658072f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scholarship_url
+    - node.type.financial_aid_us
+  module:
+    - link
+id: node.financial_aid_us.field_scholarship_url
+field_name: field_scholarship_url
+entity_type: node
+bundle: financial_aid_us
+label: 'More information URL'
+description: 'Where to get more information about how to apply for this scholarship.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

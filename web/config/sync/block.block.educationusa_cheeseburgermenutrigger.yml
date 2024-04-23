@@ -1,0 +1,25 @@
+uuid: 8c4ea8f3-223d-4315-8ff1-5289702b9bb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block.block.educationusa_cheeseburgermenu
+  module:
+    - cheeseburger_menu
+  theme:
+    - educationusa
+id: educationusa_cheeseburgermenutrigger
+theme: educationusa
+region: header_form
+weight: 0
+provider: null
+plugin: cheeseburger_menu_trigger
+settings:
+  id: cheeseburger_menu_trigger
+  label: 'Cheeseburger menu trigger'
+  label_display: '0'
+  provider: cheeseburger_menu
+  block_to_trigger: educationusa_cheeseburgermenu
+  breakpoints: {  }
+  custom_media_query: null
+visibility: {  }

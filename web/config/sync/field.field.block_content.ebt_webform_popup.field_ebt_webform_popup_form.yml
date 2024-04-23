@@ -1,0 +1,27 @@
+uuid: e533e534-4853-44c7-89b8-dc104040a048
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_webform_popup
+    - field.storage.block_content.field_ebt_webform_popup_form
+  module:
+    - webform
+_core:
+  default_config_hash: XKxb-rFq0rOSgKq7mU1s79aoU0-O0IeICu_ZMzj9vG8
+id: block_content.ebt_webform_popup.field_ebt_webform_popup_form
+field_name: field_ebt_webform_popup_form
+entity_type: block_content
+bundle: ebt_webform_popup
+label: Webform
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

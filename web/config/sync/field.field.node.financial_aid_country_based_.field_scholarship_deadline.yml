@@ -1,0 +1,24 @@
+uuid: 0df4c354-f2c6-4af7-8dbc-8f8d1a8c7f17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scholarship_deadline
+    - filter.format.plain_text
+    - node.type.financial_aid_country_based_
+  module:
+    - text
+id: node.financial_aid_country_based_.field_scholarship_deadline
+field_name: field_scholarship_deadline
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Scholarship Deadline'
+description: 'Enter either a specific date (e.g. May 7, 2015) or something more vague (e.g. spring 2015 or every spring).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

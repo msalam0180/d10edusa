@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ebt_timeline.field_ebt_timeline_current
+    - field.field.paragraph.ebt_timeline.field_ebt_timeline_date
+    - field.field.paragraph.ebt_timeline.field_ebt_timeline_image
+    - field.field.paragraph.ebt_timeline.field_ebt_timeline_text
+    - field.field.paragraph.ebt_timeline.field_ebt_timeline_title
+    - paragraphs.paragraphs_type.ebt_timeline
+  module:
+    - image
+    - text
+id: paragraph.ebt_timeline.default
+targetEntityType: paragraph
+bundle: ebt_timeline
+mode: default
+content:
+  field_ebt_timeline_current:
+    weight: 4
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ebt_timeline_date:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ebt_timeline_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    type: image_url
+    region: content
+  field_ebt_timeline_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ebt_timeline_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

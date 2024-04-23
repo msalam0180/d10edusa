@@ -1,0 +1,19 @@
+uuid: a1ece276-e2bb-4a42-ae3b-dd570f26f534
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_center_blog
+field_name: field_center_blog
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,4 @@
+services:
+  ebt_cta.generate_cta_css:
+    class: Drupal\ebt_cta\Services\GenerateCtaCSS
+    arguments: ['@config.factory']

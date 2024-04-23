@@ -1,0 +1,23 @@
+uuid: 49f33f5e-c2f6-4197-88c5-40305686e540
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.edusa_videos
+  module:
+    - feeds
+id: node.edusa_videos.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: edusa_videos
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

@@ -1,0 +1,22 @@
+uuid: 8d14b7e3-e8a9-458d-bc8c-5669ee3e2dc8
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - educationusa
+_core:
+  default_config_hash: TUUkiy1MvqYw7u0W78aSYZvawkc4ZG_waseplEW-wqA
+id: educationusa_messages
+theme: educationusa
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

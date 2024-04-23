@@ -1,0 +1,44 @@
+/* Overriding .site-footer color in colors.css */
+.site-footer {
+    background: #04214D;
+}
+
+.footer-row {
+    background-color:#04214D;
+    color:white;
+}
+
+.footer-row-a {
+    color: rgb(13, 110, 253)  !important;
+    text-decoration: underline  !important;
+
+    &:hover {
+        color: rgb(13, 110, 253)  !important;
+        text-decoration: none  !important;
+    }
+  }
+
+.footer-row-ul {
+    list-style-type: disc;
+}
+
+.footer-row-h6 {
+    font-size: 1rem !important;
+}
+
+.footer-row-h4 {
+        font-size: 1.5rem !important;
+        text-transform: none;
+}
+
+.footer-links {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    @include bp(lg) {
+    margin-top: -10px;
+   }
+}
+
+.footer-newsletter{
+    margin-top: -10px;
+}

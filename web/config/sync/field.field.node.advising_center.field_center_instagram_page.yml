@@ -1,0 +1,23 @@
+uuid: 82a87d0c-8a0d-45df-bdfa-ab535e77a4c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_instagram_page
+    - node.type.advising_center
+  module:
+    - link
+id: node.advising_center.field_center_instagram_page
+field_name: field_center_instagram_page
+entity_type: node
+bundle: advising_center
+label: 'Instagram Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

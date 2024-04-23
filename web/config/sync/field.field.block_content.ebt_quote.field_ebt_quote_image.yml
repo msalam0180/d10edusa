@@ -1,0 +1,31 @@
+uuid: 1d144766-cfbc-430a-bbb0-6672030df81f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_quote
+    - field.storage.block_content.field_ebt_quote_image
+    - media.type.image
+_core:
+  default_config_hash: _AaWTlSa1X6CaC-_c0qarZPGAD9IaSjpuJF_CUK9vk0
+id: block_content.ebt_quote.field_ebt_quote_image
+field_name: field_ebt_quote_image
+entity_type: block_content
+bundle: ebt_quote
+label: 'Quote Image'
+description: 'Persona photo or Company logo'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

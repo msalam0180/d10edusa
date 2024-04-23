@@ -1,0 +1,23 @@
+uuid: 1ed08e6f-e7f7-444b-92aa-ebbb6beb1e3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.financial_aid_us
+  module:
+    - feeds
+id: node.financial_aid_us.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: financial_aid_us
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

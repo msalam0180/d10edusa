@@ -1,0 +1,36 @@
+uuid: f63a889d-8d30-4b07-88cc-200b8a48221c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_step_type
+field_name: field_step_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: undergraduate
+      label: UNDERGRADUATE
+    -
+      value: graduate
+      label: GRADUATE
+    -
+      value: short_term
+      label: 'SHORT TERM'
+    -
+      value: english_language
+      label: 'ENGLISH LANGUAGE'
+    -
+      value: online_learning
+      label: 'ONLINE LEARNING'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

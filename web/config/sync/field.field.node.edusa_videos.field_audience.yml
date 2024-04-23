@@ -1,0 +1,29 @@
+uuid: 9f490974-6158-4d43-9c28-30a415d519a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audience
+    - node.type.edusa_videos
+    - taxonomy.vocabulary.audiences
+id: node.edusa_videos.field_audience
+field_name: field_audience
+entity_type: node
+bundle: edusa_videos
+label: Audience
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      audiences: audiences
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the ebt_cta module.
+ */
+
+use Drupal\media\Entity\MediaType;
+use Drupal\field\Entity\FieldConfig;
+
+/**
+ * Implements hook_requirements().
+ */
+function ebt_cta_requirements($phase) {
+  if ($phase != 'install') {
+    return [];
+  }
+
+  if (class_exists('Drupal\media\Entity\MediaType')) {
+    foreach (MediaType::loadMultiple() as $type) {
+      if ($type->id() == 'image') {
+        return [];
+      }
+    }
+  }
+  return [
+    'ebt_cta_media_type_image' => [
+      'title' => t('Media type Image'),
+      'value' => t('Not created'),
+      'description' => t('The EBT CTA needs to be <a href="@url">created</a> "Image" Media type.', ['@url' => '/admin/structure/media']),
+      'severity' => REQUIREMENT_ERROR,
+    ],
+  ];
+}
+
+/**
+ * Update the CTA link to have the Label as optional.
+ */
+function ebt_cta_update_9201() {
+
+  // Set the machine names.
+  $block_type_id = 'ebt_cta';
+  $field_name = 'field_ebt_cta_link';
+
+  // Set the key that represents optional value.
+  $optional_value = 1;
+
+  // Load the field configuration object.
+  $field_config = FieldConfig::loadByName('block_content', $block_type_id, $field_name);
+
+  // If the field doesn't exists, skip.
+  if (empty($field_config)) {
+    return;
+  }
+
+  // Get the field settings.
+  $settings = $field_config->getSettings();
+
+  // Set the link title as optional.
+  $settings['title'] = $optional_value;
+
+  // Save the object.
+  $field_config->setSettings($settings)->save();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function ebt_cta_uninstall() {
+
+  \Drupal::messenger()->addStatus(t('The EBT CTA has been uninstalled, but the Block Type have not been deleted for consistency reasons. If needed, you can manually remove them by going to Structure » Block layout » Custom block library'));
+
+}

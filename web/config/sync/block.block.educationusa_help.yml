@@ -1,0 +1,22 @@
+uuid: 394db426-c249-47ac-93c1-bf696c00fa73
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - educationusa
+_core:
+  default_config_hash: QDGB6UJQO6WNOLQkRcsNSfEDNkc9Va4uFXtK3XdJ19Q
+id: educationusa_help
+theme: educationusa
+region: highlighted
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

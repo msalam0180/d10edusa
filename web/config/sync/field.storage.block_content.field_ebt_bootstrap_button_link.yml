@@ -1,0 +1,21 @@
+uuid: e31eea07-21a9-4a52-8d52-c48b6b5083f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: 4Mn_2tFUWa7Mu6w06yP9iFQ7KLLKr83YOpxoaTd3IDo
+id: block_content.field_ebt_bootstrap_button_link
+field_name: field_ebt_bootstrap_button_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

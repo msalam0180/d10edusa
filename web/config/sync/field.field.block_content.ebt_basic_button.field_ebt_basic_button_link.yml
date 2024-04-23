@@ -1,0 +1,25 @@
+uuid: 38661e6f-6baa-4a1b-9444-a7302c1925cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_basic_button
+    - field.storage.block_content.field_ebt_basic_button_link
+  module:
+    - link
+_core:
+  default_config_hash: sHxTdakkm0n2AWPN2_ygOqsVXsuySIH10GpOOAEbzYE
+id: block_content.ebt_basic_button.field_ebt_basic_button_link
+field_name: field_ebt_basic_button_link
+entity_type: block_content
+bundle: ebt_basic_button
+label: 'Button LInk'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -1,0 +1,8 @@
+uuid: 5ccc01a2-2972-47db-9d77-2efd9b29cf7b
+langcode: en
+status: true
+dependencies: {  }
+id: study
+label: 'Five Steps Study Page Menu'
+description: ''
+locked: false

@@ -1,0 +1,25 @@
+uuid: eb522ac9-db39-433a-a757-2fb9dc058d19
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:ebt_text:7983a795-df9f-417e-a398-f9131d489b73'
+  module:
+    - block_content
+  theme:
+    - educationusa
+id: educationusa_socialmedia
+theme: educationusa
+region: footer_zero
+weight: 0
+provider: null
+plugin: 'block_content:7983a795-df9f-417e-a398-f9131d489b73'
+settings:
+  id: 'block_content:7983a795-df9f-417e-a398-f9131d489b73'
+  label: 'Social Media'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

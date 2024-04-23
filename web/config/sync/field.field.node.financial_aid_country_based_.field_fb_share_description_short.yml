@@ -1,0 +1,24 @@
+uuid: 412d93e4-4d1a-41ed-93e2-15047e518559
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fb_share_description_short
+    - filter.format.plain_text
+    - node.type.financial_aid_country_based_
+  module:
+    - text
+id: node.financial_aid_country_based_.field_fb_share_description_short
+field_name: field_fb_share_description_short
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Facebook text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

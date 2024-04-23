@@ -1,0 +1,24 @@
+uuid: 5399d7ee-d279-4386-8357-7e007089cff2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_othr_social_profile
+    - filter.format.full_html
+    - node.type.advising_center
+  module:
+    - text
+id: node.advising_center.field_center_othr_social_profile
+field_name: field_center_othr_social_profile
+entity_type: node
+bundle: advising_center
+label: 'Other Social Profile'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

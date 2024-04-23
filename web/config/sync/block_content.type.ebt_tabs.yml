@@ -1,0 +1,10 @@
+uuid: 0a220d06-94d1-4743-bb32-df1e14a77c42
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2Zf0IzYoN8bXlbuz0O0K2EFPtAJ-8Zgijs9KDbMjPbU
+id: ebt_tabs
+label: 'EBT Tabs'
+revision: 1
+description: 'Extra Block Type (EBT): Tabs'

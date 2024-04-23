@@ -1,0 +1,102 @@
+.view-list-of-programs {
+    margin-top: 25px;
+    .form-radios {
+        .js-form-item {
+            padding: 5px 10px !important;
+            text-align: center;
+            position: relative;
+            margin: 10px 10px 10px 0;
+            input {
+                visibility: hidden;
+            }
+        
+            &:hover,
+            .active {
+                background-color: #146aa8;
+
+                label {
+                    color: #fff;
+                }
+            }
+
+            label {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: 0px;
+                left: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+input[type="radio"].form-check-input:checked + label {
+  background-color: #146aa8;
+  color: #fff !important;
+}
+
+.js-pager__items.pager {
+    padding-left: 0px !important;
+}
+
+.list_pro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-btn {
+        position: relative;
+        display: block;
+        border-radius: 10px;
+
+        background-color: #e9f1f7;
+        border: 1px solid #ccc;
+        font-family: var(--font-family-roboto);
+        transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+        padding: 10px;
+        border-radius: 20px;
+        overflow: hidden;
+        font-size: 12px;
+        color: #000 !important;  
+        margin-left: 10px;
+        margin-top: 15px;
+        text-wrap: nowrap;
+
+        &:hover {
+            background-color: var(--deep-sapphire);
+            color: #fff !important; 
+        }
+    }
+}
+
+.arrow_btn {
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0367cc;
+    font-family: var(--font-family-roboto);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &::after {
+        content: '';
+        background: url($images + 'bluearrow.png') no-repeat;
+        display: block;
+        height: 8px;
+        width: 8px;
+        background-size: contain;
+        margin-left: 5px;
+    }
+
+    &.white {
+        color: #ffffff;
+        &::after {
+            background: url($images + 'left-1@1x.png') no-repeat;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+uuid: dfe42901-273f-454b-a92e-59759d6a5643
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xlTbw2rsxfnXJ7Hv3VCpxLp5Ekaa0jutCubC0YpGcbw
+name: quote_image
+label: 'Quote Image'
+effects:
+  d8117768-053a-4efa-87bf-a1e49600d865:
+    uuid: d8117768-053a-4efa-87bf-a1e49600d865
+    id: image_scale
+    weight: 2
+    data:
+      width: 530
+      height: null
+      upscale: false

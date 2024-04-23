@@ -1,0 +1,323 @@
+uuid: d9a987eb-fff4-4ed4-bc56-f9100cba2145
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.advising_center.body
+    - field.field.node.advising_center.feeds_item
+    - field.field.node.advising_center.field_center_blog
+    - field.field.node.advising_center.field_center_city
+    - field.field.node.advising_center.field_center_country_flag
+    - field.field.node.advising_center.field_center_email
+    - field.field.node.advising_center.field_center_facebook_group
+    - field.field.node.advising_center.field_center_facebook_page
+    - field.field.node.advising_center.field_center_hours
+    - field.field.node.advising_center.field_center_instagram_page
+    - field.field.node.advising_center.field_center_level
+    - field.field.node.advising_center.field_center_materials
+    - field.field.node.advising_center.field_center_othr_social_profile
+    - field.field.node.advising_center.field_center_program_highlights
+    - field.field.node.advising_center.field_center_services
+    - field.field.node.advising_center.field_center_special_programs
+    - field.field.node.advising_center.field_center_twitter_account
+    - field.field.node.advising_center.field_center_virtual_hours
+    - field.field.node.advising_center.field_center_website
+    - field.field.node.advising_center.field_center_youtube_channel
+    - field.field.node.advising_center.field_fax_number
+    - field.field.node.advising_center.field_featured_image
+    - field.field.node.advising_center.field_hei_fax_number
+    - field.field.node.advising_center.field_hei_phone_number
+    - field.field.node.advising_center.field_hei_skype
+    - field.field.node.advising_center.field_hei_virtual_pres_options
+    - field.field.node.advising_center.field_location
+    - field.field.node.advising_center.field_phone_number
+    - field.field.node.advising_center.field_public_mailing_address
+    - field.field.node.advising_center.field_region
+    - field.field.node.advising_center.field_skype
+    - field.field.node.advising_center.field_tmp_img
+    - field.field.node.advising_center.field_walk_up_address
+    - node.type.advising_center
+  module:
+    - link
+    - text
+    - user
+id: node.advising_center.default
+targetEntityType: node
+bundle: advising_center
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_center_blog:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 141
+    region: content
+  field_center_city:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 125
+    region: content
+  field_center_country_flag:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 150
+    region: content
+  field_center_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_center_facebook_group:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 137
+    region: content
+  field_center_facebook_page:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 138
+    region: content
+  field_center_hours:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 134
+    region: content
+  field_center_instagram_page:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 139
+    region: content
+  field_center_level:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 151
+    region: content
+  field_center_materials:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 147
+    region: content
+  field_center_othr_social_profile:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 143
+    region: content
+  field_center_program_highlights:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 146
+    region: content
+  field_center_services:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 144
+    region: content
+  field_center_special_programs:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 145
+    region: content
+  field_center_twitter_account:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 140
+    region: content
+  field_center_virtual_hours:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 135
+    region: content
+  field_center_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 136
+    region: content
+  field_center_youtube_channel:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 142
+    region: content
+  field_fax_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 128
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_hei_fax_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 131
+    region: content
+  field_hei_phone_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 130
+    region: content
+  field_hei_skype:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 132
+    region: content
+  field_hei_virtual_pres_options:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 149
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_phone_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 127
+    region: content
+  field_public_mailing_address:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 148
+    region: content
+  field_region:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_skype:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 129
+    region: content
+  field_tmp_img:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_walk_up_address:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 126
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true

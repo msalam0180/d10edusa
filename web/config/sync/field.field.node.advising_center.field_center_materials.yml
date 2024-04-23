@@ -1,0 +1,24 @@
+uuid: 2c0bb368-e65e-49cf-aaf1-891a2ce4aeaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_materials
+    - filter.format.full_html
+    - node.type.advising_center
+  module:
+    - text
+id: node.advising_center.field_center_materials
+field_name: field_center_materials
+entity_type: node
+bundle: advising_center
+label: Materials
+description: 'Materials your center wants to receive.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

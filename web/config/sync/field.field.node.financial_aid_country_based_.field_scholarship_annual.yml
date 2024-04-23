@@ -1,0 +1,21 @@
+uuid: cc1bc3b5-ff8f-4685-ae29-a2001e402cc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scholarship_annual
+    - node.type.financial_aid_country_based_
+id: node.financial_aid_country_based_.field_scholarship_annual
+field_name: field_scholarship_annual
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Recurs Annually'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

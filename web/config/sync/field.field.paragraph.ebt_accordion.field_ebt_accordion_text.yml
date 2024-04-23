@@ -1,0 +1,24 @@
+uuid: b4f1bceb-9db1-44a0-a6d5-772493d1e4e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ebt_accordion_text
+    - paragraphs.paragraphs_type.ebt_accordion
+  module:
+    - text
+_core:
+  default_config_hash: K83AQZ4cOGBmrJfAKHjN1BC5fNJE2slkMvsq-eOngms
+id: paragraph.ebt_accordion.field_ebt_accordion_text
+field_name: field_ebt_accordion_text
+entity_type: paragraph
+bundle: ebt_accordion
+label: 'Text / Answer'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

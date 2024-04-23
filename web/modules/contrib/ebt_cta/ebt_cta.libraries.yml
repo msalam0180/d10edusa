@@ -1,0 +1,4 @@
+ebt_cta:
+  css:
+    component:
+      css/ebt_cta.css: {}

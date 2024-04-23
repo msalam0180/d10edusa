@@ -1,0 +1,209 @@
+.eca_ex {
+    &-programs {
+        position: relative;
+        .node__content {
+            background: #e9f1f7;
+        }
+        &-body {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        &-main { 
+
+           padding: 2.5% 5%; 
+           @include bp(sm) {
+            //    padding: 2.5% 15%;
+            margin: 0 auto;
+            max-width: 1000px;
+           }
+        }
+
+        &-image {
+            position: relative;
+            &-text {
+                position: relative;
+                color: #001333;
+                font-size: 34px;
+                font-weight: bold;
+                font-family: var(--font-family-roboto);
+                text-align: center;
+                line-height: 32px;
+            }
+            &-holder {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+            }
+
+            img {
+                position: relative;
+                width: 300px;
+            }
+        }
+
+        &-body {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            @include bp(md) {
+                flex-direction: row;
+            }
+
+            p {
+                width: 100%;
+                margin: 0 15px;
+                font-size: 18px;
+
+                // @include bp(sm) {
+                //     width: 600px;
+                // }
+
+                @include bp(md) {
+                    font-size: 20px;
+                    //width: 800px;
+                }
+            }
+        }
+
+        &-notice {
+            font-size: 16px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            margin-right: 5px;
+            width: 100%;
+
+            &:before {
+                content: '';
+                display: block;
+                height: 20px;
+                width: 20px;
+                background-size: contain !important;
+                margin-right: 10px;
+                background: url($images + 'info@1x.png') no-repeat;
+            }
+        }
+
+        &-subs {
+            @include subs();
+            &-image {
+                @include sub-images-style();
+                background: url($images + 'time@1x.png') no-repeat;
+            }
+
+            &-block {
+                position: relative;
+                @include blocks ();
+            }
+        }
+
+        &-el-app {
+
+            &-subs {
+                @include subs();
+
+                &-image {
+                    @include sub-images-style();
+                    background: url($images + 'info-1@1x.png') no-repeat;
+                }
+
+                &-block {
+                    position: relative;
+                    @include blocks ();
+                }
+            }
+
+            &-container {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                margin: 10px auto;
+
+                @include bp(md) {
+                    flex-direction: column;
+                }
+                &-title,
+                &-descriptions {
+                    position: relative;
+                    font-family: var(--font-family-roboto);
+                }
+
+                &-title {
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+                &-descriptions {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin: 10px auto;
+
+                    @include bp(md) {
+                        flex-direction: row;
+                    }
+
+                    .field__item {
+                        position: relative;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+
+                        // @include bp(lg2) {
+                        //     max-width: 450px;
+                        // }
+
+                        p {
+                            font-size: 12px;
+                            position: relative;
+                             display: flex;
+                             flex-direction: row;
+                            margin-right: 5px;
+                            width: 100%;
+                            &:before {
+                                content: '';
+                                display: block;
+                                max-height: 15px;
+                                max-width: 15px;
+                                width: 100%;
+                                height: 100%;
+                                background-size: contain !important;
+                                margin-right: 10px;
+                                background: url($images + 'check-1@1x.png') no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-contacts {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            &-email,
+            &-tel,
+            &-web {
+                position: relative;
+                font-size: 14px;
+                font-family: var(--font-family-roboto);
+            }
+        }
+
+        &-hl {
+            position: relative;
+            display: block;
+            // margin: 10px 0;
+            width: 100%;
+            height: 5px;
+            background-color: #a1a0a0;
+        }
+    }
+}
+
+.programs-image{
+    border-radius: 15px;
+}

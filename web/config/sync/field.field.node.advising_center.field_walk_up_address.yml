@@ -1,0 +1,24 @@
+uuid: dcc33802-e0c6-4be4-bc90-7cd3d53c3744
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_walk_up_address
+    - filter.format.full_html
+    - node.type.advising_center
+  module:
+    - text
+id: node.advising_center.field_walk_up_address
+field_name: field_walk_up_address
+entity_type: node
+bundle: advising_center
+label: 'Walk Up Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

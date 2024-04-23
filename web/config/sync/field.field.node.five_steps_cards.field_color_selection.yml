@@ -1,0 +1,21 @@
+uuid: 62d5c1c1-8e20-4590-a808-80705be9c3bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_color_selection
+    - node.type.five_steps_cards
+  module:
+    - options
+id: node.five_steps_cards.field_color_selection
+field_name: field_color_selection
+entity_type: node
+bundle: five_steps_cards
+label: 'Color Selection'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

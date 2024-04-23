@@ -1,0 +1,76 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+<article{{attributes.addClass(classes)}}>
+    <header>
+    </header>
+    <div{{content_attributes.addClass('node__content','clearfix')}}>
+        <div class="container events">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row ">
+                   {% for row in rows %}
+				<div class="col-md-8 d-flex align-items-stretch">
+						<div class="card-body d-flex flex-column line-clamp">
+							<a href="/educationusa/web/node/{{row.content['#row']._entity.nid[0].value}}" hreflang="en">
+								<span class="field-content"><b>{{row.content['#row']._entity.title[0].value}}</b></span>
+							</a>
+							{% if row.content['#row']._entity.field_institution_name[0].value|raw is not empty %}
+                            {{row.content['#row']._entity.field_institution_name.value}}<br>
+                            {% endif %}
+							{% if row.content['#row']._entity.field_scholarship_deadline[0].value|raw is not empty %}
+                            Apply by: {{row.content['#row']._entity.field_scholarship_deadline[0].value|raw }}
+                            {% endif %}
+						</div>
+				</div>
+			{% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row mb-2">
+                        <div>
+                           <b><a href="/educationusa/web/find-advising-center">Find an Advising Center</a></b>
+                                <hr>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div>
+                           <b>Financial Aid</b>
+                                <hr>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div>
+                             <b><a href="/educationusa/web/find-events">Events</a></b>
+                                <hr>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div>
+                             <b><a href="/educationusa/web/find-videos">Videos</a></b>
+                                <hr>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div><br><br>
+    </div>
+</article>
+
+

@@ -1,0 +1,49 @@
+.site-footer { //375px
+   padding-left: 7%;
+   width:auto;
+   overflow-x:hidden;
+
+  @include bp(xs) {
+    padding-left: 9%;
+    overflow-x:hidden;
+  }
+  @include bp(md) { //450px
+    padding-left: 7%;
+    overflow-x:hidden;
+  }
+  @include bp(lg) {
+    padding-left: 8%;
+    width: auto;
+    overflow-x:hidden;
+  }
+  background-color: #001333 !important;
+}
+
+
+.footer-links-roboto-bold-coconut-20px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.footer-links-segoeui-regular-normal-dove-gray-20px {
+    color: var(--dove-gray);
+    font-family: var(--font-family-segoeui-regular);
+    font-size: var(--font-size-s);
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 3%;
+    padding-right: 0%;
+
+    @include bp(xs) {
+     }
+     @include bp(md) {
+     }
+     @include bp(lg) {
+      margin-left: 5%;
+     }
+}
+

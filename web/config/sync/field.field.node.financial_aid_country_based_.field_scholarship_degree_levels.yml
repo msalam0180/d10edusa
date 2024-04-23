@@ -1,0 +1,29 @@
+uuid: 0e192007-5eec-4c83-8e4a-efa62578a0a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scholarship_degree_levels
+    - node.type.financial_aid_country_based_
+    - taxonomy.vocabulary.degree_levels
+id: node.financial_aid_country_based_.field_scholarship_degree_levels
+field_name: field_scholarship_degree_levels
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Degree Levels'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      degree_levels: degree_levels
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

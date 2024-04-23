@@ -1,0 +1,10 @@
+uuid: ace54b9a-fbf8-4d11-acf7-01f462901b19
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MYrjSAxOpL7yIgF7efseTPdxreHwdIytokEU8AsyKOc
+id: ebt_stats
+label: 'EBT Stats'
+revision: 0
+description: 'Extra Block Type (EBT): Stats'

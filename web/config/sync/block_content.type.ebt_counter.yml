@@ -1,0 +1,10 @@
+uuid: f8dea40b-d72e-448a-9f1d-6f877d5d7b37
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BAdc_syLOJWN_IuQiwJb7kdzLXXokTLaEplzy8ajUBs
+id: ebt_counter
+label: 'EBT Counter'
+revision: 0
+description: 'Extra Block Type (EBT): Counter - Adds Counter with coffee cups, projects, case studies number, etc.'

@@ -1,0 +1,21 @@
+uuid: 9c338495-df5c-44e2-979a-387b543c3b76
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tmp_address_line_one
+field_name: field_tmp_address_line_one
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,15 @@
+.icon-sm svg {
+  width: .5rem;
+}
+
+.icon svg {
+  width: 1.5rem;
+}
+
+.icon-md svg {
+  width: 2rem;
+}
+
+.icon-lg svg {
+  width: 3rem;
+}

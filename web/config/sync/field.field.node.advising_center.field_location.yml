@@ -1,0 +1,29 @@
+uuid: e23c9174-091d-4bb9-9b3a-49667053a2bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.advising_center
+    - taxonomy.vocabulary.countries
+id: node.advising_center.field_location
+field_name: field_location
+entity_type: node
+bundle: advising_center
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      countries: countries
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

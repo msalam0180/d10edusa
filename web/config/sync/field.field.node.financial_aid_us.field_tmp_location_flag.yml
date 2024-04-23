@@ -1,0 +1,19 @@
+uuid: d2049c45-5c40-4de2-b8a2-94c595c3d830
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmp_location_flag
+    - node.type.financial_aid_us
+id: node.financial_aid_us.field_tmp_location_flag
+field_name: field_tmp_location_flag
+entity_type: node
+bundle: financial_aid_us
+label: 'Tmp location flag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

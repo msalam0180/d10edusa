@@ -1,0 +1,38 @@
+<div class="row menu-style">
+  <div class="col-md-6 menu-style">
+    <div class="btn-group">
+      <button class="btn btn-secondary btn-lg dropdown-toggle form-control btn-pill" type="button" id="menu-dropdown-button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Click to Learn More
+      </button>
+      <div class="dropdown-menu" aria-labelledby="menu-dropdown-button">
+        {% if menus[menu_machine_name] %}
+          <ul class="list-unstyled">
+            {% for item in menus[menu_machine_name] %}
+              <li>
+                <a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a>
+                {% if item.below %}
+                  <ul class="list-unstyled menu-level-2">
+                    {% for subitem in item.below %}
+                      <li>
+                        <a class="dropdown-item" href="{{ subitem.url }}">{{ subitem.title }}</a>
+                        {% if subitem.below %}
+                          <ul class="list-unstyled menu-level-3">
+                            {% for subsubitem in subitem.below %}
+                              <li>
+                                <a class="dropdown-item" href="{{ subsubitem.url }}">{{ subsubitem.title }}</a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

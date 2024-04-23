@@ -1,0 +1,71 @@
+uuid: 2758a9a3-6dfa-4f2c-b2b8-c22ad13e01d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.international_students.body
+    - field.field.node.international_students.field_card_component
+    - field.field.node.international_students.field_hero
+    - field.field.node.international_students.field_main_intro
+    - field.field.node.international_students.field_youtube_vimeo_video
+    - node.type.international_students
+  module:
+    - block_field
+    - image
+    - text
+    - user
+    - video_embed_field
+id: node.international_students.default
+targetEntityType: node
+bundle: international_students
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_card_component:
+    type: block_field
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_hero:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_main_intro:
+    type: block_field
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_youtube_vimeo_video:
+    type: video_embed_field_video
+    label: hidden
+    settings:
+      autoplay: true
+      responsive: true
+      width: 854
+      height: 480
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * EBT Counter module code for including templates.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ebt_counter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ebt_counter module.
+    case 'help.page.ebt_counter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Extra Block Types: Counter module provides ability to add Number Counter and Text with WYSIWYG editor. This module provides settings for 2,3 or 4 columns and all options from Count-up.js plugin.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Register a theme for each paragraph type.
+ */
+function ebt_counter_theme($existing, $type, $theme, $path) {
+  $theme_templates = [];
+
+  // Register custom Paragraph field number.
+  $theme_templates['field__paragraph__ebt_counter__field_ebt_counter_number'] = [
+    'base hook' => 'field',
+  ];
+
+  return $theme_templates;
+}
+
+/**
+ * Implements hook_theme_suggestions_hook_alter().
+ */
+function ebt_counter_theme_suggestions_field_alter(array &$suggestions, array $variables, $hook) {
+  $field = $variables['element']['#field_name'];
+
+  if ($field == 'field_ebt_counter_number') {
+    $suggestions[] = 'field__paragraph__ebt_counter__field_ebt_counter_number';
+  }
+}

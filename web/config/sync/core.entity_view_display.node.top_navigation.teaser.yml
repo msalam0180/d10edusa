@@ -1,0 +1,38 @@
+uuid: 7c77c42f-6cec-414f-94b2-bcae9ad58029
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.top_navigation.body
+    - field.field.node.top_navigation.field_nav_image
+    - field.field.node.top_navigation.field_nav_link
+    - field.field.node.top_navigation.field_nav_type
+    - field.field.node.top_navigation.field_type
+    - node.type.top_navigation
+  module:
+    - text
+    - user
+id: node.top_navigation.teaser
+targetEntityType: node
+bundle: top_navigation
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_nav_image: true
+  field_nav_link: true
+  field_nav_type: true
+  field_type: true

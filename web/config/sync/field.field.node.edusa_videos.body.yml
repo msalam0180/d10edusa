@@ -1,0 +1,24 @@
+uuid: 6842ccce-2d08-47ea-b50d-7001ff90be41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.edusa_videos
+  module:
+    - text
+id: node.edusa_videos.body
+field_name: body
+entity_type: node
+bundle: edusa_videos
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

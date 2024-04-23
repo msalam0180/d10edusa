@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+	<h3>{{ title }}</h3>
+{% endif %}
+{# {% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %} #}
+{# <div{{ row.attributes.addClass(row_classes) }}> #}
+{# <section class="pb-4 container-fluid bg-light border-top"> #}
+{# <div class="container  py-5"> #}
+	<div class="d-flex flex-row  "> <div>
+		<div class="illustration-icons eca-icons-news"></div>
+	</div>
+	<div>
+		<small class="text-uppercase pb-0">{{ "Exchange Programs"|t }}</small>
+		<p class="section-title " style="">{{ "Latest News"|t }}
+		</p>
+	</div>
+</div>
+<div class="row">
+	<p class="pb-4">{{ "The U.S. Department of State Bureau of Educational and Cultural Affairs (ECA) offers many educational, cultural, and professional exchange programs worldwide for both U.S. and non-U.S. citizens. Discover ECA’s exchange programs and opportunities below."|t }}</p>
+	{% for row in rows %}
+		<div class="col-sm-3 col-6 col-md-6 col-lg-3">
+			<img
+			src="{{ file_url(row['content']['#row']._entity.field_ra_image.entity.uri.value) }}" class="card-img-top" alt="{{row.content['#row']._entity.field_ra_image[0].alt }}">
+			{# <img class="card-img-top img-fluid rounded-4" src="{{file_url(content.field_news_image|field_target_entity.uri.value)}}" alt="{{content.field_news_image|field_raw('alt')}}"> #}
+			<div
+				class="">
+				{# <p class="small mt-1">{{ row.content['#row']._entity.field_news_date[0].value|date("F d, Y") }}</p> #}
+				<h5 class="title-4Cards fw-bold pb-0">{{row.content['#row']._entity.title[0].value|raw}}</h4>
+				<div class="pb-2 small">{{row.content['#row']._entity.body[0].value|raw}}</div>
+				<a class="fw-bold pt-5" href="{{ row.content['#row']._entity.field_rd_learn_more_link[0].url }}">
+					{{ row.content['#row']._entity.field_rd_learn_more_link[0].title}}</a>
+				<i class="fa fa-angle-right link-primary"></i>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+{# </div> #}
+{# </section> #}
+{# </div> #}
+{# {% endfor %} #}

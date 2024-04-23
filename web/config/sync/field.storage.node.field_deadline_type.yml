@@ -1,0 +1,33 @@
+uuid: 8a5c6fcb-ff60-4875-a3ae-1701c7740f0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_deadline_type
+field_name: field_deadline_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: no_deadline
+      label: 'No Deadline'
+    -
+      value: deadline_same_as_application_deadline
+      label: 'Scholarship deadline same as application deadline'
+    -
+      value: deadline_different_from_application_deadline
+      label: 'Scholarship deadline different from application deadline'
+    -
+      value: multiple_deadlines
+      label: 'Multiple deadlines'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

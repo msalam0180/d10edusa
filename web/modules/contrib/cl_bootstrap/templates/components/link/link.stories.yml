@@ -1,0 +1,34 @@
+title: Bootstrap/UI Kit/Buttons & Links
+argTypes:
+  style:
+    options:
+      Primary: primary
+      Secondary: secondary
+      Light: light
+      Dark: dark
+    control: radio
+  target:
+    defaultValue: ''
+    control: radio
+    options:
+      Empty: ''
+      Blank: '_blank'
+  iconPlacement:
+    options:
+      Before: before
+      After: after
+      Above: above
+      Below: below
+    control: radio
+stories:
+  - name: Links
+    args:
+      text: Default Text Link
+      href: https://www.example.org
+      style: primary
+      target: '_blank'
+      classes: ''
+      iconName: ''
+      iconClasses: icon-lg
+      iconGap: 2
+      iconPlacement: after

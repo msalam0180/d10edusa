@@ -1,0 +1,14 @@
+type: module
+name: 'Extra Block Types (EBT): Timeline'
+description: 'Adds Timeline block type with different styles.'
+core_version_requirement: ^9.3 || ^10
+package: 'Extra Block Types'
+
+dependencies:
+  - ebt_core:ebt_core
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2023-10-19
+version: '1.4.2'
+project: 'ebt_timeline'
+datestamp: 1697706409

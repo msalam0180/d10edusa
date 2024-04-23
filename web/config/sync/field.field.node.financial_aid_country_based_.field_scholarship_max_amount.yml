@@ -1,0 +1,24 @@
+uuid: 28e9224a-0abd-4246-99d0-b2ef7b0c285d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scholarship_max_amount
+    - filter.format.plain_text
+    - node.type.financial_aid_country_based_
+  module:
+    - text
+id: node.financial_aid_country_based_.field_scholarship_max_amount
+field_name: field_scholarship_max_amount
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Maximum amount of award'
+description: 'Possibly a dollar value (e.g. $20,000), or more general (e.g. Full Tuition plus books).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

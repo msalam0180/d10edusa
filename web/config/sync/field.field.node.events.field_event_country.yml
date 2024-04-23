@@ -1,0 +1,29 @@
+uuid: 9c0b5eda-b815-49ec-8c4b-60e071a0f0de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_country
+    - node.type.events
+    - taxonomy.vocabulary.countries
+id: node.events.field_event_country
+field_name: field_event_country
+entity_type: node
+bundle: events
+label: 'Event Country'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      countries: countries
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

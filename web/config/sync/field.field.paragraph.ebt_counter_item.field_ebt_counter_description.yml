@@ -1,0 +1,24 @@
+uuid: 1fb3164d-5c5b-4871-aeba-a224f96195b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ebt_counter_description
+    - paragraphs.paragraphs_type.ebt_counter_item
+  module:
+    - text
+_core:
+  default_config_hash: SGPys8iAffvOl_W66tfDAlPixkXxxxidEUCONW9q7dI
+id: paragraph.ebt_counter_item.field_ebt_counter_description
+field_name: field_ebt_counter_description
+entity_type: paragraph
+bundle: ebt_counter_item
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

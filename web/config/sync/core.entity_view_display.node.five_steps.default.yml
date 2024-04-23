@@ -1,0 +1,58 @@
+uuid: a37939a3-1182-46c8-b25b-46c6f187e8dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.five_steps.body
+    - field.field.node.five_steps.field_hero
+    - field.field.node.five_steps.field_hero_overlay_text
+    - field.field.node.five_steps.field_text_cards
+    - node.type.five_steps
+  module:
+    - block_field
+    - image
+    - text
+    - user
+id: node.five_steps.default
+targetEntityType: node
+bundle: five_steps
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_hero:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_hero_overlay_text:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_text_cards:
+    type: block_field
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

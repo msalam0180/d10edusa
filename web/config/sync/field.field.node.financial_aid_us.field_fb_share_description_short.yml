@@ -1,0 +1,24 @@
+uuid: aa1625ae-bc3b-469c-89e6-fa6dd14f5a3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fb_share_description_short
+    - filter.format.plain_text
+    - node.type.financial_aid_us
+  module:
+    - text
+id: node.financial_aid_us.field_fb_share_description_short
+field_name: field_fb_share_description_short
+entity_type: node
+bundle: financial_aid_us
+label: 'Example Facebook Post'
+description: 'EducationUSA will occasionally re-post. If you wish your submission to be re-posted, include some example text.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

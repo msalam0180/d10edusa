@@ -1,0 +1,26 @@
+uuid: 2e99106e-ac63-448c-82b6-91cf03339f62
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_cta
+    - field.storage.block_content.body
+  module:
+    - text
+_core:
+  default_config_hash: Xswlt75VBfRWb1lhRxDCEdmO2MWrGjyFMGZtNtNvvhs
+id: block_content.ebt_cta.body
+field_name: body
+entity_type: block_content
+bundle: ebt_cta
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

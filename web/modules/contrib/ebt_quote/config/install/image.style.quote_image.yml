@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: quote_image
+label: 'Quote Image'
+effects:
+  d8117768-053a-4efa-87bf-a1e49600d865:
+    uuid: d8117768-053a-4efa-87bf-a1e49600d865
+    id: image_scale
+    weight: 2
+    data:
+      width: 530
+      height: null
+      upscale: false

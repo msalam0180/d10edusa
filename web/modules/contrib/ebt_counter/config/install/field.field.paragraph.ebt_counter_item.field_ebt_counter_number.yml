@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ebt_counter_number
+    - paragraphs.paragraphs_type.ebt_counter_item
+id: paragraph.ebt_counter_item.field_ebt_counter_number
+field_name: field_ebt_counter_number
+entity_type: paragraph
+bundle: ebt_counter_item
+label: Number
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 31392aa1-f467-4ec9-beda-7524cb66647c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_tmp_country_long
+field_name: field_tmp_country_long
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

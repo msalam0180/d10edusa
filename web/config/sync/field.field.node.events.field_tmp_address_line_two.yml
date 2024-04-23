@@ -1,0 +1,19 @@
+uuid: 60abd748-e7c7-4a1f-a413-ee19ee6fcc4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmp_address_line_two
+    - node.type.events
+id: node.events.field_tmp_address_line_two
+field_name: field_tmp_address_line_two
+entity_type: node
+bundle: events
+label: 'Event Address line 2'
+description: 'Premise (i.e. Apartment / Suite number) for In-Person Location'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

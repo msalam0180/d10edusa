@@ -1,0 +1,24 @@
+uuid: c231394c-b2d4-4bbb-ba2f-60ed1c330903
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.study
+  module:
+    - text
+id: node.study.body
+field_name: body
+entity_type: node
+bundle: study
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

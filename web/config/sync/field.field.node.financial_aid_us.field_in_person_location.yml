@@ -1,0 +1,41 @@
+uuid: bb96864d-8663-40a9-9980-0d3877e6ac5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_in_person_location
+    - node.type.financial_aid_us
+  module:
+    - address
+id: node.financial_aid_us.field_in_person_location
+field_name: field_in_person_location
+entity_type: node
+bundle: financial_aid_us
+label: 'In-Person Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    postalCode:
+      override: hidden
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+    administrativeArea:
+      override: hidden
+  fields: {  }
+field_type: address

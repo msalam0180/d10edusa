@@ -1,0 +1,24 @@
+uuid: 0f5aa581-43dd-4b85-bb2e-565d8993ca06
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_share_description_short
+    - filter.format.plain_text
+    - node.type.financial_aid_us
+  module:
+    - text
+id: node.financial_aid_us.field_share_description_short
+field_name: field_share_description_short
+entity_type: node
+bundle: financial_aid_us
+label: 'Example Twitter Post'
+description: 'EducationUSA will occasionally re-post. If you wish your submission to be re-posted, include some example text.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

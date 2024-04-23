@@ -1,0 +1,19 @@
+uuid: 856d8d57-125a-4634-bacb-1a8b48a6dd46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_overlay_text
+    - node.type.five_steps
+id: node.five_steps.field_hero_overlay_text
+field_name: field_hero_overlay_text
+entity_type: node
+bundle: five_steps
+label: 'Hero Overlay Text'
+description: 'The overlay text that appears on top of the hero image'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

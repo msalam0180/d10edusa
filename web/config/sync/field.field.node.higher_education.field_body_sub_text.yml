@@ -1,0 +1,22 @@
+uuid: 139abda2-592b-4ebd-96e8-53a96088a35e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_sub_text
+    - node.type.higher_education
+  module:
+    - text
+id: node.higher_education.field_body_sub_text
+field_name: field_body_sub_text
+entity_type: node
+bundle: higher_education
+label: 'Body Sub Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

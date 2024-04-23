@@ -1,0 +1,19 @@
+uuid: bfab33ef-ae5c-4478-80c0-3b2aa7db7528
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_email
+    - node.type.advising_center
+id: node.advising_center.field_center_email
+field_name: field_center_email
+entity_type: node
+bundle: advising_center
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

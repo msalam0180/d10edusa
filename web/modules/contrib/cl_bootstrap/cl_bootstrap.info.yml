@@ -1,0 +1,12 @@
+name: 'Component Libraries: Bootstrap'
+description: Adds Bootstrap components to the library.
+type: module
+core_version_requirement: ^9 || ^10
+package: 'Components'
+dependencies:
+  - cl_components:cl_components
+
+# Information added by Drupal.org packaging script on 2023-02-14
+version: '1.0.0-alpha1'
+project: 'cl_bootstrap'
+datestamp: 1676412687

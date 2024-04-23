@@ -1,0 +1,484 @@
+uuid: 94994286-dad6-4e1b-b052-cacc31b8ee08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.advising_center.body
+    - field.field.node.advising_center.field_center_blog
+    - field.field.node.advising_center.field_center_city
+    - field.field.node.advising_center.field_center_country_flag
+    - field.field.node.advising_center.field_center_email
+    - field.field.node.advising_center.field_center_facebook_group
+    - field.field.node.advising_center.field_center_facebook_page
+    - field.field.node.advising_center.field_center_hours
+    - field.field.node.advising_center.field_center_instagram_page
+    - field.field.node.advising_center.field_center_level
+    - field.field.node.advising_center.field_center_materials
+    - field.field.node.advising_center.field_center_othr_social_profile
+    - field.field.node.advising_center.field_center_program_highlights
+    - field.field.node.advising_center.field_center_services
+    - field.field.node.advising_center.field_center_special_programs
+    - field.field.node.advising_center.field_center_twitter_account
+    - field.field.node.advising_center.field_center_virtual_hours
+    - field.field.node.advising_center.field_center_website
+    - field.field.node.advising_center.field_center_youtube_channel
+    - field.field.node.advising_center.field_fax_number
+    - field.field.node.advising_center.field_hei_fax_number
+    - field.field.node.advising_center.field_hei_phone_number
+    - field.field.node.advising_center.field_hei_skype
+    - field.field.node.advising_center.field_hei_virtual_pres_options
+    - field.field.node.advising_center.field_location
+    - field.field.node.advising_center.field_phone_number
+    - field.field.node.advising_center.field_public_mailing_address
+    - field.field.node.advising_center.field_region
+    - field.field.node.advising_center.field_skype
+    - field.field.node.advising_center.field_tmp_img
+    - field.field.node.advising_center.field_walk_up_address
+    - node.type.advising_center
+  module:
+    - feeds_log
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+label: 'Advising Centers'
+id: advising_centers
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: advising_center
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    value: Title
+    label: Title
+    machine_name: title
+    type: csv
+  images_and_videos:
+    value: 'Images and Videos'
+    label: 'Images and Videos'
+    machine_name: images_and_videos
+    type: csv
+  city:
+    value: City
+    label: City
+    machine_name: city
+    type: csv
+  location:
+    value: Location
+    label: Location
+    machine_name: location
+    type: csv
+  event_details:
+    value: 'Event Details'
+    label: 'Event Details'
+    machine_name: event_details
+    type: csv
+  e_mail_address:
+    value: 'E-mail Address'
+    label: 'E-mail Address'
+    machine_name: e_mail_address
+    type: csv
+  walk_up_address:
+    value: 'Walk-Up Address'
+    label: 'Walk-Up Address'
+    machine_name: walk_up_address
+    type: csv
+  public_phone_number:
+    value: 'Public Phone number'
+    label: 'Public Phone number'
+    machine_name: public_phone_number
+    type: csv
+  public_fax_number:
+    value: 'Public Fax number'
+    label: 'Public Fax number'
+    machine_name: public_fax_number
+    type: csv
+  public_skype:
+    value: 'Public Skype'
+    label: 'Public Skype'
+    machine_name: public_skype
+    type: csv
+  hei_phone_number:
+    value: 'HEI Phone number'
+    label: 'HEI Phone number'
+    machine_name: hei_phone_number
+    type: csv
+  hei_fax_number:
+    value: 'HEI Fax number'
+    label: 'HEI Fax number'
+    machine_name: hei_fax_number
+    type: csv
+  hei_skype:
+    value: 'HEI Skype'
+    label: 'HEI Skype'
+    machine_name: hei_skype
+    type: csv
+  hei_virtual_presentation_options:
+    value: 'HEI virtual presentation options'
+    label: 'HEI virtual presentation options'
+    machine_name: hei_virtual_presentation_options
+    type: csv
+  center_hours:
+    value: 'Center Hours'
+    label: 'Center Hours'
+    machine_name: center_hours
+    type: csv
+  virtual_advising_hours:
+    value: 'Virtual Advising Hours'
+    label: 'Virtual Advising Hours'
+    machine_name: virtual_advising_hours
+    type: csv
+  website_url_:
+    value: 'Website (URL)'
+    label: 'Website (URL)'
+    machine_name: website_url_
+    type: csv
+  facebook_group_url_:
+    value: 'Facebook Group (URL)'
+    label: 'Facebook Group (URL)'
+    machine_name: facebook_group_url_
+    type: csv
+  facebook_page_url_:
+    value: 'Facebook Page (URL)'
+    label: 'Facebook Page (URL)'
+    machine_name: facebook_page_url_
+    type: csv
+  instagram_page_url_:
+    value: 'Instagram Page (URL)'
+    label: 'Instagram Page (URL)'
+    machine_name: instagram_page_url_
+    type: csv
+  twitter_account_name_:
+    value: 'Twitter Account (name)'
+    label: 'Twitter Account (name)'
+    machine_name: twitter_account_name_
+    type: csv
+  blog_url_:
+    value: 'Blog (URL)'
+    label: 'Blog (URL)'
+    machine_name: blog_url_
+    type: csv
+  youtube_channel_url_:
+    value: 'YouTube Channel (URL)'
+    label: 'YouTube Channel (URL)'
+    machine_name: youtube_channel_url_
+    type: csv
+  other_social_profile:
+    value: 'Other social profile'
+    label: 'Other social profile'
+    machine_name: other_social_profile
+    type: csv
+  services:
+    value: Services
+    label: Services
+    machine_name: services
+    type: csv
+  special_programs:
+    value: 'Special Programs'
+    label: 'Special Programs'
+    machine_name: special_programs
+    type: csv
+  program_highlights:
+    value: 'Program Highlights'
+    label: 'Program Highlights'
+    machine_name: program_highlights
+    type: csv
+  public_mailing_address:
+    value: 'public mailing address'
+    label: 'Public Mailing Address'
+    machine_name: public_mailing_address
+    type: csv
+  material:
+    value: Material
+    label: Material
+    machine_name: material
+    type: csv
+  region:
+    value: Region
+    label: Region
+    machine_name: region
+    type: csv
+  country_flag:
+    value: 'Country Flag'
+    label: 'Country Flag'
+    machine_name: country_flag
+    type: csv
+  '':
+    value: 'Public Mailing Address'
+    label: 'Public Mailing Address'
+    machine_name: ''
+    type: csv
+  center_level:
+    value: 'Center level'
+    label: 'Center level'
+    machine_name: center_level
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_center_city
+    map:
+      value: city
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_location
+    map:
+      target_id: location
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: countries
+  -
+    target: body
+    map:
+      value: event_details
+      summary: ''
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_center_email
+    map:
+      value: e_mail_address
+    settings:
+      language: null
+      defuse: false
+    unique: {  }
+  -
+    target: field_walk_up_address
+    map:
+      value: walk_up_address
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_phone_number
+    map:
+      value: public_phone_number
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_fax_number
+    map:
+      value: public_fax_number
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_skype
+    map:
+      value: public_skype
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_hei_phone_number
+    map:
+      value: hei_phone_number
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_hei_fax_number
+    map:
+      value: hei_fax_number
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_hei_skype
+    map:
+      value: hei_skype
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_center_virtual_hours
+    map:
+      value: center_hours
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_center_website
+    map:
+      uri: website_url_
+      title: website_url_
+    settings:
+      language: null
+  -
+    target: field_center_facebook_group
+    map:
+      uri: facebook_group_url_
+      title: facebook_group_url_
+    settings:
+      language: null
+  -
+    target: field_center_facebook_page
+    map:
+      uri: facebook_page_url_
+      title: facebook_page_url_
+    settings:
+      language: null
+  -
+    target: field_center_instagram_page
+    map:
+      uri: instagram_page_url_
+      title: instagram_page_url_
+    settings:
+      language: null
+  -
+    target: field_center_twitter_account
+    map:
+      value: twitter_account_name_
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_center_blog
+    map:
+      uri: blog_url_
+      title: blog_url_
+    settings:
+      language: null
+  -
+    target: field_center_youtube_channel
+    map:
+      uri: youtube_channel_url_
+      title: youtube_channel_url_
+    settings:
+      language: null
+  -
+    target: field_center_othr_social_profile
+    map:
+      value: other_social_profile
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_center_services
+    map:
+      value: services
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_center_special_programs
+    map:
+      value: special_programs
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_center_program_highlights
+    map:
+      value: program_highlights
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_center_materials
+    map:
+      value: material
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_region
+    map:
+      target_id: region
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: region
+  -
+    target: field_tmp_img
+    map:
+      value: images_and_videos
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_hei_virtual_pres_options
+    map:
+      value: hei_virtual_presentation_options
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_center_country_flag
+    map:
+      value: country_flag
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_public_mailing_address
+    map:
+      value: public_mailing_address
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_center_hours
+    map:
+      value: center_hours
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_center_level
+    map:
+      target_id: center_level
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: center_level

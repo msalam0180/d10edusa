@@ -1,0 +1,60 @@
+uuid: acb81d89-9c4f-48de-814d-e9bf8432be2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ebt_counter_item.field_ebt_counter_description
+    - field.field.paragraph.ebt_counter_item.field_ebt_counter_icon
+    - field.field.paragraph.ebt_counter_item.field_ebt_counter_number
+    - field.field.paragraph.ebt_counter_item.field_ebt_counter_title
+    - paragraphs.paragraphs_type.ebt_counter_item
+  module:
+    - field_layout
+    - layout_discovery
+    - media_library
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: snzZLNDA9DFF0msO0Up9bLDhB8kgJR3OFtnbryzGVms
+id: paragraph.ebt_counter_item.default
+targetEntityType: paragraph
+bundle: ebt_counter_item
+mode: default
+content:
+  field_ebt_counter_description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ebt_counter_icon:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_ebt_counter_number:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_ebt_counter_title:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

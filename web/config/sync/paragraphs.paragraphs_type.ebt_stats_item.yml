@@ -1,0 +1,12 @@
+uuid: 0bdfc20b-3b1c-4399-acb8-316037c23f7a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mXP3gCAYTFLXux_oLacqKfa_b0MprpWFhqxO39VWGl8
+id: ebt_stats_item
+label: 'EBT Stats Item'
+icon_uuid: null
+icon_default: null
+description: 'Stats Item for EBT Stats block'
+behavior_plugins: {  }

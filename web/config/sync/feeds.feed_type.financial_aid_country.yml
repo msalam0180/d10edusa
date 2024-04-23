@@ -1,0 +1,297 @@
+uuid: bf5b84f7-e03b-4120-9c3b-a062845d22ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.financial_aid_country_based_.body
+    - field.field.node.financial_aid_country_based_.field_institution_name
+    - field.field.node.financial_aid_country_based_.field_location
+    - field.field.node.financial_aid_country_based_.field_region
+    - field.field.node.financial_aid_country_based_.field_scholarship_annual
+    - field.field.node.financial_aid_country_based_.field_scholarship_deadline
+    - field.field.node.financial_aid_country_based_.field_scholarship_degree_levels
+    - field.field.node.financial_aid_country_based_.field_scholarship_email
+    - field.field.node.financial_aid_country_based_.field_scholarship_majors
+    - field.field.node.financial_aid_country_based_.field_scholarship_max_amount
+    - field.field.node.financial_aid_country_based_.field_scholarship_url
+    - field.field.node.financial_aid_country_based_.field_tmp_authored_by
+    - field.field.node.financial_aid_country_based_.field_tmp_img
+    - field.field.node.financial_aid_country_based_.field_tmp_location_flag
+    - field.field.node.financial_aid_country_based_.field_tmp_scholarship_duration
+    - node.type.financial_aid_country_based_
+  module:
+    - feeds_log
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+label: 'Financial Aid Country'
+id: financial_aid_country
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: financial_aid_country_based_
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    value: Title
+    label: Title
+    machine_name: title
+    type: csv
+  institution:
+    value: Institution
+    label: Institution
+    machine_name: institution
+    type: csv
+  location_flag:
+    value: 'Location Flag'
+    label: 'Location Flag'
+    machine_name: location_flag
+    type: csv
+  location:
+    value: Location
+    label: Location
+    machine_name: location
+    type: csv
+  region:
+    value: Region
+    label: Region
+    machine_name: region
+    type: csv
+  financial_aid_deadline:
+    value: 'Financial Aid Deadline'
+    label: 'Financial Aid Deadline'
+    machine_name: financial_aid_deadline
+    type: csv
+  recurs_annually:
+    value: 'Recurs Annually'
+    label: 'Recurs Annually'
+    machine_name: recurs_annually
+    type: csv
+  degree_levels:
+    value: 'Degree levels'
+    label: 'Degree levels'
+    machine_name: degree_levels
+    type: csv
+  duration_of_award:
+    value: 'Duration of Award'
+    label: 'Duration of Award'
+    machine_name: duration_of_award
+    type: csv
+  maximum_amount_of_award:
+    value: 'Maximum amount of award'
+    label: 'Maximum amount of award'
+    machine_name: maximum_amount_of_award
+    type: csv
+  majors:
+    value: Majors
+    label: Majors
+    machine_name: majors
+    type: csv
+  body:
+    value: Body
+    label: Body
+    machine_name: body
+    type: csv
+  more_information_e_mail:
+    value: 'More information e-mail'
+    label: 'More information e-mail'
+    machine_name: more_information_e_mail
+    type: csv
+  '':
+    value: 'Institution Logo'
+    label: 'Institution Logo'
+    machine_name: ''
+    type: csv
+  more_information_url:
+    value: 'More information URL'
+    label: 'More information URL'
+    machine_name: more_information_url
+    type: csv
+  more_information_url_text:
+    value: 'More information URL Text'
+    label: 'More information URL Text'
+    machine_name: more_information_url_text
+    type: csv
+  finaidbody:
+    value: Body
+    label: Body
+    machine_name: finaidbody
+    type: csv
+  post_date:
+    value: 'Post date'
+    label: 'Post date'
+    machine_name: post_date
+    type: csv
+  author:
+    value: Author
+    label: Author
+    machine_name: author
+    type: csv
+  logo:
+    value: Logo
+    label: Logo
+    machine_name: logo
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_institution_name
+    map:
+      value: institution
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_region
+    map:
+      target_id: region
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: region
+  -
+    target: field_scholarship_deadline
+    map:
+      value: financial_aid_deadline
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_scholarship_annual
+    map:
+      value: recurs_annually
+    settings:
+      language: null
+  -
+    target: field_scholarship_max_amount
+    map:
+      value: maximum_amount_of_award
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_scholarship_majors
+    map:
+      value: majors
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: body
+    map:
+      value: finaidbody
+      summary: body
+    settings:
+      language: ''
+      format: plain_text
+  -
+    target: field_scholarship_email
+    map:
+      value: more_information_e_mail
+    settings:
+      language: null
+      defuse: false
+    unique: {  }
+  -
+    target: field_scholarship_url
+    map:
+      uri: more_information_url
+      title: more_information_url_text
+    settings:
+      language: null
+  -
+    target: created
+    map:
+      value: post_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_tmp_authored_by
+    map:
+      value: author
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_tmp_scholarship_duration
+    map:
+      value: duration_of_award
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_tmp_location_flag
+    map:
+      value: location_flag
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_tmp_img
+    map:
+      value: logo
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_location
+    map:
+      target_id: location
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 1
+      autocreate_bundle: countries
+  -
+    target: field_scholarship_degree_levels
+    map:
+      target_id: degree_levels
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: degree_levels

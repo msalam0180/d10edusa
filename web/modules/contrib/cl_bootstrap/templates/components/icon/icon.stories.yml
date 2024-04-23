@@ -1,0 +1,6 @@
+title: Bootstrap/UI Kit/Icons
+stories:
+  - name: Icon
+    args:
+      name: airplane
+      classes: icon-sm

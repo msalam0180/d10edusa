@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_slideshow
+label: 'EBT Slide'
+icon_uuid: null
+icon_default: null
+description: 'Slideshow section for EBT Slideshow'
+behavior_plugins: {  }

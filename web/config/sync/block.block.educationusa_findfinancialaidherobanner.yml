@@ -1,0 +1,30 @@
+uuid: cec171d2-a35f-4bbe-a2e8-20289d42e3b0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_banner:45457d3a-8f01-4fe1-87a8-4f785c208bb9'
+  module:
+    - block_content
+    - system
+  theme:
+    - educationusa
+id: educationusa_findfinancialaidherobanner
+theme: educationusa
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:45457d3a-8f01-4fe1-87a8-4f785c208bb9'
+settings:
+  id: 'block_content:45457d3a-8f01-4fe1-87a8-4f785c208bb9'
+  label: 'Find Financial Aid Hero Banner'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /find-financial-aid

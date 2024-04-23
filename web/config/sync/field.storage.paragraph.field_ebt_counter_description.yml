@@ -1,0 +1,21 @@
+uuid: aae104b0-c8d4-4235-a37c-bd405807e7a5
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: T2aI_SC10fUAVAHAQ6YSjRx-RgZI16Y4DhBlcYV8xTY
+id: paragraph.field_ebt_counter_description
+field_name: field_ebt_counter_description
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

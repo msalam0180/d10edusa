@@ -1,0 +1,30 @@
+uuid: f4fbfd5a-870b-42fd-99af-1c65027196e6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_banner:4733ddcc-a016-4d6c-b617-db447916a9dd'
+  module:
+    - block_content
+    - system
+  theme:
+    - educationusa
+id: educationusa_findeventsherobanner
+theme: educationusa
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:4733ddcc-a016-4d6c-b617-db447916a9dd'
+settings:
+  id: 'block_content:4733ddcc-a016-4d6c-b617-db447916a9dd'
+  label: 'Find Events Hero Banner'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /find-events

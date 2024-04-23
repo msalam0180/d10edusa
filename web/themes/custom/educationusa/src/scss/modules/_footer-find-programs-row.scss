@@ -1,0 +1,81 @@
+.find-programs-roboto-bold-white-18px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.find-programs-roboto-normal-alto-18px {
+  color: var(--alto);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  width: 76%;
+}
+
+.az {
+  background-color: #2f3d48;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  a {
+    color: white;
+  }
+}
+
+.find-programs-nav-link {
+  color: rgb(231, 231, 231);
+}
+
+.find-programs-nav-link:hover {
+  color: rgb(231, 231, 231);
+}
+
+.footer-margin-left{
+  @include bp(lg) {
+  margin-left: 233px;
+  }
+}
+
+.footer-white-line-top {
+  @include bp(lg) {
+  width: 92%;
+  border-top: 1px solid #555;
+  margin-top: 0px;
+ 
+  }
+}
+
+/*
+.site-footer__bottom {
+  margin-top: 26px !important; 
+  border-bottom: 1px solid #555 !important;
+  width: 92%;
+  }
+*/
+
+/*Hiding Bootstrap Footer Blue line*/
+/*
+.site-footer__bottom {
+ //   border-top: 0px solid #555 !important;
+    margin-top: 67px !important;
+}
+*/
+
+a[title="About"]{
+  font-weight: bold;
+}
+
+a[title="Alumni News"]{
+  font-weight: bold;
+}
+
+a[title="Resources for Entrepreneurs"]{
+  font-weight: bold;
+}
+
+a[title="Network, Grants, and Resources"]{
+  font-weight: bold;
+}

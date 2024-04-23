@@ -1,0 +1,68 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main content
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+  ]
+%}
+<div{{attributes.addClass(classes)}}>
+	{{ title_prefix }}
+	{% if label %}
+		<h2{{title_attributes}}>{{ label }}</h2>
+	{% endif %}
+	{{ title_suffix }}
+	{% block content %}
+		<section class=" ">
+			<div class="pb-5 pt-5 container">
+				<div class="row " style="">
+					
+					<div class="col-sm-12 col-12 col-md-6 col-lg-3 mt-3" id="">
+					<div class="card border-0 " style="">
+					<div class="view zoom rounded-4"> <img class="card-img-top inner-img" src="{{file_url(content.field_br_ic_card_image|field_target_entity.uri.value)}}" alt="{{content.field_br_ic_card_image|field_raw('alt')}}">
+						<div class="card-img-overlay d-flex flex-wrap align-content-end " style="">
+						<div class="breaking-news-ic-card-bgrd pb-3 " style="">
+							<div class="p-3 mt-2 " style=""><small class="text-uppercase pb-0 text-white small"> Exchange Alumni </small>
+								<h4 class="breaking-news-ic-card-title text-white fw-bold">{{ content.field_field_br_ic_card_title.0 }}</h4>
+								<a href="#" class="fw-bold card-link learn-text">Learn More</a> <i class="fa fa-angle-right learn-text p-0"></i></div>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+					
+				</div>
+			</div>
+	    </section>
+	{% endblock %}
+</div>

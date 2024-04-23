@@ -1,0 +1,25 @@
+uuid: 6efb2cfa-2514-4237-90ea-f03243a0780e
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:ebt_text:534bf971-db1c-4475-9d45-931eade8d853'
+  module:
+    - block_content
+  theme:
+    - educationusa
+id: educationusa_abouteducationusainfoblockone
+theme: educationusa
+region: secondary_menu
+weight: -11
+provider: null
+plugin: 'block_content:534bf971-db1c-4475-9d45-931eade8d853'
+settings:
+  id: 'block_content:534bf971-db1c-4475-9d45-931eade8d853'
+  label: 'About Education USA InfoBlock One'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

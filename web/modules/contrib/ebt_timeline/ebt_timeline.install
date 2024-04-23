@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the EBT timeline.
+ */
+
+use Drupal\paragraphs\Entity\ParagraphsType;
+use Drupal\field\Entity\FieldConfig;
+
+/**
+ * Update the Paragraph Type labek to "EBT Timeline Event".
+ */
+function ebt_timeline_update_9111() {
+
+  // Get the paragraph type object.
+  $paragraph_type = ParagraphsType::load('ebt_timeline');
+
+  // If there is no the block type, skip.
+  if (empty($paragraph_type)) {
+    return;
+  }
+
+  // Update the description.
+  $paragraph_type->set('label', 'EBT Timeline Event');
+
+  // Save the updated block type.
+  $paragraph_type->save();
+
+}
+
+/**
+ * Set the field "field_ebt_timeline" as required in the Block Type.
+ */
+function ebt_timeline_update_9112() {
+
+  // Set the machine names.
+  $block_type_id = 'ebt_timeline';
+  $field_name = 'field_ebt_timeline';
+
+  // Load the field configuration object.
+  $field_config = FieldConfig::loadByName('block_content', $block_type_id, $field_name);
+
+  // If the field doesn't exists, skip.
+  if (empty($field_config)) {
+    return;
+  }
+
+  // Set the field as required.
+  $field_config->setRequired(TRUE)->save();
+
+}

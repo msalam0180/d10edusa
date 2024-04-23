@@ -1,0 +1,24 @@
+uuid: 7710bb5b-06eb-4f44-9151-d20cf56331da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scholarship_majors
+    - filter.format.plain_text
+    - node.type.financial_aid_us
+  module:
+    - text
+id: node.financial_aid_us.field_scholarship_majors
+field_name: field_scholarship_majors
+entity_type: node
+bundle: financial_aid_us
+label: Majors
+description: 'Any majors that the scholarship is restricted to.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

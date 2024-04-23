@@ -1,0 +1,17 @@
+uuid: a4ac41f9-cddc-4684-8bbd-0b89a8b6d644
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Et29BhgBeTqvhgY2GYsCViL4QGjZRI0vsbEe5O1VON4
+name: ebt_gallery_image
+label: 'EBT Gallery Image'
+effects:
+  6ab4544c-7611-414c-aaa8-4eed96b10c84:
+    uuid: 6ab4544c-7611-414c-aaa8-4eed96b10c84
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 365
+      height: 265
+      anchor: center-center

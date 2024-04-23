@@ -1,0 +1,21 @@
+uuid: c61a1fdf-a8a9-4ea6-a3de-6cda2fd26742
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_block
+    - field.storage.block_content.field_background_color
+id: block_content.card_block.field_background_color
+field_name: field_background_color
+entity_type: block_content
+bundle: card_block
+label: 'Background Color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

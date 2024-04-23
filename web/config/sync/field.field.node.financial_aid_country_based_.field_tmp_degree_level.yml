@@ -1,0 +1,24 @@
+uuid: 0e6ee517-b207-4de5-a5cc-b52cb8a36efe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmp_degree_level
+    - filter.format.full_html
+    - node.type.financial_aid_country_based_
+  module:
+    - text
+id: node.financial_aid_country_based_.field_tmp_degree_level
+field_name: field_tmp_degree_level
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Tmp degree levels'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

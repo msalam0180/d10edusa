@@ -1,0 +1,31 @@
+uuid: d351641a-d3ec-4882-8561-7dd6f9ba9fc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_image_gallery
+    - field.storage.block_content.field_ebt_image_gallery
+    - media.type.image
+_core:
+  default_config_hash: FAizD6Kvuyrbl5yxVgCp1vn4NLB9d-nI3wWWaqOR-kQ
+id: block_content.ebt_image_gallery.field_ebt_image_gallery
+field_name: field_ebt_image_gallery
+entity_type: block_content
+bundle: ebt_image_gallery
+label: 'Image Gallery'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

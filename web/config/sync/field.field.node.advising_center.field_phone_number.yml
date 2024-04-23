@@ -1,0 +1,19 @@
+uuid: dbabceba-35a2-46a4-9b8a-2c9d40f4bc6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone_number
+    - node.type.advising_center
+id: node.advising_center.field_phone_number
+field_name: field_phone_number
+entity_type: node
+bundle: advising_center
+label: 'Public Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

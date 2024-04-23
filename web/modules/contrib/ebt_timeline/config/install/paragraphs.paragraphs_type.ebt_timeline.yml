@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_timeline
+label: 'EBT Timeline Event'
+icon_uuid: null
+icon_default: null
+description: 'Timeline section for EBT Timeline'
+behavior_plugins: {  }

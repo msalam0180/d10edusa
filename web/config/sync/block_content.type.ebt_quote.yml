@@ -1,0 +1,10 @@
+uuid: 2ba80d6c-2863-4e16-9cff-6ea7e86d2e3d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: R3qZ2pP9HUZZOVzX7J5oHroNb9W2pfSWulgYrgRbm4g
+id: ebt_quote
+label: 'EBT Quote'
+revision: 0
+description: 'Extra Block Type (EBT): Quote'

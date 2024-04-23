@@ -1,0 +1,100 @@
+.eca-icons {
+
+    &-refresh,
+    &-light,
+    &-redchart,
+    &-bigmap,
+    &-world-earth,
+    &-top-logo,
+    &-map-world,
+    &-map-small,
+    &-m-glass,
+    &-map,
+    &-news,
+    &-star,
+    &-time,
+    &-inform {
+        position: relative;
+        height: 50px;
+        width: 50px;
+        margin-bottom: 1px;
+        // margin-left: 11px;
+        object-fit: contain;
+        display: block;
+        background-size: contain !important;
+    }
+
+    &-light {
+        background: url($images + 'light-icon.png') no-repeat;
+    }
+    &-bigmap {
+        background: url($images + 'BigMap.png') no-repeat;
+        margin: 15px 0px !important;
+        height: 58px !important;
+        width: 80px !important;
+        background-position: center !important;
+    }
+    &-usmap {
+        background: url($images + 'USMap.png') no-repeat;
+        margin: 15px 0px !important;
+        height: 58px !important;
+        width: 80px !important;
+        background-position: center !important;
+    }
+    &-nonusmap {
+        background: url('../images/nonUSMap.png') no-repeat;
+        margin: 12px 12px !important;
+        height: 58px !important;
+        width: 80px !important;
+        background-position: center !important;
+    }
+    &-world-earth {
+        background: url($images + '2.png') no-repeat;
+        margin: 0px 10px 10px 0px  !important;
+        height: 44px !important;
+        width: 44px !important;
+        background-position: center !important;
+    }
+    &-star {
+        background: url($images + 'Featured_Programs.png') no-repeat;
+    }
+    &-news {
+        background: url($images + 'LatestNewsIcon.png') no-repeat;
+    }
+    &-time {
+        background: url($images + 'time@1x.png') no-repeat;
+    }
+    &-inform {
+        background: url('../images/inform.png') no-repeat;
+    }
+    &-map {
+        background: url($images + 'Map.png') no-repeat;
+    }
+    &-m-glass {
+        background: url($images + 'magnifying-glass.png') no-repeat;
+    }
+    &-map-small {
+        background: url($images + 'USA-MAPsmall.png') no-repeat;
+    }
+    &-map-world {
+        background: url($images + 'WorldMap.png') no-repeat;
+    }
+    &-top-logo {
+        background: url($images + 'Flag.svg') no-repeat;
+        width: 153px !important;
+        height: 35px !important;
+    }
+    &-redchart {
+        background: url($images + 'chart-red.png') no-repeat;
+    }
+    &-refresh {
+        background: url($images + 'refresh-icon') no-repeat;
+    }
+}
+
+.icon-alg {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}

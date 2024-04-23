@@ -1,0 +1,31 @@
+uuid: 8820937a-9bd5-4ae4-8184-f65f6bed1b33
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.advising_center_list
+  module:
+    - system
+    - views
+  theme:
+    - educationusa
+id: educationusa_views_block__advising_center_list_find_advising
+theme: educationusa
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:advising_center_list-find_advising_center'
+settings:
+  id: 'views_block:advising_center_list-find_advising_center'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+  exposed: {  }
+  pager_offset: 0
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /find-advising-center

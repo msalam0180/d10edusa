@@ -1,0 +1,26 @@
+uuid: 49dfc5ea-7278-42f0-87e6-2619a2c103e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_quote
+    - field.storage.block_content.body
+  module:
+    - text
+_core:
+  default_config_hash: RHJ2BeL7FRpMNmRALB5w7o8erlsGuBnb8MOaVvceiDo
+id: block_content.ebt_quote.body
+field_name: body
+entity_type: block_content
+bundle: ebt_quote
+label: Quote
+description: 'Quote or Testimonial'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

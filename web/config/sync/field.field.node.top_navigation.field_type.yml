@@ -1,0 +1,21 @@
+uuid: fb12ef61-565d-4cac-831a-fce5a6830c34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.top_navigation
+  module:
+    - options
+id: node.top_navigation.field_type
+field_name: field_type
+entity_type: node
+bundle: top_navigation
+label: Type
+description: 'Select Type To Determine The Page the Top Navigation will display on'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

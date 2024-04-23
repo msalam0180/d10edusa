@@ -1,0 +1,33 @@
+uuid: a4c6ac88-ab74-42a0-b9b7-40f4ee602068
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_scholarship_duration
+field_name: field_scholarship_duration
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: one_semester
+      label: 'One Semester'
+    -
+      value: one_year
+      label: 'One year'
+    -
+      value: two_years
+      label: 'Two years'
+    -
+      value: four_years
+      label: 'Four years'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

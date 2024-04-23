@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+<section class="news-backdrop">
+  <div class="container-fluid">
+      <div class="container text-center py-3 pt-3 w-100">
+          <p>
+              <small class="news-color small-bold">{{ 'Education USA'|t }}</small>
+          </p>
+          <h3 class="news-color fw-bold display-6">
+              {{ 'Upcoming Events'|t }}
+          </h3>
+      </div>
+  </div>
+  <div class="pb-3 pt-4 container">
+    <div class="row">
+      {% for row in rows %}
+        <div class="col-md-6 mt-2">
+          <div class="card mb-3 h-100"> 
+            <div class="card-body">
+              {{ row.content }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+

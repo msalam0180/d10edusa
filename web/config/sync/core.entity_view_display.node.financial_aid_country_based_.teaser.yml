@@ -1,0 +1,82 @@
+uuid: 21193287-6d01-4f67-aae9-4ee22d379a9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.financial_aid_country_based_.body
+    - field.field.node.financial_aid_country_based_.feeds_item
+    - field.field.node.financial_aid_country_based_.field_country
+    - field.field.node.financial_aid_country_based_.field_deadline_type
+    - field.field.node.financial_aid_country_based_.field_fb_share_description_short
+    - field.field.node.financial_aid_country_based_.field_institution_logo
+    - field.field.node.financial_aid_country_based_.field_institution_name
+    - field.field.node.financial_aid_country_based_.field_location
+    - field.field.node.financial_aid_country_based_.field_location_flag
+    - field.field.node.financial_aid_country_based_.field_region
+    - field.field.node.financial_aid_country_based_.field_scholarship_annual
+    - field.field.node.financial_aid_country_based_.field_scholarship_deadline
+    - field.field.node.financial_aid_country_based_.field_scholarship_degree_levels
+    - field.field.node.financial_aid_country_based_.field_scholarship_duration
+    - field.field.node.financial_aid_country_based_.field_scholarship_email
+    - field.field.node.financial_aid_country_based_.field_scholarship_majors
+    - field.field.node.financial_aid_country_based_.field_scholarship_max_amount
+    - field.field.node.financial_aid_country_based_.field_scholarship_url
+    - field.field.node.financial_aid_country_based_.field_share_description_short
+    - field.field.node.financial_aid_country_based_.field_tmp_authored_by
+    - field.field.node.financial_aid_country_based_.field_tmp_country
+    - field.field.node.financial_aid_country_based_.field_tmp_country_long
+    - field.field.node.financial_aid_country_based_.field_tmp_degree_level
+    - field.field.node.financial_aid_country_based_.field_tmp_img
+    - field.field.node.financial_aid_country_based_.field_tmp_location_flag
+    - field.field.node.financial_aid_country_based_.field_tmp_scholarship_duration
+    - field.field.node.financial_aid_country_based_.field_us_states
+    - node.type.financial_aid_country_based_
+  module:
+    - text
+    - user
+id: node.financial_aid_country_based_.teaser
+targetEntityType: node
+bundle: financial_aid_country_based_
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true
+  field_country: true
+  field_deadline_type: true
+  field_fb_share_description_short: true
+  field_institution_logo: true
+  field_institution_name: true
+  field_location: true
+  field_location_flag: true
+  field_region: true
+  field_scholarship_annual: true
+  field_scholarship_deadline: true
+  field_scholarship_degree_levels: true
+  field_scholarship_duration: true
+  field_scholarship_email: true
+  field_scholarship_majors: true
+  field_scholarship_max_amount: true
+  field_scholarship_url: true
+  field_share_description_short: true
+  field_tmp_authored_by: true
+  field_tmp_country: true
+  field_tmp_country_long: true
+  field_tmp_degree_level: true
+  field_tmp_img: true
+  field_tmp_location_flag: true
+  field_tmp_scholarship_duration: true
+  field_us_states: true

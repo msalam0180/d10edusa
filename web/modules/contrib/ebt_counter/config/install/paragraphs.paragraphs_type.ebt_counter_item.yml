@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_counter_item
+label: 'EBT Counter Item'
+icon_uuid: null
+icon_default: null
+description: 'Counter Items to be used inside of Block Type: "EBT Counter"'
+behavior_plugins: {  }

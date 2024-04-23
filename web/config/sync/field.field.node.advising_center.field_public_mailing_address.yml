@@ -1,0 +1,24 @@
+uuid: c2bbae7e-f0ea-433a-a3d2-e8969bf5447e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_mailing_address
+    - filter.format.full_html
+    - node.type.advising_center
+  module:
+    - text
+id: node.advising_center.field_public_mailing_address
+field_name: field_public_mailing_address
+entity_type: node
+bundle: advising_center
+label: 'Public Mailing Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

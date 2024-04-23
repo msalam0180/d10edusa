@@ -1,0 +1,12 @@
+uuid: 9e52ef70-9439-411b-92d1-4881850e6b30
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7IpvZPMN9T939ox72-gNDYNrZIVrXQ7nlF-Pxkzq_7M
+id: ebt_slick_slider
+label: 'EBT Slick Slide'
+icon_uuid: null
+icon_default: null
+description: 'Slide for EBT Slick Slider'
+behavior_plugins: {  }

@@ -1,0 +1,30 @@
+uuid: d1d45585-893a-4fe7-b747-326e21e7b5f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.financial_country_and_us
+  module:
+    - system
+    - views
+  theme:
+    - educationusa
+id: educationusa_views_block__financial_country_and_us_financialaid
+theme: educationusa
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:financial_country_and_us-financialaid'
+settings:
+  id: 'views_block:financial_country_and_us-financialaid'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+  exposed: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /find-financial-aid

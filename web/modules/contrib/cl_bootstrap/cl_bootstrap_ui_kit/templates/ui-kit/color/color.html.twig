@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Implements the Color tab content for the UI Kit.
+ *
+ * Displays usage of color within the theme.
+ *
+ * @see @bootstrap_ui_kit/color/color.html.twig
+ * @see @cl_bootstrap_ui_kit/templates/ui-kit/color/color.macros.twig
+ */
+#}
+{% import '@cl_bootstrap_ui_kit/templates/ui-kit/color/color.macros.twig' as macros %}
+
+{% extends '@bootstrap_ui_kit/ui-kit/color/color.html.twig' %}
+
+{% block accessibility_checker_content %}
+  {{ macros.accessibility_info('primary', 'white') }}
+  {{ macros.accessibility_info('secondary', 'white') }}
+{% endblock %}

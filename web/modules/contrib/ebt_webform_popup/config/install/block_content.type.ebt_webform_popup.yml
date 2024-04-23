@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: ebt_webform_popup
+label: 'EBT Webform Popup'
+revision: 0
+description: 'Extra Block Type (EBT): Webform Popup'

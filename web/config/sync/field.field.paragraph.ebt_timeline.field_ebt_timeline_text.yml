@@ -1,0 +1,24 @@
+uuid: 61021106-a418-4c5e-a66a-8dd797b7714c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ebt_timeline_text
+    - paragraphs.paragraphs_type.ebt_timeline
+  module:
+    - text
+_core:
+  default_config_hash: 5F87FeFRv4oMn7nyxCCJ3pjlpG-G5NBIfD-5o5No0t8
+id: paragraph.ebt_timeline.field_ebt_timeline_text
+field_name: field_ebt_timeline_text
+entity_type: paragraph
+bundle: ebt_timeline
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

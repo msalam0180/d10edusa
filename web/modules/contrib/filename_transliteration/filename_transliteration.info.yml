@@ -1,0 +1,10 @@
+name: Filename Transliteration
+type: module
+description: Enables basic filename transliteration for all uploaded File Entities.
+core_version_requirement: ^8 || ^9 || ^10
+package: Media
+
+# Information added by Drupal.org packaging script on 2023-03-05
+version: '1.1.0'
+project: 'filename_transliteration'
+datestamp: 1677981324

@@ -1,0 +1,22 @@
+uuid: 18a5a014-d1c0-4c30-9b43-f3a2e0c31e8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: five_steps_study
+label: 'Five Steps Study'
+type: 'canonical_entities:node'
+pattern: '/[node:field_five_steps]/[node:title]'
+selection_criteria:
+  3828df29-842a-465f-bddc-3bf908857454:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 3828df29-842a-465f-bddc-3bf908857454
+    context_mapping:
+      node: node
+    bundles:
+      study: study
+selection_logic: and
+weight: -5
+relationships: {  }

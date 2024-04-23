@@ -1,0 +1,19 @@
+uuid: fa0891a4-6eed-4ba6-bb39-f77ae5c22d41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmp_address_line_one
+    - node.type.events
+id: node.events.field_tmp_address_line_one
+field_name: field_tmp_address_line_one
+entity_type: node
+bundle: events
+label: 'Event Address line 1'
+description: 'Street, Ave., Block, Suite/Apt no. for In-Person Location'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

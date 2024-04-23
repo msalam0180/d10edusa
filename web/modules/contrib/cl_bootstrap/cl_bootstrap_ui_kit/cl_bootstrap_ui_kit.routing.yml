@@ -1,0 +1,7 @@
+#cl_bootstrap_ui_kit.ui_kit:
+#  path: '/ui-kit'
+#  defaults:
+#    _controller: '\Drupal\bootstrap_ui_kit\Controller\BootstrapUiKitController::content'
+#    _title: 'UI Kit Library'
+#  requirements:
+#    _permission: 'access bootstrap ui kit'

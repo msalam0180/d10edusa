@@ -1,0 +1,166 @@
+<article{{attributes.addClass(classes)}}>
+    <header>
+    </header>
+    <div{{content_attributes.addClass('node__content','clearfix')}}>
+        <div class="container events">
+            <div class="row">
+                <div class="col-md-8">
+                    
+                      <div class="row justify-content-left">  
+                        
+                         {% if node.field_institution_logo.entity.field_media_image.entity.fileuri is not empty  %} 
+                              <div class="col-md-7">
+                                  {{ title_prefix }}
+                                  {% if label %}
+                                    <h2{{title_attributes.addClass('node__title')}}>
+                                    {{ label }}
+                                    <h4 class="fw-bold margin-top-adj">{{ node.field_institution_name.value }}</h4>
+                                    </h2>
+                                  {% endif %}
+                              </div>
+                              <div class="col-md-4">
+                                  <img class="img-thumbnail" src="{{ file_url(node.field_institution_logo.entity.field_media_image.entity.fileuri) }}" alt="{{ node.field_institution_logoentity.field_media_image.entity.alt }}">
+                              </div>
+                         {% elseif node.field_tmp_img.value is not empty  %}
+                              <div class="col-md-7">
+                                  {{ title_prefix }}
+                                  {% if label %}
+                                    <h2{{title_attributes.addClass('node__title')}}>
+                                    {{ label }}
+                                    <h4 class="fw-bold margin-top-adj">{{ node.field_institution_name.value }}</h4>
+                                    </h2>
+                                  {% endif %}
+                              </div>
+                              <div class="col-md-4">
+                                    <img class="img-thumbnail" src="/educationusa/web/sites/default/files/styles/content_area_full_width/public/field_hei_logo/{{ node.field_tmp_img.value }}" alt="{{ node.field_tmp_img.value }}">
+                              </div>
+                         {% else %}
+                              <div class="col-md-7" style="width:100%;">
+                                  {{ title_prefix }}
+                                  {% if label %}
+                                    <h2{{title_attributes.addClass('node__title')}}>
+                                    {{ label }}
+                                    <h4 class="fw-bold margin-top-adj">{{ node.field_institution_name.value }}</h4>
+                                    </h2>
+                                  {% endif %}
+                              </div>
+                         {% endif %}
+
+                        
+                      </div>  
+                      {% if content.body %}
+                      <div class="row">
+                         {{ content.body[0] }} 
+                      </div>
+                      {% endif %}
+
+                      
+                        {% if node.field_scholarship_url.uri is not empty %}
+                            <button class="btn btn-primary mt-2 mb-3">
+                            <a href="{{ node.field_scholarship_url.uri }}">{{ node.field_scholarship_url.title|default('More Information') }}</a>
+                            </button>
+                        {% else %}
+                        {% endif %}
+                      
+                </div>
+                <div class="col-md-4">
+                    <div class="row mb-2">
+                        <div>
+                            {% if node.field_location is not empty %}
+                                        <h6 class="mb-2"><b>STUDY ABROAD</b></h6>
+                                        {{ content.field_location.0|render|striptags }}
+                                        {% for key, value in content.field_location %}
+                                           {% if key > 0 %}{{', '}}{{ value }}{% endif %}
+                                         {% endfor %}
+                                         <hr>
+                            {% endif %}
+                            <h6 class="mb-2"><b>REGION</b></h6>
+                                 {% if node.field_region %}
+                                     {{ content.field_region.0}}
+                                 {% endif %}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-2">
+                        <div>
+                                {% if node.field_scholarship_deadline	%}
+                                        <h6 class="mb-2"><b>SCHOLARSHIP DEADLINE</b></h6>
+                                        <p>{{ content.field_scholarship_deadline.0|render|striptags }}
+                                        {% if node.field_scholarship_annual.value == '1' %}
+                                           <br>{{ "Recurs Annually"|t }}
+                                        {% elseif node.field_scholarship_annual.value == '0' %}
+                                        {% endif %}</p>          
+                                {% endif %}
+                                 <hr>
+                        </div>
+                    </div>
+                   
+                    <div class="row mb-2">
+                        <div>
+                                {% if node.field_scholarship_degree_levels is not empty	%}
+                                   <h6 class="mb-2"><b>DEGREE LEVELS</b></h6>
+                                      {{ content.field_scholarship_degree_levels.0}}
+                                         {% for key, value in content.field_scholarship_degree_levels %}
+                                           {% if key > 0 %}
+                                             {{ ' <br> ' }}
+                                             {{ value }}
+                                           {% endif %}
+                                         {% endfor %}
+                                {% endif %}
+                                                    <hr>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div>
+                                {% if node.field_scholarship_duration is not empty	%}
+                                        <h6 class="mb-2"><b>DURATION OF AWARD</b></h6>
+                                        <p>{{ content.field_scholarship_duration.0 }}</p>
+                                        <hr>
+                                {% else %}
+                                        <h6 class="mb-2"><b>DURATION OF AWARD</b></h6>
+                                        <p>{{ content.field_tmp_scholarship_duration.0 }}</p>
+                                        <hr>
+                                {% endif %}
+                                         
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-2">
+                        <div>
+                                {% if node.field_scholarship_max_amount is not empty	%}
+                                        <h6 class="mb-2"><b>MAXIMUM AMOUNT OF AWARD</b></h6>
+                                        <p>{{ content.field_scholarship_max_amount.0|render|striptags }}</p>
+                                        <hr>
+                                {% endif %}
+                                
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-2">
+                        <div>
+                                {% if node.field_scholarship_degree_levels is not empty	%}
+                                        <h6 class="mb-2"><b>RESTRICTED TO THESE MAJORS</b></h6>
+                                        <p>{{ content.field_scholarship_majors.0|render|striptags }}</p>
+                                        <hr>
+                                {% endif %}
+                                
+                        </div>
+                    </div>
+                    
+                     <div class="row mb-2">
+                        <div>
+                                {% if node.field_scholarship_email is not empty	%}
+                                        <h6 class="mb-2"><b>CONTACT FOR MORE INFORMATION</b></h6>
+                                        <p><a href="mailto:{{ content.field_scholarship_email.0|render|striptags }}">Contact by e-mail</a></p>
+                                        <hr>
+                                {% endif %}
+                                 
+                        </div>
+                    </div>
+                                                                                 
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

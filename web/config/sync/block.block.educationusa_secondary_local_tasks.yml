@@ -1,0 +1,22 @@
+uuid: 9c979d6e-37ce-4c47-84c9-35cbe90dfa39
+langcode: en
+status: true
+dependencies:
+  theme:
+    - educationusa
+_core:
+  default_config_hash: ILQvEJBrv8SO4C2aoXXJb7txnl1rClTtw2hQSF7OXEg
+id: educationusa_secondary_local_tasks
+theme: educationusa
+region: content
+weight: -12
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

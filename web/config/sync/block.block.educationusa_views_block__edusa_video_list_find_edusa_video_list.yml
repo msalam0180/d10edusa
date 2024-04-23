@@ -1,0 +1,30 @@
+uuid: 48324523-4d41-4a95-a06c-23f50e26d1c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.edusa_video_list
+  module:
+    - system
+    - views
+  theme:
+    - educationusa
+id: educationusa_views_block__edusa_video_list_find_edusa_video_list
+theme: educationusa
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:edusa_video_list-find_edusa_video_list'
+settings:
+  id: 'views_block:edusa_video_list-find_edusa_video_list'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+  exposed: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /find-videos

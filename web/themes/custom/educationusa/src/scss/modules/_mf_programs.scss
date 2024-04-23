@@ -1,0 +1,544 @@
+// More Programs SCSS
+.mp {
+
+    h2,
+    h3 {
+        // color: var(--white);
+        margin-bottom: 0px;
+    }
+
+    h2 {
+        color: var(--black);
+        font-family: var(--font-family-merriweather);
+    }
+    h3 {
+        text-transform: uppercase;
+        color: var(--deep-sapphire);
+        font-family: var(--font-family-roboto);
+    }
+
+    &-container {
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    &-rows {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        flex-wrap: nowrap;
+
+        @include bp(sm) {
+            flex-direction: row;
+        }
+
+        .views-row {
+            width: auto;
+        }
+    }
+}
+
+// Find Programs SCSS
+.fp {
+    &-container {
+      /*  background-color: #002868; */
+        padding: 25px;
+        margin-left: -10%;
+        
+
+        .fieldset-legend,
+        #edit-field-programs-phct-value-collapsible,
+        label {
+            color: var(--white);
+            font-family: var(--font-family-roboto);
+            // font-size: var(--font-size-xxl);
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 18px;
+            min-height: 18px;
+            width: 77%;
+            font-size: 15px !important;
+
+            @include bp(lg) {
+            color: var(--white);
+            font-family: var(--font-family-roboto);
+            // font-size: var(--font-size-xxl);
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 18px;
+            min-height: 18px;
+            width: 390px;
+            font-size: 15px !important;
+            border-radius: 7px;
+            border-width: thin;
+            }
+        }
+
+        .flex-wrap {
+            justify-content: center;
+        }
+
+        .eca-ex-programs-main {
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+    }
+
+    &-inner {
+        .views-exposed-form {
+            position: relative;
+            display: block;
+            margin-top: 70px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: -22px;
+            
+            @include bp(lg) {
+            position: relative;
+            display: block;
+            margin-top: 70px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: -342px;
+            }
+
+
+            .eca_ex-search-submit {
+                background: none;
+                font-size: 16px;
+                font-weight: 400 !important;
+                //font-size: inherit;
+                color: var(--white);
+                background-color: #004eaa;
+                border-radius: 10px;
+                font-family: var(--font-family-roboto);
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 500ms ease-in-out;
+                width: max-content;
+                padding: 18px 10px;
+                margin-bottom: -36px;
+                order: 5 !important;
+
+                margin-top: 12%;
+                margin-left: 245%;
+
+                // display: none !important;
+
+                &:hover {
+                    color: var(--white);
+                    background-color: #004eaa;
+                }
+            }
+        }
+    }
+
+    // &-submit-btn {
+    //     color: var(--white);
+    //     background-color: #004eaa;
+    //     border-radius: 10px;
+    //     font-family: var(--font-family-roboto);
+    //     height: 30px;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     transition: all 500ms ease-in-out;
+
+    //     &:hover {
+    //         color: var(--white);
+    //         background-color: #004eaa;
+    //     }
+    // }
+
+    &-inner-c {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+         @include bp(sm) {
+            width: 850px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: baseline;
+         }
+
+         #edit-actions {
+            order: 5;
+            margin: auto;
+        }
+    }
+
+    h2,
+    h3 {
+        color: #fff;
+        font-family: var(--font-family-roboto);
+        margin-bottom: 0;
+        font-size: 24px;
+        @include bp(lg) {
+            color: #fff;
+            font-family: var(--font-family-roboto);
+            margin-bottom: 0;
+
+        }
+
+    }
+
+    h2 {}
+    h3 {}
+
+    .flex-col {
+        text-align: center;
+        max-width: 400px;
+        margin-top: 0;
+        margin: 0 auto;
+
+        @include bp(md) {
+            margin-top: 19.5px;
+            text-align: left;
+            max-width:inherit;
+         }
+    }
+
+    .flex-row-3 {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+
+        @include bp(md) {
+            text-align: left;
+            flex-direction: row;
+            max-width: 900px;
+            margin: auto;
+         }
+
+         .x11 {
+            display: flex;
+            flex-direction: column;
+            margin: 15px auto 0;
+            width: 30px;
+
+            @include bp(sm) {
+                text-align: left;
+                flex-direction: row;
+             }
+             @include bp(lg) {
+                display: flex;
+                flex-direction: column;
+                margin: 15px auto 0;
+             }
+         }
+    }
+
+}
+
+#edit-field-programs {
+    &-students-value--wrapper,
+    &-oos-value--wrapper,
+    &-phct-value-collapsible,
+    &-app-type-value--wrapper {
+        display: flex;
+        flex-direction: column;
+        font-size: 15px !important;
+        max-width: 390px;
+        margin-right: 5px;
+        margin-left: 3%;
+    }
+    
+    &-phct-value-collapsible {
+       order: 1;
+       border: 2px solid #fff;
+       border-radius: 0px;
+       padding: 10px;
+       position: relative;
+       margin-bottom: 30px;
+       margin-left: -10px;
+
+       @include bp(sm2) {
+        margin-left: 26px;
+        margin-left: 20% !important;
+       }
+
+       @include bp(lg) {
+        order: 1;
+        border: 2px solid #fff;
+        border-radius: 0px;
+        padding: 10px;
+        position: relative;
+        margin-bottom: 30px;
+        margin-left: -10px;
+        }
+        
+       &:after {
+        content: '';
+        background: url($images + 'icons-down@1x.png');
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 15px;
+        height: 15px;
+        background-size: contain;
+        z-index: 600 !important;
+       }
+
+    }
+
+    &-app-type-value--wrapper {
+       order: 2;
+      /* @include bp(md) {
+        order: 0;
+       }
+       @include bp(sm2) {
+       }
+       @include bp(lg) {
+        order: 2;
+        //padding-top: 30px;
+        //margin-left: -10%;
+       } */
+    }
+    &-students-value--wrapper {
+        order: 3;
+     }
+    &-oos-value--wrapper {
+        order: 4;
+    }
+}
+
+// #edit-submit-find-programs {
+//     display: flex;
+//     flex-direction: column;
+//     order: 4;
+// }
+
+.find-programs-page {
+    .view-content.row {
+        background-color: #fff;
+    }
+    .fp-container {
+        padding: 0;
+    }
+
+    article {
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+}
+
+#edit-field-programs-phct-value-collapsible {
+    summary {
+        text-transform: uppercase;
+        font-size: 15px;
+    }
+}
+
+.fieldset-legend {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+ .node--type-u-s-citizens,
+ .node--type-non-u-s-citizens {
+    .fp-container {
+        .view-content.row {
+            // &:first-child {
+                display: none !important;
+            // }
+        }
+    }
+ }
+
+#edit-field-programs-phct-value-collapsible {
+    margin-top: 10px;
+
+    @include bp(lg) {
+        margin-top: 10px;
+    }
+   
+   @include bp(sm2) {
+    margin-left: -3%;
+    margin-top: 1%;
+    width: 34% !important;
+   }
+}
+
+ #edit-field-programs-students-value--wrapper {
+    margin-left: -6%;
+    @include bp(sm2){
+        margin-left: 20%;
+    }
+    @include bp(lg){
+        margin-left: 20%;
+    }
+ }
+
+ #edit-field-programs-app-type-value--wrapper {
+    order: 2;
+    @include bp(sm2){
+        margin-left: 20%;
+        margin-top: 0% !important;
+        order: 2;
+        }
+
+   @include bp(lg){
+
+    order: 2;
+    }
+   
+ }
+
+ #edit-field-programs-oos-value--wrapper {
+    margin-left: 1%;
+    @include bp(lg) {
+    margin-left: 93%;
+    margin-top: -65%;
+ /* margin-top: -49%; */  
+    display: block;
+    margin-right: -50px;
+    column-gap: 325px;
+    .fieldset-legend{
+        white-space: nowrap;
+    }
+
+    }
+ }
+
+.world-image{
+    position: relative;
+    display: block;
+}
+
+.world-inner-image{
+    background-repeat: no-repeat;
+    position: relative;
+    display: none;
+    width: 351px;
+    height: 147px;
+    margin-left: 37px;
+    margin-top: 5px;
+    background-size: cover;
+    background-image: url(../images/world-map.png);
+
+
+   @include bp(lg) {
+    background-repeat: no-repeat;
+    position: absolute;
+    display: none;
+    width: 434px;
+    height: 138px;
+    margin-left: 147px;
+    margin-top: -7px;
+    background-size: cover;
+    background-image: url(../images/world-map.png);
+   }
+   @include bp(sm2) {
+    background-repeat: no-repeat;
+    //position: absolute;
+    display: none;
+    width: 434px;
+    height: 138px;
+    margin-left: 147px;
+    margin-top: -7px;
+    background-size: cover;
+    background-image: url(../images/world-map.png);
+   }
+}
+
+.fp-container .flex-wrap {
+    padding-left: -4%;
+    @include bp(lg) {
+        padding-right: 259px;
+    }
+}
+
+.fp .flex-row-3 .image-holder .x11 {
+    @include bp(lg) {
+    margin-right: 3px;
+    margin-bottom: 99px;
+    width: 70px;
+    }
+}
+
+.fp .flex-col {
+    text-align: left;
+    max-width: 77%;
+
+    @include bp(lg) {
+    margin-left: -19%;
+    }
+}
+
+.fp .flex-row-3 .x11 {
+    margin-left: 10px;
+    margin-bottom: -55px;
+
+    @include bp(sm2) {
+    margin-left: 56px;
+    margin-bottom: -47px;
+    }
+
+    @include bp(md) {
+    margin-left: 281%;
+    margin-bottom: 99px;
+    }
+
+    @include bp(lg) {
+    margin-left: -214%;
+    }
+}
+
+.btn-primary {
+    background-color: #156aa8;
+    border: 1px solid #156aa8;
+}
+
+
+.fp-inner-c #edit-actions--3 {
+    -ms-flex-order: 5;
+    order: 5;
+    margin: auto;
+}
+
+
+
+
+.page-link[rel="next"]{
+    margin-left: 700px !important;
+    background-color: #004eaa;
+    margin-top: 7%;
+    color:#fff;
+    border-radius: 20px !important;
+}    
+
+/*Hide search button in Alphabetical List of Programs tab*/
+.eca_ex-search-submit[id^="edit-submit-list-of-programs"]{
+ display: none;
+}
+
+/*Hide search button in Special Focus Areas Programs tab*/
+.eca_ex-search-submit[id^="edit-submit-special-focus-areas-programs"]{
+    display: none;
+}
+
+
+/* Pushes up OOS checkboxes if State select box expands */
+summary[aria-expanded="true"]:active{
+  & #edit-field-programs-oos-value--wrapper {
+        margin-top: -99% !important;
+    }    
+}
+
+
+label[for="edit-field-programs-phct-value"]{
+    margin-left: 43%;
+}
+#edit-field-programs-phct-value{
+    margin-left: 43%;
+    width:-webkit-stretch;
+}
+

@@ -1,0 +1,10 @@
+uuid: a03c85b1-53ab-44e0-9909-d5e0f207438e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: EPwbWyfVd_vUMqmDcQcJd9ww6p2h7kUQTny9S5dPxXQ
+id: ebt_bootstrap_button
+label: 'EBT Bootstrap Button'
+revision: 0
+description: 'Extra Block Type (EBT): Bootstrap Button'

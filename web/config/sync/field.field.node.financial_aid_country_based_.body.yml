@@ -1,0 +1,30 @@
+uuid: e1943544-1092-474f-86ff-dd0de2e94342
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.plain_text
+    - node.type.financial_aid_country_based_
+  module:
+    - text
+id: node.financial_aid_country_based_.body
+field_name: body
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Short Description'
+description: 'If this scholarship has multiple deadlines, please include the details here.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - basic_html
+    - full_html
+    - plain_text
+field_type: text_with_summary

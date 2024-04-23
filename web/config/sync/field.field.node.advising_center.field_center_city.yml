@@ -1,0 +1,19 @@
+uuid: 138aafc8-5f21-47fb-bd5c-609cbade9562
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_city
+    - node.type.advising_center
+id: node.advising_center.field_center_city
+field_name: field_center_city
+entity_type: node
+bundle: advising_center
+label: City
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

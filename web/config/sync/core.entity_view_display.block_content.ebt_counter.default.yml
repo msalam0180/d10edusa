@@ -1,0 +1,48 @@
+uuid: ffe07397-9d78-4dd8-a9b8-011352c3c894
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_counter
+    - field.field.block_content.ebt_counter.body
+    - field.field.block_content.ebt_counter.field_ebt_counter_icon
+    - field.field.block_content.ebt_counter.field_ebt_counter_items
+    - field.field.block_content.ebt_counter.field_ebt_counter_number
+    - field.field.block_content.ebt_counter.field_ebt_settings
+  module:
+    - ebt_core
+    - entity_reference_revisions
+    - text
+_core:
+  default_config_hash: U0J7ekcnrzJlts3b7XRAuCz6M0oc4laODI1JQpfnSWU
+id: block_content.ebt_counter.default
+targetEntityType: block_content
+bundle: ebt_counter
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ebt_counter_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ebt_settings:
+    type: ebt_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_ebt_counter_icon: true
+  field_ebt_counter_number: true

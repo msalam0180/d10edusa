@@ -1,0 +1,25 @@
+uuid: bcd8ac86-38c5-4808-b89e-ab025abaa5bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_bootstrap_button
+    - field.storage.block_content.field_ebt_bootstrap_button_link
+  module:
+    - link
+_core:
+  default_config_hash: LHj34VkFYZYI5N_541KsHaqlWyuH7Cw_KxfjHm23woU
+id: block_content.ebt_bootstrap_button.field_ebt_bootstrap_button_link
+field_name: field_ebt_bootstrap_button_link
+entity_type: block_content
+bundle: ebt_bootstrap_button
+label: Link
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

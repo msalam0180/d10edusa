@@ -1,0 +1,20 @@
+uuid: 2927f320-43c3-4257-81ca-03bd32d1ca0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_scholarship_deadline
+field_name: field_scholarship_deadline
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: cbe3dd06-f1ae-4116-8979-af10219e22a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scholarship_duration
+    - node.type.financial_aid_country_based_
+  module:
+    - options
+id: node.financial_aid_country_based_.field_scholarship_duration
+field_name: field_scholarship_duration
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Duration of Award'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

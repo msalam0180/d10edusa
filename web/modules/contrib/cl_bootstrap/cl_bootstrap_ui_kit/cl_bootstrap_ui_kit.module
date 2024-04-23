@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Module implementation file.
+ */
+
+/**
+ * Implementation of hook_theme()
+ */
+function cl_bootstrap_ui_kit_theme($existing, $type, $theme, $path) {
+  return [
+    'page__ui_kit' => [
+      'template' => 'page--ui-kit',
+      'render element' => 'html',
+    ],
+  ];
+}
+
+function cl_bootstrap_ui_kit_preprocess_page__ui_kit(&$variables) {
+  // Setup a component path. Added for cleaner stories path value.
+  if (\Drupal::currentUser()->hasPermission('access bootstrap ui kit dev mode')) {
+    $module_handler = \Drupal::service('extension.list.module');
+    $variables['components_path'] = $module_handler->getPath('cl_bootstrap') . '/templates/components';
+  }
+}

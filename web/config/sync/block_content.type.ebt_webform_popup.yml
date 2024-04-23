@@ -1,0 +1,10 @@
+uuid: 68f38623-45a6-46cc-87ba-53c459c41ea7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2PyweimMCiXZdcfL7o3WT6DPFw8x8O1FPQfufWOKf5A
+id: ebt_webform_popup
+label: 'EBT Webform Popup'
+revision: 0
+description: 'Extra Block Type (EBT): Webform Popup'

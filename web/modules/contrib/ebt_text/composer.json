@@ -1,0 +1,16 @@
+{
+    "name": "drupal/ebt_text",
+    "type": "drupal-module",
+    "description": "Extra Block Types (EBT): Text",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0-or-later",
+    "homepage": "http://drupal.org/project/ebt_text",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/ebt_text",
+        "source": "https://git.drupalcode.org/project/ebt_text"
+    },
+    "require": {
+        "drupal/ebt_core": "^1.4"
+    }
+}

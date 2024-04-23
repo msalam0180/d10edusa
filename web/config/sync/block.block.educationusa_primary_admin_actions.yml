@@ -1,0 +1,20 @@
+uuid: 0b902952-ae26-4e1c-9d41-4c9abd26d0a6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - educationusa
+_core:
+  default_config_hash: nRok8M6d8ggYJVx-CxSzl0eUy2fxXx4HtwMIwyj8zgc
+id: educationusa_primary_admin_actions
+theme: educationusa
+region: content
+weight: -14
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

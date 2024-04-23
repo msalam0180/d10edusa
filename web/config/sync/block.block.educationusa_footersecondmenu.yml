@@ -1,0 +1,25 @@
+uuid: bc75eb15-962a-4d0d-b156-0e3faf9e4920
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-second-menu
+  module:
+    - system
+  theme:
+    - educationusa
+id: educationusa_footersecondmenu
+theme: educationusa
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-second-menu'
+settings:
+  id: 'system_menu_block:footer-second-menu'
+  label: 'Footer second menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

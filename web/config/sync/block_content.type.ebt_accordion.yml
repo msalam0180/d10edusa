@@ -1,0 +1,10 @@
+uuid: ef76a787-d35d-4a54-baf9-26dfc10e61df
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dB47Zxr808aSXzelLxShTOImxLGvz9ibkaPpIHw2XL8
+id: ebt_accordion
+label: 'EBT Accordion/FAQ'
+revision: 1
+description: 'Extra Block Type (EBT): Accordion/FAQ'

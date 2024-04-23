@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ebt_image_gallery
+label: 'EBT Image Gallery'
+targetEntityType: media
+cache: true

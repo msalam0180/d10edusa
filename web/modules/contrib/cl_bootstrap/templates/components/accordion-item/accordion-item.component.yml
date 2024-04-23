@@ -1,0 +1,20 @@
+$schema: https://git.drupalcode.org/project/cl_components/-/raw/1.x/src/metadata.schema.json
+machineName: accordion-item
+name: Accordion Item
+status: WIP
+componentType: atom
+description: The accordion item component.
+schemas:
+  props:
+    type: object
+    required:
+      - title
+    properties:
+      title:
+        type: string
+        title: Title
+        description: The accordion header title text.
+        examples:
+          - Accordion Item 1
+          - Accordion Item 2
+          - Accordion Item 3

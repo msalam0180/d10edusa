@@ -1,0 +1,29 @@
+uuid: 60c52437-da19-46c0-8e79-9f87ba43fb60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_level
+    - node.type.advising_center
+    - taxonomy.vocabulary.center_level
+id: node.advising_center.field_center_level
+field_name: field_center_level
+entity_type: node
+bundle: advising_center
+label: 'Center Level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      center_level: center_level
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

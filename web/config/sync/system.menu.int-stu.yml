@@ -1,0 +1,8 @@
+uuid: fcc60f00-7906-49c8-9337-66afdfa0e3c2
+langcode: en
+status: true
+dependencies: {  }
+id: int-stu
+label: 'International Students Menu'
+description: ''
+locked: false

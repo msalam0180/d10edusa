@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Template for a link component with optional icon.
+ *
+ * Available variables:
+ * - href: The link URL.
+ * - text: The link text.
+ * - style: The link style. Possible values: primary, secondary, light, dark.
+ * - classes: (optional) Additional classes to apply to the link.
+ * - target: (optional) The link target.
+ * - iconName: (optional) The name of the icon to display next to the link text.
+ * - iconClasses: (optional) Additional classes to apply to the icon.
+ * - iconGap: (optional) The size of the gap between the link text and the icon. Default: 2.
+ * - iconPlacement: (optional) The position of the icon relative to the link text. Possible values:
+ *   before, after, above, below. Default: after.
+ */
+#}
+{% set component_classes = [
+  'link-' ~ style,
+  'd-flex',
+  'align-items-center',
+  classes,
+  iconName ? 'gap-' ~ iconGap|default('2'),
+  iconPlacement in ['above', 'below'] ? 'flex-column',
+  iconPlacement in ['before'] ? 'flex-row-reverse',
+  iconPlacement in ['above'] ? 'flex-column-reverse',
+] %}
+
+{% if target is not empty %}
+  {% set clAttributes = clAttributes.setAttribute('target', target) %}
+{% endif %}
+
+<a {{ clAttributes.addClass(component_classes) }} href="{{ href }}">
+  {% block content %}
+    {{ text }}
+  {% endblock %}
+  {% if iconName %}
+    {% include 'icon' with { name: iconName, classes: iconClasses } only %}
+  {% endif %}
+</a>

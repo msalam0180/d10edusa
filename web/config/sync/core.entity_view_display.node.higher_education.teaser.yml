@@ -1,0 +1,44 @@
+uuid: ee06fcf5-d1fb-449b-9c85-ae4786d3fd11
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.higher_education.body
+    - field.field.node.higher_education.field_body_sub_text
+    - field.field.node.higher_education.field_card_component
+    - field.field.node.higher_education.field_featured_image
+    - field.field.node.higher_education.field_hero_banner
+    - field.field.node.higher_education.field_main_intro
+    - field.field.node.higher_education.field_video_body
+    - field.field.node.higher_education.field_youtube_vimeo_video
+    - node.type.higher_education
+  module:
+    - text
+    - user
+id: node.higher_education.teaser
+targetEntityType: node
+bundle: higher_education
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_body_sub_text: true
+  field_card_component: true
+  field_featured_image: true
+  field_hero_banner: true
+  field_main_intro: true
+  field_video_body: true
+  field_youtube_vimeo_video: true

@@ -1,0 +1,71 @@
+uuid: b4887e44-7a45-4228-8f90-c59a628943c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ebt_timeline.field_ebt_timeline_current
+    - field.field.paragraph.ebt_timeline.field_ebt_timeline_date
+    - field.field.paragraph.ebt_timeline.field_ebt_timeline_image
+    - field.field.paragraph.ebt_timeline.field_ebt_timeline_text
+    - field.field.paragraph.ebt_timeline.field_ebt_timeline_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.ebt_timeline
+  module:
+    - field_layout
+    - image
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: flb7Lcly7pYFTjL1p4rdZWYC9Ft7XZLmGWmbdRM5Dig
+id: paragraph.ebt_timeline.default
+targetEntityType: paragraph
+bundle: ebt_timeline
+mode: default
+content:
+  field_ebt_timeline_current:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_ebt_timeline_date:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ebt_timeline_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_ebt_timeline_text:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ebt_timeline_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

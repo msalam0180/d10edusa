@@ -1,0 +1,25 @@
+uuid: f59ca1fe-09f6-4186-979c-78890c7ae673
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_body
+    - node.type.higher_education
+  module:
+    - video_embed_field
+id: node.higher_education.field_video_body
+field_name: field_video_body
+entity_type: node
+bundle: higher_education
+label: video_body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    youtube: youtube
+    youtube_playlist: youtube_playlist
+    vimeo: '0'
+field_type: video_embed_field

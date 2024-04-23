@@ -1,0 +1,23 @@
+uuid: 210c78a3-579b-4782-943f-2244adfbb46c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_year
+    - node.type.events
+  module:
+    - yearonly
+id: node.events.field_event_year
+field_name: field_event_year
+entity_type: node
+bundle: events
+label: 'Event Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '2000'
+  yearonly_to: now
+field_type: yearonly

@@ -1,0 +1,27 @@
+uuid: a69e8db7-54f9-4bb7-9bd1-464843245588
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - educationusa
+_core:
+  default_config_hash: hdl517XyVo4G9TUqKO4bPr_wWkajFqs4-Tzu8WzA_Hg
+id: educationusa_main_menu
+theme: educationusa
+region: primary_menu
+weight: -10
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

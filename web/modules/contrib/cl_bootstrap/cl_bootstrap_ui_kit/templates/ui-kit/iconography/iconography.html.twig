@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Implements the Iconography tab content for the UI Kit.
+ *
+ * Displays usage of icons within the theme.
+ *
+ */
+#}
+{% extends '@bootstrap_ui_kit/ui-kit/iconography/iconography.html.twig' %}
+
+{# Component: Icon #}
+{% block icon %}
+  {% include 'icon' with { name: icon, classes: 'icon-lg' } %}
+{% endblock %}
+
+{# Drupal storybook file #}
+{% block section_modal %}
+  {%
+    set tabs = {
+      'twig': {},
+      'php': {},
+      'storybook': {
+        'title': 'Stories',
+        'hilightLang': 'php',
+        'files': {
+          'Buttons': components_path ~ '/icon/icon.stories.yml',
+        },
+      },
+    }
+  %}
+  {{ parent() }}
+{% endblock %}

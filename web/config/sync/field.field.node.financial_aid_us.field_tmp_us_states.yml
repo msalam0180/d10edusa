@@ -1,0 +1,24 @@
+uuid: 41928440-5b80-4992-9015-d589c1381ed4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmp_us_states
+    - filter.format.plain_text
+    - node.type.financial_aid_us
+  module:
+    - text
+id: node.financial_aid_us.field_tmp_us_states
+field_name: field_tmp_us_states
+entity_type: node
+bundle: financial_aid_us
+label: 'Tmp us states'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - plain_text
+field_type: text

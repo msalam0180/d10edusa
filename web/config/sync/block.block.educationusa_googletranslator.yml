@@ -1,0 +1,20 @@
+uuid: 1f93678e-38eb-4e7a-866d-3fc79b1b17e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - google_translator
+  theme:
+    - educationusa
+id: educationusa_googletranslator
+theme: educationusa
+region: primary_menu
+weight: -12
+provider: null
+plugin: google_translator
+settings:
+  id: google_translator
+  label: 'Translate this page'
+  label_display: ''
+  provider: google_translator
+visibility: {  }

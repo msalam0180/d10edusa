@@ -1,0 +1,25 @@
+uuid: 6f7ce96d-5451-436f-bc59-2a24d6630c97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_youtube_vimeo_video
+    - node.type.higher_education
+  module:
+    - video_embed_field
+id: node.higher_education.field_youtube_vimeo_video
+field_name: field_youtube_vimeo_video
+entity_type: node
+bundle: higher_education
+label: 'Youtube/Vimeo Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: youtube_playlist
+field_type: video_embed_field

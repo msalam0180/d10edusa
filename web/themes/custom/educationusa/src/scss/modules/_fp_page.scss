@@ -1,0 +1,329 @@
+.fpp {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1000px;
+    &-page {
+    }
+
+    &-buttons-list-drop-down {
+        width: 160px;
+        position: relative;
+        // display: block;
+        display: none;
+        flex-direction: row;
+        margin-bottom: 20px;
+        font-family: var(--font-family-roboto);
+
+        &::after {
+            content: ' ';
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            right: 10px;
+            bottom: 11px;
+            background-size: contain !important;
+            background: url($images + 'dropdown-icon@1x.png') no-repeat;
+        }
+
+        &.active,
+        &:hover {
+            &::after {
+                content: ' ';
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                right: 10px;
+                bottom: 11px;
+                background-size: contain !important;
+                background: url($images + 'icons-down@1x.png') no-repeat;
+            }
+        }
+    }
+
+    &-buttons-list-drop-down,
+    &-buttons,
+    &-view-list-of-programs .form-item-title {
+        background-color: #e9f1f7;
+        border: 1px solid #ccc;
+        font-family: var(--font-family-roboto);
+        transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+        padding: 10px;
+        border-radius: 20px;
+        overflow: hidden;
+        font-size: 12px;
+        color: #000 !important;
+        margin-left: 10px;
+        margin-top: 15px;
+        text-wrap: nowrap;
+
+
+        &:hover {
+            background-color: var(--deep-sapphire);
+            color: #fff !important;
+        }
+
+        &-list {
+            position: relative;
+            flex-direction: column;
+            display: none;
+            /* padding-left: 0px !important; */
+            margin-left: -50px !important;
+            margin-top: 3.5rem;
+
+            &.active {
+                display: flex;
+            }
+
+            @include bp(sm) {
+                flex-direction: row;
+            }
+
+            li {
+                margin: 5px 0 15px 0;
+            }
+        }
+
+        &.active {
+            background-color: var(--deep-sapphire);
+            color: #fff !important;
+        }
+    }
+
+    &-sfa-buttons {
+        display: flex !important;
+        flex-direction: column;
+
+        @include bp(sm) {
+            flex-direction: row;
+        }
+
+        &-list {
+            display: flex !important;
+        }
+    }
+}
+
+#open-app-non-us,
+#special-focus-areas,
+#list-programs,
+#find-programs {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+
+.sfa-view {
+    position: relative;
+
+    h2,
+    h3 {
+        margin: 0;
+        font-family: var(--font-family-roboto);
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .view-header {
+        position: relative;
+        max-width: 1600px;
+    }
+
+    .image-holder {
+        position: relative;
+        display: block;
+        margin-right: 0px;
+
+        .x11 {
+            bottom: 0px;
+            position: relative;
+            left: -10px;
+            display: block;
+            height: fit-content;
+            width: fit-content;
+        }
+    }
+
+    .flex-col {
+        margin-top: 0;
+        min-height: inherit;
+        width: 100%;
+        text-align: center;
+
+        @include bp(sm) {
+            text-align: left;
+            margin-right: 20px;
+        }
+    }
+
+    .flex-row-3 {
+        margin-top: 25px;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include bp(sm) {
+            align-items:start;
+            flex-direction: row;
+        }
+    }
+
+    .view-content.row {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        @include bp(sm) {
+            flex-direction: row;
+        }
+
+        .views-row {
+            max-width: 300px;
+            margin: 10px;
+            //background-color: red;
+        }
+    }
+
+    .form-radios {
+        display: flex !important;
+        flex-direction: column;
+
+        @include bp(sm) {
+            flex-direction: row;
+        }
+
+        #edit-field-special-focus-areas-value-technology,
+        #edit-field-special-focus-areas-value-education-teaching,
+        #edit-field-special-focus-areas-value-arts-culture,
+        #edit-field-special-focus-areas-value-all {
+            display: none !important;
+        }
+
+        .form-item-field-special-focus-areas-value {
+            margin: 0;
+            padding: 0;
+
+            input {
+                display: none;
+            }
+        }
+
+        .form-check-label {
+            background-color: #e9f1f7;
+            border: 1px solid #ccc;
+            font-family: var(--font-family-roboto);
+            transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+            padding: 10px;
+            border-radius: 20px;
+            overflow: hidden;
+            font-size: 12px;
+            color: #000 !important;
+            margin-right: 15px;
+
+            &:hover {
+                background-color: #004eaa;
+                color: #fff !important;
+            }
+        }
+
+    }
+
+    .eca_ex-ln-image {
+        width: 375px;
+    height: 212px;
+    position: relative;
+    display: block;
+    }
+
+}
+
+.fpp-page {
+   .fp-container {
+        .view-content.row {
+            display: none !important;
+        }
+   }
+
+}
+
+.form-item-title {
+    background-color: #e9f1f7;
+    border: 1px solid #ccc;
+    font-family: var(--font-family-roboto);
+    transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+    border-radius: 20px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #000 !important;
+    margin-left: 0px;
+    margin-top: 0px;
+    padding-left: 23px;
+    padding-right: 0px;
+    padding-top: 2px !important;
+    padding-bottom: 0px;
+    width: 58px;
+    display: inline-block;
+}
+
+  .form-check-input:checked {
+    background-color: var(--deep-sapphire);
+    border-color:var(--deep-sapphire);
+  }
+
+  .view-special-focus-areas-programs,
+  .view-list-of-programs {
+    .x11 {
+        height: fit-content;
+        width: fit-content;
+    }
+  }
+
+  .view-list-of-programs {
+    .inner-container.w-container {
+        margin-left: inherit;
+        margin-right: inherit;
+    }
+  }
+
+  .view-featured-stories {
+
+  }
+
+  .view-current-opportunities,
+  .view-highlighted-programs {
+    .x11 {
+        height: 40px !important;
+        width: 40px !important;
+    }
+  }
+
+  .eca {
+    &-fp-non-us,
+    &-fp-us {
+        position: relative;
+        display: none;
+
+        .active {
+            display: block;
+        }
+    }
+  }
+
+// Aligning Arts & Culture, Education & Teaching and Technology radio buttons
+#edit-field-special-focus-areas-value {
+    margin-left: -2px;
+}

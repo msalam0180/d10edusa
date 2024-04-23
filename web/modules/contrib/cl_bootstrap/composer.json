@@ -1,0 +1,9 @@
+{
+    "name": "drupal/cl_bootstrap",
+    "type": "drupal-module",
+    "description": "New ImageX module with custom components using storybook.js as our decoupled foundation.",
+    "require": {
+        "drupal/core": "^9 || ^10",
+        "drupal/cl_components": "^1.0"
+    }
+}

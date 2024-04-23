@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the EBT Quote module.
+ */
+
+use Drupal\media\Entity\MediaType;
+
+/**
+ * Implements hook_requirements().
+ */
+function ebt_quote_requirements($phase) {
+  if ($phase != 'install') {
+    return [];
+  }
+
+  if (class_exists('Drupal\media\Entity\MediaType')) {
+    foreach (MediaType::loadMultiple() as $type) {
+      if ($type->id() == 'image') {
+        return [];
+      }
+    }
+  }
+
+  return [
+    'ebt_quote_media_type_image' => [
+      'title' => t('Media type Image'),
+      'value' => t('Not created'),
+      'description' => t('The EBT Quote needs to be <a href="@url">created</a> "Image" Media type.', ['@url' => '/admin/structure/media']),
+      'severity' => REQUIREMENT_ERROR,
+    ],
+  ];
+}
+
+/**
+ * Update the Block Type description to "Extra Block Type (EBT): Quote".
+ */
+function ebt_quote_update_9101() {
+
+  // Get the object of block type.
+  $block_type = \Drupal::entityTypeManager()->getStorage('block_content_type')->load('ebt_quote');
+
+  // If there is no the block type, skip.
+  if (empty($block_type)) {
+    return;
+  }
+
+  // Update the description.
+  $block_type->set('description', 'Extra Block Type (EBT): Quote');
+
+  // Save the updated block type.
+  $block_type->save();
+
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function ebt_quote_uninstall() {
+
+  \Drupal::messenger()->addStatus(t('The EBT Quote has been uninstalled, but the Block Type have not been deleted for consistency reasons. If needed, you can manually remove them by going to Structure » Block layout » Custom block library'));
+
+}

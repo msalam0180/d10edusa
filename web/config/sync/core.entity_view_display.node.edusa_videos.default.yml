@@ -1,0 +1,67 @@
+uuid: 44040270-8330-4278-8f32-062ab4bfc574
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.edusa_videos.body
+    - field.field.node.edusa_videos.feeds_item
+    - field.field.node.edusa_videos.field_audience
+    - field.field.node.edusa_videos.field_edusa_media
+    - field.field.node.edusa_videos.field_tmp_video_path
+    - field.field.node.edusa_videos.field_topics
+    - node.type.edusa_videos
+  module:
+    - text
+    - user
+id: node.edusa_videos.default
+targetEntityType: node
+bundle: edusa_videos
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_audience:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 118
+    region: content
+  field_edusa_media:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  field_tmp_video_path:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  field_topics:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true

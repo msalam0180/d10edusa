@@ -1,0 +1,21 @@
+uuid: 1f53ec90-a1f3-485e-bf0e-351d292962af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_step_type
+    - node.type.study
+  module:
+    - options
+id: node.study.field_step_type
+field_name: field_step_type
+entity_type: node
+bundle: study
+label: 'Step Type'
+description: 'This should be used to indicate the Study Step Type'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

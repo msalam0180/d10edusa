@@ -1,0 +1,19 @@
+uuid: 67edcdd6-2c13-4d4d-a8c4-477cdca79e4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmp_authored_by
+    - node.type.events
+id: node.events.field_tmp_authored_by
+field_name: field_tmp_authored_by
+entity_type: node
+bundle: events
+label: 'Tmp authored by'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

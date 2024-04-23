@@ -1,0 +1,24 @@
+uuid: 9025b394-4fb7-44e8-a39b-4453983f0c36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_virtual_hours
+    - filter.format.full_html
+    - node.type.advising_center
+  module:
+    - text
+id: node.advising_center.field_center_virtual_hours
+field_name: field_center_virtual_hours
+entity_type: node
+bundle: advising_center
+label: 'Virtual Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

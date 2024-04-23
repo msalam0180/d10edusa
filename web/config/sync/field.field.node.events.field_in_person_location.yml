@@ -1,0 +1,47 @@
+uuid: c06e04a2-b03e-46e5-855b-45402a9a0fcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_in_person_location
+    - node.type.events
+  module:
+    - address
+id: node.events.field_in_person_location
+field_name: field_in_person_location
+entity_type: node
+bundle: events
+label: 'In-Person Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: optional
+    addressLine2:
+      override: optional
+    postalCode:
+      override: hidden
+    sortingCode:
+      override: optional
+    dependentLocality:
+      override: optional
+    locality:
+      override: optional
+    administrativeArea:
+      override: hidden
+  fields: {  }
+field_type: address

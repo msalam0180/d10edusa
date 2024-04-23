@@ -1,0 +1,22 @@
+uuid: f154635d-c066-4cbd-a17c-a20e3d4640b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - educationusa
+_core:
+  default_config_hash: GJ5TLE4k2ptx5uEq1u6B6pBSgWTlUwltbb9HNCExPaw
+id: educationusa_content
+theme: educationusa
+region: content
+weight: -11
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,43 @@
+uuid: 788515ed-d4e1-423c-a249-ae7c5d43a314
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_webform
+    - field.field.block_content.ebt_webform.body
+    - field.field.block_content.ebt_webform.field_ebt_settings
+    - field.field.block_content.ebt_webform.field_ebt_webform_form
+  module:
+    - ebt_core
+    - text
+    - webform
+_core:
+  default_config_hash: gpru4Rd0T0JY8wkKLrvgy_u9NIovpL4X5IKCjcykrUE
+id: block_content.ebt_webform.default
+targetEntityType: block_content
+bundle: ebt_webform
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ebt_settings:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: ebt_settings_default
+    region: content
+  field_ebt_webform_form:
+    weight: 2
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+hidden: {  }

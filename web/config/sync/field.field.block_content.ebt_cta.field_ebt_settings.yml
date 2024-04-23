@@ -1,0 +1,23 @@
+uuid: e690c41c-e18b-4443-ade8-d7efe0f4e154
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_cta
+    - field.storage.block_content.field_ebt_settings
+  module:
+    - ebt_core
+_core:
+  default_config_hash: o4qhawOFKN4zS8tfJKa0LamrN4V8y8cW4d55CAAP8EY
+id: block_content.ebt_cta.field_ebt_settings
+field_name: field_ebt_settings
+entity_type: block_content
+bundle: ebt_cta
+label: 'Block settings'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ebt_settings

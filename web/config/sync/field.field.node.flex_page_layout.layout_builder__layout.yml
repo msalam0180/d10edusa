@@ -1,0 +1,21 @@
+uuid: 4fe415b9-3116-4b87-8106-719ac6b827ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_builder__layout
+    - node.type.flex_page_layout
+  module:
+    - layout_builder
+id: node.flex_page_layout.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: node
+bundle: flex_page_layout
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

@@ -1,0 +1,19 @@
+uuid: 034d5b6c-3c00-496b-ba85-95c9ba3e8085
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_center_country_flag
+    - node.type.advising_center
+id: node.advising_center.field_center_country_flag
+field_name: field_center_country_flag
+entity_type: node
+bundle: advising_center
+label: 'Center Country Flag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

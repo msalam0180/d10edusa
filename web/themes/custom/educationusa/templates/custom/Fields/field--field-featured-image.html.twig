@@ -1,0 +1,11 @@
+{% for item in items %}
+  {% set media_entity = item.content['#media'] %}
+  {% if media_entity %}
+    {% set image_field = media_entity.field_media_image %}
+    {% if image_field and image_field.entity %}
+      <img src="{{ file_url(image_field.entity.fileuri) }}" 
+           alt="{{ image_field.alt }}" 
+           class="card-img-top img-fluid rounded-4" />
+    {% endif %}
+  {% endif %}
+{% endfor %}

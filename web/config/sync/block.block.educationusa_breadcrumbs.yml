@@ -1,0 +1,22 @@
+uuid: a8716f25-9fee-4f16-97e6-04a2ffdc8eae
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - educationusa
+_core:
+  default_config_hash: Tb4Qn4S1y0xNekML9Xlim6x0u_6zYiAKzNdAdD2PftY
+id: educationusa_breadcrumbs
+theme: educationusa
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

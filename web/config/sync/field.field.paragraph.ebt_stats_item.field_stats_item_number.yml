@@ -1,0 +1,24 @@
+uuid: e4673ac6-4fa7-4c9d-a7fd-cc3615fecdcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stats_item_number
+    - paragraphs.paragraphs_type.ebt_stats_item
+  module:
+    - text
+_core:
+  default_config_hash: 5OFR72Rn-pvsZTbp7LEkgUVp0q21QilFZMegsC5ICbo
+id: paragraph.ebt_stats_item.field_stats_item_number
+field_name: field_stats_item_number
+entity_type: paragraph
+bundle: ebt_stats_item
+label: 'Stats item number'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

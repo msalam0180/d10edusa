@@ -1,0 +1,28 @@
+uuid: 4c553fcf-515c-4a8a-9a13-02e2abc04c00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tmp_country_long
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.plain_text
+    - node.type.financial_aid_country_based_
+  module:
+    - text
+id: node.financial_aid_country_based_.field_tmp_country_long
+field_name: field_tmp_country_long
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Tmp country long'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - full_html
+    - plain_text
+field_type: text_long

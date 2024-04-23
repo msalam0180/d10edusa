@@ -1,0 +1,12 @@
+{
+  "name": "drupal/cl_bootstrap_ui_kit",
+  "type": "drupal-module",
+  "keywords": ["Drupal", "Components", "Bootstrap Components", "Bootstrap Storybook Components"],
+  "license": "GPL-2.0+",
+  "description": "Connector module for displaying components inside the bootstrap UI Kit module.",
+    "require": {
+        "drupal/core": "^9 || ^10",
+        "drupal/cl_components": "^1.0",
+        "drupal/bootstrap_ui_kit": "^1.0"
+    }
+}

@@ -1,0 +1,15 @@
+type: module
+name: 'Extra Block Types (EBT): Call to Action'
+description: 'Adds Text block with CTA button.'
+core_version_requirement: ^9.3 || ^10
+package: 'Extra Block Types'
+
+dependencies:
+  - drupal:media
+  - ebt_basic_button:ebt_basic_button
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2023-10-19
+version: '1.4.5'
+project: 'ebt_cta'
+datestamp: 1697706089

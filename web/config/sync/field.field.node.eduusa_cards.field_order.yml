@@ -1,0 +1,23 @@
+uuid: 419a360d-f815-4d66-8c89-e63788899156
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order
+    - node.type.eduusa_cards
+id: node.eduusa_cards.field_order
+field_name: field_order
+entity_type: node
+bundle: eduusa_cards
+label: Order
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

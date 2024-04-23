@@ -1,0 +1,36 @@
+uuid: 974424e1-3848-49c4-8ce5-5e7a6260f104
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.eduusa_cards.body
+    - field.field.node.eduusa_cards.field_card_background_image
+    - field.field.node.eduusa_cards.field_card_title
+    - field.field.node.eduusa_cards.field_order
+    - node.type.eduusa_cards
+  module:
+    - text
+    - user
+id: node.eduusa_cards.teaser
+targetEntityType: node
+bundle: eduusa_cards
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_card_background_image: true
+  field_card_title: true
+  field_order: true

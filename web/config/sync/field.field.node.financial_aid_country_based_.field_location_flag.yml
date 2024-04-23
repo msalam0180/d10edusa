@@ -1,0 +1,23 @@
+uuid: 06c93370-b9ca-4d32-8e8a-a7f60960a844
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_flag
+    - node.type.financial_aid_country_based_
+  module:
+    - options
+id: node.financial_aid_country_based_.field_location_flag
+field_name: field_location_flag
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'Location Flag'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: non_us
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,20 @@
+uuid: 8f4d7b1e-7409-48e9-9064-bae06472234c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_fb_share_description_short
+field_name: field_fb_share_description_short
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

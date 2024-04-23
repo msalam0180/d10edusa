@@ -1,0 +1,23 @@
+uuid: 5a8dfd19-b21f-4deb-8269-390818e37d52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nav_link
+    - node.type.top_navigation
+  module:
+    - link
+id: node.top_navigation.field_nav_link
+field_name: field_nav_link
+entity_type: node
+bundle: top_navigation
+label: 'Nav Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

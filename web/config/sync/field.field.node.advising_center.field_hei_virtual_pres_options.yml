@@ -1,0 +1,24 @@
+uuid: fb74040f-a817-49a9-a2d1-6ad8419aaa32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hei_virtual_pres_options
+    - filter.format.full_html
+    - node.type.advising_center
+  module:
+    - text
+id: node.advising_center.field_hei_virtual_pres_options
+field_name: field_hei_virtual_pres_options
+entity_type: node
+bundle: advising_center
+label: 'HEI Virtual Pres Options'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

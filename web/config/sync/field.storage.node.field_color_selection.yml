@@ -1,0 +1,36 @@
+uuid: 10f3ae11-aa06-40c1-9ed7-7be3d86e882c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_color_selection
+field_name: field_color_selection
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: green
+      label: Green
+    -
+      value: gold
+      label: Gold
+    -
+      value: red
+      label: Red
+    -
+      value: blue
+      label: Blue
+    -
+      value: purple
+      label: Purple
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

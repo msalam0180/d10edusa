@@ -1,0 +1,24 @@
+uuid: 168b6d97-7fe3-4a4e-a918-2295a2fbbf66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.eduusa_cards
+  module:
+    - text
+id: node.eduusa_cards.body
+field_name: body
+entity_type: node
+bundle: eduusa_cards
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

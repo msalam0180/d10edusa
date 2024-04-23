@@ -1,0 +1,8 @@
+uuid: 1936becc-94e0-42e8-8319-772bf4d53a58
+langcode: en
+status: true
+dependencies: {  }
+id: for-inst
+label: 'Foreign Institutions Menu'
+description: ''
+locked: false

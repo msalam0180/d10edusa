@@ -1,0 +1,22 @@
+uuid: fdd46d51-4f71-4667-9211-4763483b2a4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 12yti1pJd8_55sJ_ipVJkKkOSBrqJNbIN1ScDohe8Ug
+id: paragraph.field_ebt_counter_number
+field_name: field_ebt_counter_number
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

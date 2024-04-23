@@ -1,0 +1,19 @@
+uuid: e160147b-19b0-49ef-9a31-6f1fb862c3a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skype
+    - node.type.advising_center
+id: node.advising_center.field_skype
+field_name: field_skype
+entity_type: node
+bundle: advising_center
+label: 'Public Skype'
+description: 'Skype name. Note that this must be an account for the advising center, not an individual adviser.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

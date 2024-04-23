@@ -1,0 +1,29 @@
+uuid: 9541ebf7-0ede-416b-b80a-49d8265fea9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.financial_aid_country_based_
+    - taxonomy.vocabulary.countries
+id: node.financial_aid_country_based_.field_location
+field_name: field_location
+entity_type: node
+bundle: financial_aid_country_based_
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      countries: countries
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

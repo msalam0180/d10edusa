@@ -1,0 +1,42 @@
+{#
+/*
+ * Buttons
+*/
+#}
+
+{# Simple Button #}
+{% include 'button' with { text: 'Button Text'|t, style: 'primary' } %}
+
+{# Button with custom content #}
+{% embed 'button' with {
+  text: 'Button text'|t,
+  style: 'primary',
+  disabled: 1,
+  iconName: 'address-book',
+  iconClasses: 'icon-lg pt-2',
+  iconPlacement: 'above',
+  dataBsToggle: 'modal',
+  dataBsTarget: '#exampleModal',
+} %}
+  {% block content %}
+    <span class="navbar-toggler-icon"></span>
+    {{ parent() }}  {# the original components content block #}
+  {% endblock %}
+{% endembed %}
+
+{#
+/*
+ * Links
+*/
+#}
+
+{# Simple Link #}
+{% include 'link' with { text: 'Link Text'|t, style: 'primary' } %}
+
+{# Primary Link: With Icon (Large, Above) #}
+{% include 'link' with {
+  text: 'Link Text'|t,
+  style: 'primary',
+  href: {{ url }},
+  iconName: 'arrow-up-right-from-square-solid',
+} %}

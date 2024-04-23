@@ -1,0 +1,38 @@
+uuid: 865d5497-79e7-46c5-8e9a-905dc70f638a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.international_students.body
+    - field.field.node.international_students.field_card_component
+    - field.field.node.international_students.field_hero
+    - field.field.node.international_students.field_main_intro
+    - field.field.node.international_students.field_youtube_vimeo_video
+    - node.type.international_students
+  module:
+    - text
+    - user
+id: node.international_students.teaser
+targetEntityType: node
+bundle: international_students
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_card_component: true
+  field_hero: true
+  field_main_intro: true
+  field_youtube_vimeo_video: true

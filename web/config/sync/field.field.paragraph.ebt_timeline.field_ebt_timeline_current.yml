@@ -1,0 +1,25 @@
+uuid: fa40ab1c-35e0-488f-be06-57acbfaba730
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ebt_timeline_current
+    - paragraphs.paragraphs_type.ebt_timeline
+_core:
+  default_config_hash: Js3oBqyPFEjLEDUuAPzn29jLKcNg1wsB7M9uvAF8fwQ
+id: paragraph.ebt_timeline.field_ebt_timeline_current
+field_name: field_ebt_timeline_current
+entity_type: paragraph
+bundle: ebt_timeline
+label: Current
+description: 'Highlight current stage in timeline.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

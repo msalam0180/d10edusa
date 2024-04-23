@@ -1,0 +1,40 @@
+uuid: 8af33956-ae1e-45a1-b122-4d9f372d45aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.edusa_videos.body
+    - field.field.node.edusa_videos.feeds_item
+    - field.field.node.edusa_videos.field_audience
+    - field.field.node.edusa_videos.field_edusa_media
+    - field.field.node.edusa_videos.field_tmp_video_path
+    - field.field.node.edusa_videos.field_topics
+    - node.type.edusa_videos
+  module:
+    - text
+    - user
+id: node.edusa_videos.teaser
+targetEntityType: node
+bundle: edusa_videos
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true
+  field_audience: true
+  field_edusa_media: true
+  field_tmp_video_path: true
+  field_topics: true

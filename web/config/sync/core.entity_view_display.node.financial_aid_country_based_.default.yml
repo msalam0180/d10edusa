@@ -1,0 +1,237 @@
+uuid: 5d2173bd-0e2a-4562-b0f4-eb21af3c619f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.financial_aid_country_based_.body
+    - field.field.node.financial_aid_country_based_.feeds_item
+    - field.field.node.financial_aid_country_based_.field_country
+    - field.field.node.financial_aid_country_based_.field_deadline_type
+    - field.field.node.financial_aid_country_based_.field_fb_share_description_short
+    - field.field.node.financial_aid_country_based_.field_institution_logo
+    - field.field.node.financial_aid_country_based_.field_institution_name
+    - field.field.node.financial_aid_country_based_.field_location
+    - field.field.node.financial_aid_country_based_.field_location_flag
+    - field.field.node.financial_aid_country_based_.field_region
+    - field.field.node.financial_aid_country_based_.field_scholarship_annual
+    - field.field.node.financial_aid_country_based_.field_scholarship_deadline
+    - field.field.node.financial_aid_country_based_.field_scholarship_degree_levels
+    - field.field.node.financial_aid_country_based_.field_scholarship_duration
+    - field.field.node.financial_aid_country_based_.field_scholarship_email
+    - field.field.node.financial_aid_country_based_.field_scholarship_majors
+    - field.field.node.financial_aid_country_based_.field_scholarship_max_amount
+    - field.field.node.financial_aid_country_based_.field_scholarship_url
+    - field.field.node.financial_aid_country_based_.field_share_description_short
+    - field.field.node.financial_aid_country_based_.field_tmp_authored_by
+    - field.field.node.financial_aid_country_based_.field_tmp_country
+    - field.field.node.financial_aid_country_based_.field_tmp_country_long
+    - field.field.node.financial_aid_country_based_.field_tmp_degree_level
+    - field.field.node.financial_aid_country_based_.field_tmp_img
+    - field.field.node.financial_aid_country_based_.field_tmp_location_flag
+    - field.field.node.financial_aid_country_based_.field_tmp_scholarship_duration
+    - field.field.node.financial_aid_country_based_.field_us_states
+    - node.type.financial_aid_country_based_
+  module:
+    - address
+    - link
+    - options
+    - text
+    - user
+id: node.financial_aid_country_based_.default
+targetEntityType: node
+bundle: financial_aid_country_based_
+mode: default
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_country:
+    type: address_country_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_fb_share_description_short:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_institution_logo:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_institution_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_location_flag:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_region:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_scholarship_annual:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_scholarship_deadline:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_scholarship_degree_levels:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_scholarship_duration:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_scholarship_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_scholarship_majors:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_scholarship_max_amount:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_scholarship_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_share_description_short:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_tmp_authored_by:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_tmp_country:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_tmp_country_long:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_tmp_degree_level:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_tmp_img:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_tmp_location_flag:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_tmp_scholarship_duration:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  feeds_item: true
+  field_deadline_type: true
+  field_us_states: true

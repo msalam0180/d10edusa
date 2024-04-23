@@ -1,0 +1,31 @@
+uuid: 96fa7095-421c-468d-b7af-753c1e1bd54a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ebt_slick_slider_image
+    - media.type.image
+    - paragraphs.paragraphs_type.ebt_slick_slider
+_core:
+  default_config_hash: pYWtlYxsR5uP9TrVPzdvPyRiMgr6Lp75dE9QtVEyu3Q
+id: paragraph.ebt_slick_slider.field_ebt_slick_slider_image
+field_name: field_ebt_slick_slider_image
+entity_type: paragraph
+bundle: ebt_slick_slider
+label: 'Slide Image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

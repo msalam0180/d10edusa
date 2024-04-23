@@ -1,0 +1,250 @@
+uuid: ef6eacc9-2d98-42d1-8363-f0b23c18ff31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.financial_aid_us.body
+    - field.field.node.financial_aid_us.field_fb_share_description_short
+    - field.field.node.financial_aid_us.field_institution_name
+    - field.field.node.financial_aid_us.field_scholarship_majors
+    - field.field.node.financial_aid_us.field_scholarship_url
+    - field.field.node.financial_aid_us.field_share_description_short
+    - field.field.node.financial_aid_us.field_tmp_authored_by
+    - field.field.node.financial_aid_us.field_tmp_deadline_type
+    - field.field.node.financial_aid_us.field_tmp_img
+    - field.field.node.financial_aid_us.field_tmp_location_flag
+    - field.field.node.financial_aid_us.field_us_states
+    - node.type.financial_aid_us
+  module:
+    - feeds_log
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+label: 'Financial Aid US'
+id: financial_aid_us
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: financial_aid_us
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    value: Title
+    label: Title
+    machine_name: title
+    type: csv
+  institution:
+    value: Institution
+    label: Institution
+    machine_name: institution
+    type: csv
+  logo:
+    value: Logo
+    label: Logo
+    machine_name: logo
+    type: csv
+  deadline_type:
+    value: 'Deadline type'
+    label: 'Deadline type'
+    machine_name: deadline_type
+    type: csv
+  us_states:
+    value: 'US States'
+    label: 'US States'
+    machine_name: us_states
+    type: csv
+  location_flag:
+    value: 'Location Flag'
+    label: 'Location Flag'
+    machine_name: location_flag
+    type: csv
+  degree_levels:
+    value: 'Degree levels'
+    label: 'Degree levels'
+    machine_name: degree_levels
+    type: csv
+  majors:
+    value: Majors
+    label: Majors
+    machine_name: majors
+    type: csv
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: csv
+  body:
+    value: Body
+    label: Body
+    machine_name: body
+    type: csv
+  example_facebook_post:
+    value: 'Example Facebook Post'
+    label: 'Example Facebook Post'
+    machine_name: example_facebook_post
+    type: csv
+  example_twitter_post:
+    value: 'Example Twitter Post'
+    label: 'Example Twitter Post'
+    machine_name: example_twitter_post
+    type: csv
+  more_information_url:
+    value: 'More information URL'
+    label: 'More information URL'
+    machine_name: more_information_url
+    type: csv
+  more_information_url_text:
+    value: 'More information URL Text'
+    label: 'More information URL Text'
+    machine_name: more_information_url_text
+    type: csv
+  author:
+    value: Author
+    label: Author
+    machine_name: author
+    type: csv
+  post_date:
+    value: 'Post date'
+    label: 'Post date'
+    machine_name: post_date
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_institution_name
+    map:
+      value: institution
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_tmp_img
+    map:
+      value: logo
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_tmp_deadline_type
+    map:
+      value: deadline_type
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_tmp_location_flag
+    map:
+      value: location_flag
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_scholarship_majors
+    map:
+      value: majors
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: body
+    map:
+      value: body
+      summary: body
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_fb_share_description_short
+    map:
+      value: example_facebook_post
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_share_description_short
+    map:
+      value: example_twitter_post
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_scholarship_url
+    map:
+      uri: more_information_url
+      title: more_information_url_text
+    settings:
+      language: null
+  -
+    target: field_tmp_authored_by
+    map:
+      value: author
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: created
+    map:
+      value: post_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_us_states
+    map:
+      target_id: us_states
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: us_states
+  -
+    target: field_scholarship_degree_levels
+    map:
+      target_id: degree_levels
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: degree_levels

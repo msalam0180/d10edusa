@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Template for rendering the button component.
+ *
+ * Available variables:
+ * - text: The text to display on the button.
+ * - style: The button style. Examples may include "primary", "secondary", "dark", "light", etc. Defaults to "light".
+ * - size: The button size. Can be "sm" for small or "lg" for large.
+ * - outlined: Whether to display an outlined button. Defaults to false.
+ * - iconName: The name of the icon to display on the button.
+ * - iconClasses: Additional classes to apply to the icon.
+ * - iconPlacement: The position of the icon relative to the text. Can be "before", "above", or "below".
+ * - iconGap: The gap between the icon and the text. Defaults to 2.
+ * - dataBsToggle: The value of the data-bs-toggle attribute.
+ * - dataBsTarget: The value of the data-bs-target attribute.
+ * - ariaExpanded: The value of the aria-expanded attribute.
+ * - disabled: Whether the button is disabled. Defaults to false.
+ * - classes: Additional classes to apply to the button.
+ *
+ * @see template_preprocess_button()
+ */
+#}
+{% set component_classes = [
+  'btn',
+  classes,
+  outlined ? 'btn-outline-' ~ style|default('light') : 'btn-' ~ style|default('light'),
+  size ? 'btn-' ~ size,
+  iconName ? 'gap-' ~ iconGap|default('2'),
+  iconName ? 'd-flex align-items-center',
+  iconPlacement in ['above', 'below'] ? 'flex-column',
+  iconPlacement in ['before'] ? 'flex-row-reverse',
+  iconPlacement in ['above'] ? 'flex-column-reverse',
+  disabled ? 'disabled',
+] %}
+
+{% if dataBsToggle %}
+  {% set clAttributes = clAttributes.setAttribute('data-bs-toggle', dataBsToggle) %}
+{% endif %}
+
+{% if dataBsTarget %}
+  {% set clAttributes = clAttributes.setAttribute('data-bs-target', '#' ~ dataBsTarget) %}
+{% endif %}
+
+{% if ariaExpanded %}
+  {% set clAttributes = clAttributes.setAttribute('aria-expanded', ariaExpanded) %}
+{% endif %}
+
+<button {{ clAttributes.addClass(component_classes) }} {{ disabled ? 'disabled' }} type="button">
+  {% block content %}
+    {{ text }}
+  {% endblock %}
+  {% if iconName %}
+    {% include 'icon' with { name: iconName, classes: iconClasses } only %}
+  {% endif %}
+</button>

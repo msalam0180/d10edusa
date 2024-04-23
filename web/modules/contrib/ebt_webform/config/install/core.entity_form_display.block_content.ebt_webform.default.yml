@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_webform
+    - field.field.block_content.ebt_webform.body
+    - field.field.block_content.ebt_webform.field_ebt_settings
+    - field.field.block_content.ebt_webform.field_ebt_webform_form
+  module:
+    - ebt_core
+    - text
+    - webform
+id: block_content.ebt_webform.default
+targetEntityType: block_content
+bundle: ebt_webform
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_ebt_settings:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: ebt_settings_default
+    region: content
+  field_ebt_webform_form:
+    weight: 28
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

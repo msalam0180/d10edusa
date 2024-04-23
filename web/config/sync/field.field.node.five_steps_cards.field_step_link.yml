@@ -1,0 +1,23 @@
+uuid: aaca344e-0a5f-459c-a2fc-8d1a5e8695d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_step_link
+    - node.type.five_steps_cards
+  module:
+    - link
+id: node.five_steps_cards.field_step_link
+field_name: field_step_link
+entity_type: node
+bundle: five_steps_cards
+label: 'Step Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

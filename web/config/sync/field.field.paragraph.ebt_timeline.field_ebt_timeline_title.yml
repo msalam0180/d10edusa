@@ -1,0 +1,21 @@
+uuid: 37649e94-148e-44ca-a4a7-1a2cc3b26eb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ebt_timeline_title
+    - paragraphs.paragraphs_type.ebt_timeline
+_core:
+  default_config_hash: _pET64Z-ylj-Ic4NyQ0BmUF4zGO8dZ-uVWadrNKQvyo
+id: paragraph.ebt_timeline.field_ebt_timeline_title
+field_name: field_ebt_timeline_title
+entity_type: paragraph
+bundle: ebt_timeline
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

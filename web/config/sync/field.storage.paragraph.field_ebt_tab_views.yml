@@ -1,0 +1,23 @@
+uuid: 7ecd53a6-cd95-4744-9c77-58246a57bf1b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - views
+    - viewsreference
+_core:
+  default_config_hash: QmZGd58IuoXxDcUvh8hfNHnRLR71GZA3qzfZpuVSjH4
+id: paragraph.field_ebt_tab_views
+field_name: field_ebt_tab_views
+entity_type: paragraph
+type: viewsreference
+settings:
+  target_type: view
+module: viewsreference
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

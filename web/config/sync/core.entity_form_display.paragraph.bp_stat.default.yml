@@ -1,0 +1,51 @@
+uuid: 44018e98-8dab-40cf-bc7d-156078395b14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bp_stat.bp_statistic_description
+    - field.field.paragraph.bp_stat.bp_statistic_header
+    - field.field.paragraph.bp_stat.bp_statistic_item
+    - paragraphs.paragraphs_type.bp_stat
+  module:
+    - field_layout
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: vyB3xs9RfA4CoZa454FuQGynwp23utQW1QZ1qC5Eug4
+id: paragraph.bp_stat.default
+targetEntityType: paragraph
+bundle: bp_stat
+mode: default
+content:
+  bp_statistic_description:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  bp_statistic_header:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  bp_statistic_item:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

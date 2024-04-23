@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_slideshow
+    - field.field.block_content.ebt_slideshow.field_ebt_settings
+    - field.field.block_content.ebt_slideshow.field_ebt_slideshow
+  module:
+    - entity_reference_revisions
+id: block_content.ebt_slideshow.default
+targetEntityType: block_content
+bundle: ebt_slideshow
+mode: default
+content:
+  field_ebt_slideshow:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_ebt_settings: true

@@ -1,0 +1,23 @@
+uuid: f630156f-2017-4d08-b6ab-3d155e6a3f0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.advising_center
+  module:
+    - feeds
+id: node.advising_center.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: advising_center
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

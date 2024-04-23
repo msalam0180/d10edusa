@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * EBT Bootstrap Button main file.
+ */
+
+ use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ebt_bootstrap_button_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ebt_counter module.
+    case 'help.page.ebt_bootstrap_button':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('EBT Bootstrap Button provides the ability to add a custom block using a new block type "EBT Bootstrap Button"') . '</p>';
+      $output .= '<h3>' . t('How to use (configuration)') . '</h3>';
+      $output .= '<ul>';
+      $output .= '<li>' . t('EBT Core has a configuration form with Primary/Secondary colors and Mobile/Tablet/Desktop breakpoints') . '</li>';
+      $output .= '<li>' . t('The settings are available in Administration » Configuration » Content authoring » Extra Block Types (EBT) settings') . '</li>';
+      $output .= '<li>' . t('These configs will be applied to other EBT blocks by default.') . '</li>';
+      $output .= '</ul>';
+      $output .= '<h3>' . t('Creating the new custom block') . '</h3>';
+      $output .= '<ul>';
+      $output .= '<li>' . t('After installing and configuring the default settings you can go ahead and create the custom block at') . '</li>';
+      $output .= '<li>' . t('Administration » Structure » Block layout » Add custom block') . '</li>';
+      $output .= '<li>' . t('You can fill in the fields, choose the design options and save') . '</li>';
+      $output .= '<li>' . t('Now you can place the new custom block using Layout Builder in a few clicks.') . '</li>';
+      $output .= '</ul>';
+      $output .= '<h3>' . t('EBT Core') . '</h3>';
+      $output .= '<p>' . t('EBT modules provide the ability to add blocks in the layout builder in a few clicks. You can install separate block types from this bunch of EBT modules:') . '</p>';
+      $output .= '<li>' . t('<a href="@ebt_accordion@">EBT Accordion / FAQ</a>', ['@ebt_accordion@' => 'https://www.drupal.org/project/ebt_accordion']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_basic_button@">EBT Bootstrap Button</a>', ['@ebt_basic_button@' => 'https://www.drupal.org/project/ebt_basic_button']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_bootstrap_button@">EBT Bootstrap Button</a>', ['@ebt_bootstrap_button@' => 'https://www.drupal.org/project/ebt_bootstrap_button']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_cta@">EBT Call to Action</a>', ['@ebt_cta@' => 'https://www.drupal.org/project/ebt_cta']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_carousel@">EBT Carousel</a>', ['@ebt_carousel@' => 'https://www.drupal.org/project/ebt_carousel']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_counter@">EBT Counter</a>', ['@ebt_counter@' => 'https://www.drupal.org/project/ebt_counter']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_image_gallery@">EBT Image Gallery</a>', ['@ebt_image_gallery@' => 'https://www.drupal.org/project/ebt_image_gallery']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_micromodal@">EBT Micromodal</a>', ['@ebt_micromodal@' => 'https://www.drupal.org/project/ebt_micromodal']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_quote@">EBT Quote</a>', ['@ebt_quote@' => 'https://www.drupal.org/project/ebt_quote']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_slick_slider@">EBT Slick Slider</a>', ['@ebt_slick_slider@' => 'https://www.drupal.org/project/ebt_slick_slider']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_slideshow@">EBT Slideshow</a>', ['@ebt_slideshow@' => 'https://www.drupal.org/project/ebt_slideshow']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_stats@">EBT Stats</a>', ['@ebt_stats@' => 'https://www.drupal.org/project/ebt_stats']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_tabs@">EBT Tabs</a>', ['@ebt_tabs@' => 'https://www.drupal.org/project/ebt_tabs']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_text@">EBT Text</a>', ['@ebt_text@' => 'https://www.drupal.org/project/ebt_text']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_timeline@">EBT Timeline</a>', ['@ebt_timeline@' => 'https://www.drupal.org/project/ebt_timeline']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_webform@">EBT Webform<</a>', ['@ebt_webform@' => 'https://www.drupal.org/project/ebt_webform']) . '</li>';
+      $output .= '<li>' . t('<a href="@ebt_webform_popup@">EBT Webform Popup</a>', ['@ebt_webform_popup@' => 'https://www.drupal.org/project/ebt_webform_popup']) . '</li>';
+      $output .= '</ul>';
+      $output .= '<h3>' . t('External Documentation') . '</h3>';
+      $output .= '<p>' . t('You can also view the EBT documentation at Drupal Book: <a href="@drupalbook_external_documentation@">@drupalbook_external_documentation@</a>', [
+        '@drupalbook_external_documentation@' => 'https://drupalbook.org/ebt',
+      ]) . '</p>';
+      return $output;
+  }
+}

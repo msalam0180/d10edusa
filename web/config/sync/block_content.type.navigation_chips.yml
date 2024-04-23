@@ -1,0 +1,8 @@
+uuid: ef89b64c-0949-48ac-9fc0-3fa8e32a2741
+langcode: en
+status: true
+dependencies: {  }
+id: navigation_chips
+label: 'Navigation Chips'
+revision: 0
+description: 'To Be Used For Navigation Chips'

@@ -1,0 +1,30 @@
+uuid: c2646b48-aa1b-4c3d-bbb7-f4d033cda216
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_banner:2d193304-374e-4c04-9537-46e24bb42924'
+  module:
+    - block_content
+    - system
+  theme:
+    - educationusa
+id: educationusa_findvideosherobanner
+theme: educationusa
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:2d193304-374e-4c04-9537-46e24bb42924'
+settings:
+  id: 'block_content:2d193304-374e-4c04-9537-46e24bb42924'
+  label: 'Find Videos Hero Banner'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /find-videos

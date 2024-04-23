@@ -1,0 +1,88 @@
+<article{{attributes.addClass(classes)}}>
+    <header>
+    </header>
+    <div{{content_attributes.addClass('node__content','clearfix')}}>
+        <div class="container events">
+            <div class="row">
+                <div class="col-md-8">
+                    
+                      <div class="row justify-content-left">  
+
+                         {% if node.field_edusa_media.entity.field_media_image.entity.fileuri is not empty  %} 
+                                <div class="col-md-10">
+                                    {{ title_prefix }}
+                                    {% if label %}
+                                    <h2{{title_attributes.addClass('node__title')}}>
+                                    {{ label }}
+                                    </h2>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-4">
+                                    <img class="img-thumbnail" src="{{ file_url(node.field_edusa_media.entity.field_media_image.entity.fileuri) }}" alt="{{ node.field_edusa_media.field_media_image.entity.alt }}">
+                                </div>
+                         {% elseif node.field_tmp_video_path.value is not empty  %}
+                                <div class="col-md-10">
+                                    {{ title_prefix }}
+                                    {% if label %}
+                                    <h2{{title_attributes.addClass('node__title')}}>
+                                    {{ label }}<br>
+                                    <iframe style="margin-top:5px;" width="640" height="360" src="{{ node.field_tmp_video_path.value }}" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe>
+                                    </h2>
+                                    {% endif %}
+                                    
+                                </div>
+                                <div class="col-md-4">
+                                
+                                </div>
+                         {% else %}
+                                <div class="col-md-7" style="width:100%;">
+                                    {{ title_prefix }}
+                                    {% if label %}
+                                    <h2{{title_attributes.addClass('node__title')}}>
+                                    {{ label }}
+                                     </h2>
+                                    {% endif %}
+                                </div>
+                         {% endif %}
+
+
+                      </div>  
+                     </div>
+                <div class="col-md-4">
+                    <div class="row mb-2">
+                        <div>
+                            {% if node.field_audience.value is not empty %}
+                                <h6 class="mb-2"><b>FOR</b></h6>
+                                {{ content.field_audience.0|render|striptags }}
+                                <hr>
+                            {% endif %}
+
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div>
+                                {% if node.field_topics is not empty	%}
+                                        <h6 class="mb-2"><b>TAGS</b></h6>
+                                        <p>{{ content.field_topics.0|render|striptags }}</p>
+                                        <hr>
+                                {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div>
+                               {% if node.body is not empty %}
+                                <h6 class="mb-2"><b>OVERVIEW</b></h6>
+                               {{ content.body[0] }} 
+                                </hr>
+                               {% endif %}
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

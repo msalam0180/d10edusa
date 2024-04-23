@@ -1,0 +1,29 @@
+uuid: 03da5c7a-f49e-414d-88ca-be8749c6b825
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_institution_logo
+    - media.type.image
+    - node.type.financial_aid_us
+id: node.financial_aid_us.field_institution_logo
+field_name: field_institution_logo
+entity_type: node
+bundle: financial_aid_us
+label: 'Institution Logo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

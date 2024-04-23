@@ -1,0 +1,19 @@
+uuid: 6cc8db67-01f8-4268-9ab5-72dc563e0ca7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_scholarship_email
+    - node.type.financial_aid_country_based_
+id: node.financial_aid_country_based_.field_scholarship_email
+field_name: field_scholarship_email
+entity_type: node
+bundle: financial_aid_country_based_
+label: 'More information e-mail'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

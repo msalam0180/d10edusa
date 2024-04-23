@@ -1,0 +1,307 @@
+uuid: ad70542b-e1df-4dbf-ace4-bd40793fed47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.events.body
+    - field.field.node.events.field_advising_center
+    - field.field.node.events.field_audience
+    - field.field.node.events.field_event_city
+    - field.field.node.events.field_event_country
+    - field.field.node.events.field_event_type
+    - field.field.node.events.field_location_type
+    - field.field.node.events.field_more_information
+    - field.field.node.events.field_online_location
+    - field.field.node.events.field_registration_email
+    - field.field.node.events.field_summary
+    - field.field.node.events.field_timezone
+    - field.field.node.events.field_tmp_address_line_one
+    - field.field.node.events.field_tmp_address_line_two
+    - field.field.node.events.field_tmp_authored_by
+    - field.field.node.events.field_tmp_date
+    - node.type.events
+  module:
+    - feeds_log
+    - node
+third_party_settings:
+  feeds_log:
+    status: true
+    operations:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+      cleaned: cleaned
+    items:
+      created: created
+      updated: updated
+      deleted: deleted
+      skipped: skipped
+      failed: failed
+    source: true
+label: Events
+id: events
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: events
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  event_title:
+    value: 'Event Title'
+    label: 'Event Title'
+    machine_name: event_title
+    type: csv
+  event_type:
+    value: 'Event Type'
+    label: 'Event Type'
+    machine_name: event_type
+    type: csv
+  audience:
+    value: Audience
+    label: Audience
+    machine_name: audience
+    type: csv
+  summary:
+    value: Summary
+    label: Summary
+    machine_name: summary
+    type: csv
+  event_details:
+    value: 'Event Details'
+    label: 'Event Details'
+    machine_name: event_details
+    type: csv
+  date:
+    value: Date
+    label: Date
+    machine_name: date
+    type: csv
+  timezone:
+    value: Timezone
+    label: Timezone
+    machine_name: timezone
+    type: csv
+  location_type:
+    value: 'Location Type'
+    label: 'Location Type'
+    machine_name: location_type
+    type: csv
+  in_person_location_country:
+    value: 'In-Person Location - Country'
+    label: 'In-Person Location - Country'
+    machine_name: in_person_location_country
+    type: csv
+  online_location:
+    value: 'Online Location'
+    label: 'Online Location'
+    machine_name: online_location
+    type: csv
+  more_information:
+    value: 'More Information'
+    label: 'More Information'
+    machine_name: more_information
+    type: csv
+  registration_e_mail:
+    value: 'Registration E-Mail'
+    label: 'Registration E-Mail'
+    machine_name: registration_e_mail
+    type: csv
+  advising_center:
+    value: 'Advising Center'
+    label: 'Advising Center'
+    machine_name: advising_center
+    type: csv
+  advising_center_csv_col:
+    value: 'Advising Center'
+    label: 'Advising Center'
+    machine_name: advising_center_csv_col
+    type: csv
+  advising_center_csv:
+    value: 'Advising Center'
+    label: 'Advising Center'
+    machine_name: advising_center_csv
+    type: csv
+  in_person_location_thoroughfare_i_e_street_address_:
+    value: 'In-Person Location - Thoroughfare (i.e. Street address)'
+    label: 'In-Person Location - Thoroughfare (i.e. Street address)'
+    machine_name: in_person_location_thoroughfare_i_e_street_address_
+    type: csv
+  in_person_location_premise_i_e_apartment_suite_number_:
+    value: 'In-Person Location - Premise (i.e. Apartment / Suite number)'
+    label: 'In-Person Location - Premise (i.e. Apartment / Suite number)'
+    machine_name: in_person_location_premise_i_e_apartment_suite_number_
+    type: csv
+  start_date:
+    value: 'Start Date'
+    label: 'Start Date'
+    machine_name: start_date
+    type: csv
+  end_date:
+    value: 'End Date'
+    label: 'End Date'
+    machine_name: end_date
+    type: csv
+  author:
+    value: Author
+    label: Author
+    machine_name: author
+    type: csv
+  in_person_location_locality_i_e_city_:
+    value: 'In-Person Location - Locality (i.e. City)'
+    label: 'In-Person Location - Locality (i.e. City)'
+    machine_name: in_person_location_locality_i_e_city_
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: event_title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_summary
+    map:
+      value: summary
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_timezone
+    map:
+      value: timezone
+    settings:
+      language: null
+  -
+    target: field_online_location
+    map:
+      uri: online_location
+      title: online_location
+    settings:
+      language: null
+  -
+    target: field_registration_email
+    map:
+      value: registration_e_mail
+    settings:
+      language: null
+      defuse: false
+    unique: {  }
+  -
+    target: field_advising_center
+    map:
+      target_id: advising_center_csv
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 1
+      autocreate_bundle: advising_center
+  -
+    target: field_event_country
+    map:
+      target_id: in_person_location_country
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 1
+      autocreate_bundle: countries
+  -
+    target: field_event_type
+    map:
+      target_id: event_type
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: event_types
+  -
+    target: field_location_type
+    map:
+      target_id: location_type
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: location_types
+  -
+    target: field_tmp_date
+    map:
+      value: date
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: event_details
+      summary: ''
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_more_information
+    map:
+      uri: more_information
+      title: ''
+    settings:
+      language: null
+  -
+    target: field_audience
+    map:
+      target_id: audience
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: audiences
+  -
+    target: field_tmp_authored_by
+    map:
+      value: author
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_tmp_address_line_one
+    map:
+      value: in_person_location_thoroughfare_i_e_street_address_
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_tmp_address_line_two
+    map:
+      value: in_person_location_premise_i_e_apartment_suite_number_
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_event_city
+    map:
+      value: in_person_location_locality_i_e_city_
+    settings:
+      language: null
+    unique: {  }

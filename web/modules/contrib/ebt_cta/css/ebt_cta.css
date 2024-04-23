@@ -1,0 +1,68 @@
+.ebt-block-cta__content {
+  display: flex;
+  gap: 20px;
+}
+
+.ebt-block-cta__content .field--name-field-ebt-cta-title {
+  flex-direction: column;
+}
+
+.ebt-block-cta__content .column-1,
+.ebt-block-cta__content .column-2 {
+  width: 50%;
+}
+
+.ebt-block-cta__content .column-2 .field--name-field-ebt-cta-title h2,
+.ebt-block-cta__content .column-2 .field--name-field-ebt-cta-title h3,
+.ebt-block-cta__content .column-2 .field--name-field-ebt-cta-title h4,
+.ebt-block-cta__content .column-2 .field--name-field-ebt-cta-title h5 {
+  margin-top: 0;
+}
+
+.two_columns_fluid .ebt-block-cta__content .column-1 {
+  position: relative;
+}
+
+.two_columns_fluid .ebt-block-cta__content .column-1 .field--name-field-ebt-cta-column-image {
+  width: 50vw;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+.image-position-right.two_columns_fluid .ebt-block-cta__content .column-1 .field--name-field-ebt-cta-column-image {
+  right: inherit;
+  left: 0;
+}
+
+.two_columns_fluid .ebt-block-cta__content .column-1 .field--name-field-ebt-cta-column-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.one_column .ebt-block-cta__content {
+  flex-direction: column;
+}
+
+.align-content-center.ebt-cta {
+  text-align: center;
+}
+
+.align-content-center.ebt-cta h2,
+.align-content-center.ebt-cta .field--name-field-ebt-cta-column-image,
+.align-content-center.ebt-cta .cta-button-wrapper,
+.align-content-center.ebt-cta .field--name-field-ebt-cta-title {
+  text-align: center;
+}
+
+.align-content-right.ebt-cta {
+  text-align: right;
+}
+
+.align-content-right.ebt-cta h2,
+.align-content-right.ebt-cta .field--name-field-ebt-cta-column-image,
+.align-content-right.ebt-cta .cta-button-wrapper,
+.align-content-right.ebt-cta .field--name-field-ebt-cta-title {
+  text-align: right;
+}

@@ -1,0 +1,100 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the ebt_counter module.
+ */
+
+use Drupal\media\Entity\MediaType;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\paragraphs\Entity\ParagraphsType;
+
+/**
+ * Implements hook_requirements().
+ */
+function ebt_counter_requirements($phase) {
+  if ($phase != 'install') {
+    return [];
+  }
+
+  if (class_exists('Drupal\media\Entity\MediaType')) {
+    foreach (MediaType::loadMultiple() as $type) {
+      if ($type->id() == 'image') {
+        return [];
+      }
+    }
+  }
+  return [
+    'ebt_counter_media_type_image' => [
+      'title' => t('Media type Image'),
+      'value' => t('Not created'),
+      'description' => t('The EBT Counter needs to be <a href="@url">created</a> "Image" Media type.', ['@url' => '/admin/structure/media']),
+      'severity' => REQUIREMENT_ERROR,
+    ],
+  ];
+}
+
+/**
+ * Set the field "field_ebt_counter_title" as required.
+ */
+function ebt_counter_update_9101() {
+
+  // Set the machine names.
+  $paragraph_type_id = 'ebt_counter_item';
+  $field_name = 'field_ebt_counter_title';
+
+  // Load the field configuration object.
+  $field_config = FieldConfig::loadByName('paragraph', $paragraph_type_id, $field_name);
+
+  // If the field doesn't exists, skip.
+  if (empty($field_config)) {
+    return;
+  }
+
+  // Set the field as required.
+  $field_config->setRequired(TRUE)->save();
+
+}
+
+
+/**
+ * Create a description for Paragraph Type "ebt_counter_item".
+ */
+function ebt_counter_update_9102() {
+
+  // Get the entity object.
+  $paragraph_type = ParagraphsType::load('ebt_counter_item');
+
+  // If there is no result, skip.
+  if (empty($paragraph_type)) {
+    return;
+  }
+
+  // Update the description.
+  $paragraph_type->set('description', 'Counter Items to be used inside of Block Type: "EBT Counter"');
+
+  // Save the entity.
+  $paragraph_type->save();
+
+}
+
+/**
+ * Update the Block Type description of "Extra Block Type (EBT): counter".
+ */
+function ebt_counter_update_9103() {
+
+  // Get the object of block type.
+  $block_type = \Drupal::entityTypeManager()->getStorage('block_content_type')->load('ebt_counter');
+
+  // If there is no the block type, skip.
+  if (empty($block_type)) {
+    return;
+  }
+
+  // Update the description.
+  $block_type->set('description', 'Extra Block Type (EBT): Counter - Adds Counter with coffee cups, projects, case studies number, etc.');
+
+  // Save the updated block type.
+  $block_type->save();
+
+}

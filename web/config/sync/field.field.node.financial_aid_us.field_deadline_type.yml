@@ -1,0 +1,21 @@
+uuid: a7425746-e520-47c5-9397-08321b0b6647
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deadline_type
+    - node.type.financial_aid_us
+  module:
+    - options
+id: node.financial_aid_us.field_deadline_type
+field_name: field_deadline_type
+entity_type: node
+bundle: financial_aid_us
+label: 'Deadline Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

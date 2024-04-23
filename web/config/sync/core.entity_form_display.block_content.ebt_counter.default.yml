@@ -1,0 +1,122 @@
+uuid: 57c29f48-eb7a-4600-a660-98cfe4591e94
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.ebt_counter
+    - field.field.block_content.ebt_counter.body
+    - field.field.block_content.ebt_counter.field_ebt_counter_icon
+    - field.field.block_content.ebt_counter.field_ebt_counter_items
+    - field.field.block_content.ebt_counter.field_ebt_counter_number
+    - field.field.block_content.ebt_counter.field_ebt_settings
+  module:
+    - ebt_counter
+    - field_group
+    - field_layout
+    - layout_discovery
+    - paragraphs
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_content
+        - group_settings
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 120
+    group_content:
+      children:
+        - body
+        - field_ebt_counter_items
+      label: Content
+      region: content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_settings:
+      children:
+        - field_ebt_settings
+      label: Settings
+      region: content
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+_core:
+  default_config_hash: k07TlMoweT9Yz6bjpmLGKe6YvkshSJkTRnz6uGMQHkI
+id: block_content.ebt_counter.default
+targetEntityType: block_content
+bundle: ebt_counter
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_ebt_counter_items:
+    type: paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_ebt_settings:
+    type: ebt_settings_counter
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_ebt_counter_icon: true
+  field_ebt_counter_number: true

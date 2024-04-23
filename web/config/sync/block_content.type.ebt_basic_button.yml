@@ -1,0 +1,10 @@
+uuid: fcda7c5a-05d0-4f31-b001-d753e0fc6da9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: eTgR86D-XlSSjL0DOkUgyDx9iqTLZCeiiE1Wz1CNl8o
+id: ebt_basic_button
+label: 'EBT Basic Button'
+revision: 0
+description: 'Extra Block Type (EBT): Basic Button'

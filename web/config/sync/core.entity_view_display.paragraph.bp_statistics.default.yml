@@ -1,0 +1,52 @@
+uuid: 7d257c68-cd9e-4784-a404-42cdd9cfbeaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.bp_statistics.bp_background
+    - field.field.paragraph.bp_statistics.bp_header
+    - field.field.paragraph.bp_statistics.bp_statistic
+    - field.field.paragraph.bp_statistics.bp_width
+    - paragraphs.paragraphs_type.bp_statistics
+  module:
+    - entity_reference_revisions
+    - options
+_core:
+  default_config_hash: uJwfER1PHSc2XkTHQGFEs4_E6tsgCa8G2gaSB1Fak4c
+id: paragraph.bp_statistics.default
+targetEntityType: paragraph
+bundle: bp_statistics
+mode: default
+content:
+  bp_background:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  bp_header:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  bp_statistic:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  bp_width:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }
